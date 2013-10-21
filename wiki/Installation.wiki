@@ -41,7 +41,24 @@ In order to run Cooja, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?t
 
 
   * ===== Downloading the latest Contiki and run the Cooja in Cygwin =====
-As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]
+As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to the C drive and running [http://www.cygwin.com/ Cygwin], one should change the directory to Cooja folder in the Contiki directory using the following command.
+
+{{{**> cd contiki-2.x/tools/cooja**}}}
+
+{{{**> ant run**}}}
+
+After these steps inorder to verify the cooja installation we will create a Hello World simulation by the following steps:
+(This section is a summary of the same section in the second reference with some few changes)
+  * Open //File > New simulation//, and click //Create//
+  * Open //Mote Types > Create mote type > Sky Mote Type//
+  * Enter a suitable description: "My first hello world mote type"
+  * Click Browse, and select the Contiki Hello World application**: hello-world.c**
+  * Compile the Contiki shared library by clicking **Compile**
+  * When the compilation finishes, load the library and create the mote type by clicking
+         **Create**.
+  * Enter **10** and click **Create and Add**
+  * Press **Start** (or CTRL+S) in the **Control Panel** plugin to start simulating.
+
 
     * === Adding GISOO plug-in in Cooja ===
   # == Simulink ==

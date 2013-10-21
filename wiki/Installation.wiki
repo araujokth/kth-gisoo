@@ -5,9 +5,11 @@ Since GISOO is an integration of Cooja and Simulink, in order to be able to use 
 The following section explains the Cooja installation procedure.
     * === Cooja installation ===
       * ==== Linux ====
-In order to be able to run Cooja on you linux system first you need to install java virtual machine (JVM) which can find the installation procedure [http://www.java.com/en/download/help/download_options.xml#linux here]. You also need to install [http://ant.apache.org/ Apache Ant]. You can find its installation details in its [http://ant.apache.org/manual/install.html web page] or you may instal it by the following command:
+In order to be able to run Cooja on you linux system first you need to install java virtual machine (JVM) which can find the installation procedure [http://www.java.com/en/download/help/download_options.xml#linux here]. You also need to install [http://ant.apache.org/ Apache Ant]. You can find its installation details in its [http://ant.apache.org/manual/install.html web page] or you may install it by the following command:
 
+{{{sudo apt-get install ant}}}
 
+Finally you have to download [http://www.contiki-os.org/ Continki] folder from [http://sourceforge.net/projects/contiki/files/Contiki/ here] and put it somewhere in your machine.
       * ==== Windows ====
     * === Adding GISOO plug-in in Cooja ===
   # == Simulink ==

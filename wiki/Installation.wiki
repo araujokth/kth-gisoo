@@ -32,6 +32,10 @@ After installation, the [http://www.cygwin.com/ Cygwin] binaries path (for examp
 
 {{{“export PATH=$PATH:/bin”}}}
 
+  * ===== Installing the MSPGCC (The GCC tool chain for MSP430) =====
+
+
+  * ===== Downloading the latest Contiki and run the Cooja in Cygwin =====
     * === Adding GISOO plug-in in Cooja ===
   # == Simulink ==
     * === Simulink installation ===

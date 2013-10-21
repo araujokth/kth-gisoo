@@ -32,22 +32,29 @@ The build tool [http://ant.apache.org/ Ant], which is a java library and command
 By using the setup.exe, [http://www.cygwin.com/ Cygwin] installation will be started. The recommended path for Cygwin is C:\cygwin. In the step of selecting packages, although it is better to install all packages which takes, most of the packages can be left as “Default”. It is only required to change the installation status of one package named “Devel” to “install”, since it will not be installed by default.
 After installation, the [http://www.cygwin.com/ Cygwin] binaries path (for example c:\cygwin\bin) should be added to the PATH environmental variable which can be done by running the [http://www.cygwin.com/ Cygwin] and using the following command:
 
-{{{“export PATH=$PATH:/bin”}}}
+{{{
+export PATH=$PATH:/bin
+}}}
 
   * ===== Installing the MSPGCC (The GCC tool chain for MSP430) =====
 In order to run Cooja, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] (Tool chain for [http://en.wikipedia.org/wiki/TI_MSP430 MSP430]) is required. You can find the [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows download link] of [[http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] for windows in [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows here]. After extract it, you need to add the /bin and /msp430/bin to the environmental variable in cygwin by these commands:
 
-{{{export PATH=$PATH: /cygdrive/c/mspgss/bin}}}
-
-{{{export PATH=$PATH: /cygdrive/c/mspgcc/msp430/bin}}}
+{{{
+export PATH=$PATH: /cygdrive/c/mspgss/bin
+export PATH=$PATH: /cygdrive/c/mspgcc/msp430/bin
+}}}
 
 
   * ===== Downloading the latest Contiki and run the Cooja in Cygwin =====
 As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to the C drive and running [http://www.cygwin.com/ Cygwin], one should change the directory to Cooja folder in the Contiki directory using the following command.
 
-{{{**> cd contiki-2.x/tools/cooja**}}}
+{{{
+**> cd contiki-2.x/tools/cooja
+}}}
 
-{{{**> ant run**}}}
+{{{
+**> ant run
+}}}
 
 After these steps inorder to verify the cooja installation we will create a Hello World simulation by the following steps:
 (This section is a summary of the same section in the second reference with some few changes)

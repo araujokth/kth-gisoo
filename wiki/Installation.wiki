@@ -19,10 +19,10 @@ The installation procedure for Cooja on Windows can be divided to five steps:
   #Downloading the latest Contiki and run the Cooja in Cygwin.
 
 which will be explained with more details in  the following:
-  * ===== Installing Java Runtime Environment (JRE) and JDK =====
+  * ==== Installing Java Runtime Environment (JRE) and JDK ====
 As the [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a Java based simulator, Java Runtime Environment (JRE) is necessary. JDK (Java Development Kit) is needed for the next step (Installing [http://ant.apache.org/ Ant]). The JRE and the JDK can be both downloaded from [http://www.oracle.com/technetwork/java/javase/downloads/index.html here]
 
-  * ===== Installing Ant =====
+  * ==== Installing Ant ====
 The build tool [http://ant.apache.org/ Ant], which is a java library and command-line tool, is needed for running [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja].[http://ant.apache.org/ Apache Ant] can be used for this aim and can be downloaded from this [http://code.google.com/p/winant/ link].
 
 

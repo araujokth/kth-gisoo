@@ -33,6 +33,9 @@ After installation, the [http://www.cygwin.com/ Cygwin] binaries path (for examp
 {{{“export PATH=$PATH:/bin”}}}
 
   * ===== Installing the MSPGCC (The GCC tool chain for MSP430) =====
+In order to run Cooja, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] (Tool chain for [http://en.wikipedia.org/wiki/TI_MSP430 MSP430]) is required. You can find the [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows download link] of [[http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] for windows in [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows download here]. After extract it, you need to add the /bin and /msp430/bin to the environmental variable in cygwin by these commands:
+{{{export PATH=$PATH: /cygdrive/c/mspgss/bin}}}
+{{{export PATH=$PATH: /cygdrive/c/mspgcc/msp430/bin}}}
 
 
   * ===== Downloading the latest Contiki and run the Cooja in Cygwin =====

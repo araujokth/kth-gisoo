@@ -60,7 +60,7 @@ After these steps inorder to verify the cooja installation we will create a Hell
 
 
     * === Adding GISOO plug-in in Cooja ===
-After verifying the Cooja installation for the last step we should add the "Simulink Connector" plug-in which can be downloaded from "??????????????????????????" to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
+After verifying the Cooja installation for the last step we should add the "Simulink Connector" plug-in which can be downloaded from [?????????????????] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
 
 {{{/Contiki2.*/tools/cooa/apps}}}
 
@@ -70,16 +70,3 @@ To be able to run GISOO you need to have [http://www.mathworks.se/products/simul
     * === Adding GISOO library in Simulink ===
 
 In the final step you need to download the GISOO-library folder from here[?????????????????] and add it to you Matlab path variable.
-
-
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages

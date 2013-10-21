@@ -20,7 +20,9 @@ The installation procedure for Cooja on Windows can be divided to five steps:
 
 which will be explained with more details in  the following:
   *Installing Java Runtime Environment (JRE) and JDK
-As the Cooja is a Java based simulator, Java Runtime Environment (JRE) is necessary. JDK (Java Development Kit) is needed for the next step (Installing [http://ant.apache.org/ Ant]). The JRE and the JDK can be both downloaded from [http://www.oracle.com/technetwork/java/javase/downloads/index.html here]
+As the [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a Java based simulator, Java Runtime Environment (JRE) is necessary. JDK (Java Development Kit) is needed for the next step (Installing [http://ant.apache.org/ Ant]). The JRE and the JDK can be both downloaded from [http://www.oracle.com/technetwork/java/javase/downloads/index.html here]
+
+
 
     * === Adding GISOO plug-in in Cooja ===
   # == Simulink ==

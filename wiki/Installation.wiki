@@ -1,7 +1,7 @@
 Since GISOO is an integration of Cooja and Simulink, in order to be able to use it, first we need to install Cooja and Simulink and then it is necessary to add the GISOO plug-in to the Cooja and GISOO library to the Simulink. More exp;anation about these steps can be found in the following:
 
   # == Cooja ==
-[https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a mote [http://en.wikipedia.org/wiki/Emulator emulator] which Basically has been developed for the [http://www.contiki-os.org/ Continki] but also supports [http://www.tinyos.net/ TinyOS] applications and it can stimulate motes' networks and communications.
+[https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a [http://en.wikipedia.org/wiki/Motes mote] [http://en.wikipedia.org/wiki/Emulator emulator] which Basically has been developed for the [http://www.contiki-os.org/ Continki] but also supports [http://www.tinyos.net/ TinyOS] applications and it can stimulate motes' networks and communications.
 The following section explains the Cooja installation procedure.
     * === Cooja installation ===
       * ==== Linux ====

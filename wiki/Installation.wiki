@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+Since GISOO is an integration of Cooja and Simulink, in order to be able to use it, first we need to install Cooja and Simulink and then it is necessary to add the GISOO plug-in to the Cooja and GISOO library to the Simulink. More exp;anation about these steps can be found in the following:
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages

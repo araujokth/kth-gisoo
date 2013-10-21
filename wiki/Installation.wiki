@@ -66,7 +66,9 @@ After verifying the Cooja installation for the last step we should add the "Simu
 
   # == Simulink ==
     * === Simulink installation ===
+To be able to run GISOO you need to have [http://www.mathworks.se/products/simulink/ Simulink] to be installed on your machine with [http://www.mathworks.se/products/xpctarget/?s_tid=hp_fp_list xPC Target].
     * === Adding GISOO library in Simulink ===
+
 
 
    

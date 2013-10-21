@@ -4,13 +4,12 @@ Since GISOO is an integration of Cooja and Simulink, in the first step we need t
 
 
 
-  *== Cooja ==
+= Cooja =
 
 [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a [http://en.wikipedia.org/wiki/Motes mote] [http://en.wikipedia.org/wiki/Emulator emulator] which Basically has been developed for the [http://www.contiki-os.org/ Continki] but also supports [http://www.tinyos.net/ TinyOS] applications and it can stimulate motes' networks and communications.
 The following section explains the Cooja installation procedure.
-   * === Cooja installation ===
+== Cooja installation for Linux ==
 
-      * ==== Linux ====
 In order to be able to run Cooja on you linux system first you need to install java virtual machine (JVM) which can find the installation procedure [http://www.java.com/en/download/help/download_options.xml#linux here]. You also need to install [http://ant.apache.org/ Apache Ant]. You can find its installation details in its [http://ant.apache.org/manual/install.html web page] or you may install it by the following command:
 
 {{{
@@ -18,7 +17,7 @@ sudo apt-get install ant
 }}}
 
 Finally you have to download [http://www.contiki-os.org/ Continki] folder from [http://sourceforge.net/projects/contiki/files/Contiki/ here] and put it somewhere in your machine.
-      * ==== Windows ====
+ == Cooja installation for Windows ==
 The installation procedure for Cooja on Windows can be divided to five steps:
   #Installing Java Runtime Environment (JRE) and JDK.
   #Installing Ant.
@@ -27,13 +26,13 @@ The installation procedure for Cooja on Windows can be divided to five steps:
   #Downloading the latest Contiki and run the Cooja in Cygwin.
 
 which will be explained with more details in  the following:
-  * ===== Installing Java Runtime Environment (JRE) and JDK =====
+=== Installing Java Runtime Environment (JRE) and JDK ===
 As the [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a Java based simulator, Java Runtime Environment (JRE) is necessary. JDK (Java Development Kit) is needed for the next step (Installing [http://ant.apache.org/ Ant]). The JRE and the JDK can be both downloaded from [http://www.oracle.com/technetwork/java/javase/downloads/index.html here]
 
-  * ===== Installing Ant =====
+ === Installing Ant ===
 The build tool [http://ant.apache.org/ Ant], which is a java library and command-line tool, is needed for running [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja].[http://ant.apache.org/ Apache Ant] can be used for this aim and can be downloaded from this [http://code.google.com/p/winant/ link].
 
-  * ===== Installing Cygwin and path environmental configuration =====
+ === Installing Cygwin and path environmental configuration ===
 [http://www.cygwin.com/ Cygwin] is a Linux like environment for Windows users and contains DLL which acts as Linux API layer. This tool is recommended for running Cooja on Windows and can be downloaded from [http://www.cygwin.com/ here].
 By using the setup.exe, [http://www.cygwin.com/ Cygwin] installation will be started. The recommended path for Cygwin is C:\cygwin. In the step of selecting packages, although it is better to install all packages which takes, most of the packages can be left as “Default”. It is only required to change the installation status of one package named “Devel” to “install”, since it will not be installed by default.
 After installation, the [http://www.cygwin.com/ Cygwin] binaries path (for example c:\cygwin\bin) should be added to the PATH environmental variable which can be done by running the [http://www.cygwin.com/ Cygwin] and using the following command:
@@ -42,7 +41,7 @@ After installation, the [http://www.cygwin.com/ Cygwin] binaries path (for examp
 export PATH=$PATH:/bin
 }}}
 
-  * ===== Installing the MSPGCC (The GCC tool chain for MSP430) =====
+=== Installing the MSPGCC (The GCC tool chain for MSP430) ===
 In order to run Cooja, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] (Tool chain for [http://en.wikipedia.org/wiki/TI_MSP430 MSP430]) is required. You can find the [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows download link] of [[http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] for windows in [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows here]. After extract it, you need to add the /bin and /msp430/bin to the environmental variable in cygwin by these commands:
 
 {{{
@@ -51,7 +50,7 @@ export PATH=$PATH: /cygdrive/c/mspgcc/msp430/bin
 }}}
 
 
-  * ===== Downloading the latest Contiki and run the Cooja in Cygwin =====
+=== Downloading the latest Contiki and run the Cooja in Cygwin ===
 As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to the C drive and running [http://www.cygwin.com/ Cygwin], one should change the directory to Cooja folder in the Contiki directory using the following command.
 
 {{{
@@ -74,14 +73,14 @@ After these steps inorder to verify the cooja installation we will create a Hell
   * Press **Start** (or CTRL+S) in the **Control Panel** plugin to start simulating.
 
 
-    * === Adding GISOO plug-in in Cooja ===
+== Adding GISOO plug-in in Cooja ==
 After verifying the Cooja installation for the last step we should add the "Simulink Connector" plug-in which can be downloaded from [?????????????????] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
 
 {{{/Contiki2.*/tools/cooa/apps}}}
 
-  #== Simulink ==
-    * === Simulink installation ===
+ = Simulink =
+== Simulink installation ==
 To be able to run GISOO you need to have [http://www.mathworks.se/products/simulink/ Simulink] to be installed on your machine with [http://www.mathworks.se/products/xpctarget/?s_tid=hp_fp_list xPC Target].
-    * === Adding GISOO library in Simulink ===
+ == Adding GISOO library in Simulink ==
 
 In the final step you need to download the GISOO-library folder from here[?????????????????] and add it to you Matlab path variable.

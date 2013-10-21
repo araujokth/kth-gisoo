@@ -54,8 +54,7 @@ After these steps inorder to verify the cooja installation we will create a Hell
   * Enter a suitable description: "My first hello world mote type"
   * Click Browse, and select the Contiki Hello World application**: hello-world.c**
   * Compile the Contiki shared library by clicking **Compile**
-  * When the compilation finishes, load the library and create the mote type by clicking
-         **Create**.
+  * When the compilation finishes, load the library and create the mote type by clicking "Create".
   * Enter **10** and click **Create and Add**
   * Press **Start** (or CTRL+S) in the **Control Panel** plugin to start simulating.
 

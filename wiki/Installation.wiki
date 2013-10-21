@@ -1,9 +1,14 @@
-Since GISOO is an integration of Cooja and Simulink, in order to be able to use it, first we need to install Cooja and Simulink and then it is necessary to add the GISOO plug-in to the Cooja and GISOO library to the Simulink. More exp;anation about these steps can be found in the following:
+<wiki:toc />
+= Overview =
+Since GISOO is an integration of Cooja and Simulink, in the first step we need to install Cooja and Simulink properly and then it is necessary to add the GISOO plug-in to the Cooja and also GISOO-library to the Simulink. More explanations about these steps can be found in the following:
 
-== Cooja ==
+
+
+  *== Cooja ==
+
 [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a [http://en.wikipedia.org/wiki/Motes mote] [http://en.wikipedia.org/wiki/Emulator emulator] which Basically has been developed for the [http://www.contiki-os.org/ Continki] but also supports [http://www.tinyos.net/ TinyOS] applications and it can stimulate motes' networks and communications.
 The following section explains the Cooja installation procedure.
-    * === Cooja installation ===
+   * === Cooja installation ===
       * ==== Linux ====
 In order to be able to run Cooja on you linux system first you need to install java virtual machine (JVM) which can find the installation procedure [http://www.java.com/en/download/help/download_options.xml#linux here]. You also need to install [http://ant.apache.org/ Apache Ant]. You can find its installation details in its [http://ant.apache.org/manual/install.html web page] or you may install it by the following command:
 
@@ -73,7 +78,7 @@ After verifying the Cooja installation for the last step we should add the "Simu
 
 {{{/Contiki2.*/tools/cooa/apps}}}
 
-  # == Simulink ==
+  #== Simulink ==
     * === Simulink installation ===
 To be able to run GISOO you need to have [http://www.mathworks.se/products/simulink/ Simulink] to be installed on your machine with [http://www.mathworks.se/products/xpctarget/?s_tid=hp_fp_list xPC Target].
     * === Adding GISOO library in Simulink ===

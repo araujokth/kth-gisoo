@@ -41,6 +41,8 @@ In order to run Cooja, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?t
 
 
   * ===== Downloading the latest Contiki and run the Cooja in Cygwin =====
+As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]
+
     * === Adding GISOO plug-in in Cooja ===
   # == Simulink ==
     * === Simulink installation ===

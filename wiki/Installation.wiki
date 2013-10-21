@@ -11,6 +11,13 @@ In order to be able to run Cooja on you linux system first you need to install j
 
 Finally you have to download [http://www.contiki-os.org/ Continki] folder from [http://sourceforge.net/projects/contiki/files/Contiki/ here] and put it somewhere in your machine.
       * ==== Windows ====
+The installation procedure for Cooja on Windows can be divided to five steps:
+  #Installing Java Runtime Environment (JRE) and JDK.
+  #Installing Ant.
+  #Installing Cygwin and path environmental configuration.
+  #Installing the MSPGCC (The GCC tool chain for MSP430).
+  #Downloading the latest Contiki and run the Cooja in Cygwin.
+
     * === Adding GISOO plug-in in Cooja ===
   # == Simulink ==
     * === Simulink installation ===

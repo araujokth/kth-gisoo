@@ -1,5 +1,5 @@
 #summary One-sentence summary of this page.
-
+<wiki:toc />
 = Overview =
 Since GISOO is an integration of Simulink and Cooja, it is necessary to create different parts of our desired system in the following manner:
   *Physical system (Plant) should be modelled in Simulink.
@@ -7,4 +7,5 @@ Since GISOO is an integration of Simulink and Cooja, it is necessary to create d
   *Controller can be located in Simulink or Cooja.
 
 You can find more details about each steps in following:
-
+ == Cooja preparation ==
+For preparing the Cooja, we have to execute it and create a new simulation including our required motes. Finally we must connect the sensors, actuators and all of the motes which need serial communication to the same motes in Simulink. These steps has been explained in below:

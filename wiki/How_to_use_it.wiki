@@ -27,4 +27,7 @@ In the result of the mentioned steps the new simulation environment will be crea
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaEnv.png" >
 
 === Adding motes to the simulation ===
-After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used SkyMote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for TinyOS).
+After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used SkyMote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for [http://en.wikipedia.org/wiki/TinyOS TinyOS]).
+
+Inorder to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreation.png" >

@@ -35,4 +35,6 @@ Inorder to add a new mote to the simulation you can use the Motes menu and follo
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps2.png" >
 
-n the 
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MotePositioning.png" >
+

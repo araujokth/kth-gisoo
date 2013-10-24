@@ -31,6 +31,8 @@ After creating the new simulation environment we have to add all the motes to th
 
 Inorder to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:
 
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreation.png" >
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps.png" >
 
 n the 

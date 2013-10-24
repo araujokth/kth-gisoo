@@ -1,4 +1,3 @@
-
 <wiki:toc />
 = Overview =
 Since GISOO is an integration of Simulink and Cooja, it is necessary to create different parts of our desired system in the following manner:
@@ -13,3 +12,8 @@ For preparing the Cooja, we have to execute it and create a new simulation inclu
 For executing the Cooja first we should open a shell window of Cygwin and change the directory to the  Cooja directory. In this sample, the Cygwin has been located in the C:\\cygwin\  and contiki folder which contains the Cooja is located in the C:\\contiki-2.6\ . You can see the needed commands for changing the directories in the picture. Finally in the cooja folder you should use the “ant run” command to execute it. 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExecution.png" height="282px" width="837px" >
+
+ === Create a new simulation ===
+Excuting the cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png" >

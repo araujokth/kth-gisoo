@@ -21,3 +21,10 @@ Excuting the cooja, we should create a new simulation environment which can be d
 In the window of new simulation creator, you can select a name for your simulation and select your desired radio medium. You can also select the random seed for your simulation which should be the same if you want to reload exactly the same simulation. The "Create new simulation" window has been shown below:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulation_Start_config.png" >
+
+In the result of the mentioned steps the new simulation environment will be created such as following picture:
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaEnv.png" >
+
+=== Adding motes to the simulation ===
+After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used SkyMote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for TinyOS).

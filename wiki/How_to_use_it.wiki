@@ -42,6 +42,7 @@ These steps has been shown in the following picture:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps2.png" >
 
+After selecting the "main.exe" and creating the mote, the next window will ask you about the number of desired motes from that application and the location of the motes which by default will be selected randomly.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MotePositioning.png" >
 

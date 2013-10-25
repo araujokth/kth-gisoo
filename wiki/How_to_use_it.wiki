@@ -59,4 +59,6 @@ Now for each mote that you want to connect it to its mirror mote in Simulink, yo
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorSelection.png" >
 
+In the result of previous step the Simulink Connector plug-in for the selected mote will be created. This plug in will connect this mote to the mirror mote (mote with the same mote-id) in Simulink.
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >

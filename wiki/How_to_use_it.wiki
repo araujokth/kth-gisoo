@@ -37,6 +37,8 @@ Inorder to add a new mote to the simulation you can use the Motes menu and follo
 In the opened window you shoul follow these steps:
   #Select a name for you mote.
   #Use the browse button to find the main.exe of the application that you want to load it in your mote. (In TinyOS when you compile your nesC application for instant by using the "make telosb", it will automatically create a build folder for that application which contains some files including the "main.exe". This file will be used in Cooja as a mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands.)  
+  #Create the mote.
+These steps has been shown in the following picture:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps2.png" >
 

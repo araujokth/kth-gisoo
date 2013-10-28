@@ -81,6 +81,7 @@ Finally you should add all the necessary mote to the CoojaPlatform. In fact all 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
 
+For each mote, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to act as a sensor which shouid sense some data on the ADC0 pin, then you have to connect the ADC-Connector component to ADC0 input of that mote, or you want to receive some actuation data on the DAC0, you need to add the DAC connector component on the DAC0 output of your mote. these components and their and their location has been shown in the following picture.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
 

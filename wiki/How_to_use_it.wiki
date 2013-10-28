@@ -72,7 +72,7 @@ For the first step to create the simulation environment in Cooja you need to add
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >
 
 === Adding Mote to the Cooja platform ===
-
+In the next step, the necessary motes should be added inside the Cooja platform block. THis can be done by double click on the Cooaj platform block and drag a "SkyMote" block from the "Gisoo-library" to the "CoojPlatform" block. On the first attempt to add a mote inside the Cooja platform you may face a message which ask you to disable the link to the library and it should be done by clicking on the "disable" part in the pop-up message, as it has shown in the following picture. (If you did not face this message you can just add your mote inside the "Cooja platform" with out any concern)
 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/LinkDisable.png" >

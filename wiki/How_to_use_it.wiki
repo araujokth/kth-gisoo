@@ -49,10 +49,10 @@ Finally after the prevouse procedure the virtual mote will be created. The numbe
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CreatedMote2.png" >
 === Activating the SimulikConnector plug-in ===
-In order to connect motes in Cooja to the Simulink you need to use the Simmulink Connector plug-in which you previously download it from [????????????????] and added it to your Cooja folder (It has been explained here ???????????) But in order to use this plug-in one time you need to select and activate it in the Cooja extension list which you can reach and select it in "Setting-> Cooja extensions".
+In order to connect motes in Cooja to the Simulink you need to use the Simulink Connector plug-in which you previously download it from [????????????????] and added it to your Cooja folder (It has been explained here ???????????) But in order to use this plug-in one time you need to select and activate it in the Cooja extension list which you can reach and select it in "Setting-> Cooja extensions".
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExtensionsSetting.png" >
-=== Executing the SimulikConnector plug-in ===
+=== Executing the SimulinkConnector plug-in ===
 Now for each mote that you want to connect it to its mirror mote in Simulink, you have to write click on that mote and select "Mote tools Sky1 -> SimmulinkConnector". You can see the procedure in the picture below:
 
 
@@ -63,11 +63,11 @@ In the result of previous step the Simulink Connector plug-in for the selected m
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
 
 == Simulink preparation ==
-During the installation section Gisoo library should already be added to the Simulink (you can see the instruction here????????????????). Then you have access to all the componenet which you need to be able to run your simulation in GISOO. You can see the components of the library in the following picture.
+During the installation section "Gisoo library" should already be added to the Simulink (you can see the instruction here????????????????). Then you have access to all the component which you need to be able to run your simulation in GISOO. You can see the components of the library in the following picture.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
 === Adding Cooja platform ===
-For the first step to create the simulation evironment in Cooja you need to add "Cooja Platform" block to your simulation environment. This block is place that simulate the Cooja in the Simulink. It will contain all the necessary motes and also handle the syncronization and communication between Simulink and Cooja. (More details will be explained in the next steps). next picture shows the "Cooja platform" block.
+For the first step to create the simulation environment in Cooja you need to add "Cooja Platform" block to your simulation environment. This block is the place that simulate Cooja inside the Simulink. It will contain all the necessary motes and also handle the synchronization and communication between Simulink and Cooja. (More details will be explained in the next steps). next picture shows the "Cooja platform" block.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >
 

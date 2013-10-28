@@ -77,6 +77,8 @@ In the next step, the necessary motes should be added inside the Cooja platform 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/LinkDisable.png" >
 
+Finally you should add all the necessary mote to the CoojaPlatform. In fact all the motes which are need to be in contact with the plant such as sensors or actuators or motes which are doing the serial communications should be added to the Cooja platform.After adding each mote to the platform it is necessary to double click on them an set their mote-id exactly the same as the id of their mirror motes in the Cooja. (Each mote in Simulink can only communicate with the mote with the same id in Cooja.)
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
 
 

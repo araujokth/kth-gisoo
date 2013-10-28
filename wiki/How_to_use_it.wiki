@@ -91,4 +91,4 @@ In the final step we need to add a model of our plant which can be modeled in a 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >
 
  = Configuration and running the simulation =
-
+After preparing the simulation environment for the very last configuration, it is needed to set the Simulink simulation to act in a fix-step instead of variable-step. You can apply this configuration in the "configuration parameter" window which is accessible from "Simulation->Model Configuration Parameter" and finally change the type in the solver option to the fix-step. Now can also select the size of the sample time which we always config it to "0.001" to have an accuracy of one millisecond.

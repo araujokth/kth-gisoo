@@ -7,14 +7,14 @@ Since GISOO is an integration of Simulink and Cooja, it is necessary to create d
 
 In this section you can find all the required details for each step including several screen shots that can help you to follow the procedure.
 
-  == Cooja preparation ==
+ = Cooja preparation =
 For preparing the Cooja, we have to execute it and create a new simulation including our required motes. Finally we must connect the sensors, actuators and all of the motes which need serial communication to the same motes in Simulink. These steps has been explained in below:
-   === Cooja Execution  ===
+  == Cooja Execution  ==
 For executing the Cooja first we should open a shell window of Cygwin and change the directory to the  Cooja directory. In this sample, the Cygwin has been located in the C:\\cygwin\  and contiki folder which contains the Cooja is located in the C:\\contiki-2.6\ . You can see the needed commands for changing the directories in the picture. Finally in the cooja folder you should use the “ant run” command to execute it. 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExecution.png" height="282px" width="837px" >
 
-   === Create a new simulation ===
+  == Create a new simulation ==
 Excuting the cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png" >
@@ -26,7 +26,7 @@ In the window of new simulation creator, you can select a name for your simulati
 In the result of the mentioned steps the new simulation environment will be created such as following picture:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaEnv.png" >
-   === Adding motes to the simulation ===
+  == Adding motes to the simulation ==
 After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used Sky Mote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for [http://en.wikipedia.org/wiki/TinyOS TinyOS]).
 
 Inorder to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:
@@ -48,11 +48,11 @@ After selecting the "main.exe" and creating the mote, the next window will ask y
 Finally after the prevouse procedure the virtual mote will be created. The number which has been appeared on each mote is its mote-id and its selected automatically and in-order whic is not configurable by user. This is an important for the applications that each mote should have an especific id. For these type of scenarios you should create motes in an order that each mote receive your desired id.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CreatedMote2.png" >
-   === Activating the SimulikConnector plug-in ===
+  == Activating the SimulikConnector plug-in ==
 In order to connect motes in Cooja to the Simulink you need to use the Simulink Connector plug-in which you previously download it from [????????????????] and added it to your Cooja folder (It has been explained here ???????????) But in order to use this plug-in one time you need to select and activate it in the Cooja extension list which you can reach and select it in "Setting-> Cooja extensions".
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExtensionsSetting.png" >
-   === Executing the SimulinkConnector plug-in ===
+  == Executing the SimulinkConnector plug-in ==
 Now for each mote that you want to connect it to its mirror mote in Simulink, you have to write click on that mote and select "Mote tools Sky1 -> SimmulinkConnector". You can see the procedure in the picture below:
 
 
@@ -62,16 +62,16 @@ In the result of previous step the Simulink Connector plug-in for the selected m
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
 
-  == Simulink preparation ==
+ = Simulink preparation =
 During the installation section "Gisoo library" should already be added to the Simulink (you can see the instruction here????????????????). Then you have access to all the component which you need to be able to run your simulation in GISOO. You can see the components of the library in the following picture.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
-   === Adding Cooja platform ===
+  == Adding Cooja platform ==
 For the first step to create the simulation environment in Cooja you need to add "Cooja Platform" block to your simulation environment. This block is the place that simulate Cooja inside the Simulink. It will contain all the necessary motes and also handle the synchronization and communication between Simulink and Cooja. (More details will be explained in the next steps). next picture shows the "Cooja platform" block.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >
 
-   === Adding Mote to the Cooja platform ===
+  == Adding Mote to the Cooja platform ==
 In the next step, the necessary motes should be added inside the Cooja platform block. THis can be done by double click on the CoojaPlatform block and drag a "SkyMote" block from the "Gisoo-library" to the "CoojaPlatform" block. On the first attempt to add a mote inside the Cooja platform you may face a message which ask you to disable the link to the library and it should be done by clicking on the "disable" part in the pop-up message, as it has shown in the following picture. (If you did not face this message you can just add your mote inside the "Cooja platform" with out any concern)
 
 
@@ -80,12 +80,15 @@ In the next step, the necessary motes should be added inside the Cooja platform 
 Finally you should add all the necessary mote to the CoojaPlatform. In fact all the motes which are need to be in contact with the plant such as sensors or actuators or motes which are doing the serial communications should be added to the Cooja platform.After adding each mote to the platform it is necessary to double click on them an set their mote-id exactly the same as the id of their mirror motes in the Cooja. (Each mote in Simulink can only communicate with the mote with the same id in Cooja.)
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
-   === Adding ADC/DAC connectors ===
+  == Adding ADC/DAC connectors ==
 For each mote, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to act as a sensor which shouid sense some data on the ADC0 pin, then you have to connect the ADC-Connector component to ADC0 input of that mote, or you want to receive some actuation data on the DAC0, you need to add the DAC connector component on the DAC0 output of your mote. these components and their and their location has been shown in the following picture.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
 
-   === Adding the plant model ===
+  == Adding the plant model ==
 In the final step we need to add a model of our plant which can be modeled in a Discrete State-Space block to our simulation (out of the Cooja platform.) in this step we will have different number of input and out put from our Cooja platform block, which has been created by the ADC-connector or DAC-connector components from the previous step. Now in this step the the outputs from the CoojaPlatform should be used as the input for our Plant model and the output of the plant model should be used as the input for the Cooja platform. following picture shows a simple environment and the relation between the Cooja platform and the plant model.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >
+
+ = Configuration and running the simulation =
+

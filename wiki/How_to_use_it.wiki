@@ -85,4 +85,6 @@ For each mote, according to its action you should add the required ADC or DAC co
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
 
+In the final step we need to add a model of our plant which can be modeled in a Discrete State-Space block to our simulation (out of the Cooja platform.) in this step we will have different number of input and out put from our coojaplatform block, which has been created by the ADC-connector or DAC-connector components from the previous step. 
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >

@@ -80,11 +80,12 @@ In the next step, the necessary motes should be added inside the Cooja platform 
 Finally you should add all the necessary mote to the CoojaPlatform. In fact all the motes which are need to be in contact with the plant such as sensors or actuators or motes which are doing the serial communications should be added to the Cooja platform.After adding each mote to the platform it is necessary to double click on them an set their mote-id exactly the same as the id of their mirror motes in the Cooja. (Each mote in Simulink can only communicate with the mote with the same id in Cooja.)
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
-
+   === Adding ADC/DAC connectors ===
 For each mote, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to act as a sensor which shouid sense some data on the ADC0 pin, then you have to connect the ADC-Connector component to ADC0 input of that mote, or you want to receive some actuation data on the DAC0, you need to add the DAC connector component on the DAC0 output of your mote. these components and their and their location has been shown in the following picture.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
 
+   === Adding the plant model ===
 In the final step we need to add a model of our plant which can be modeled in a Discrete State-Space block to our simulation (out of the Cooja platform.) in this step we will have different number of input and out put from our Cooja platform block, which has been created by the ADC-connector or DAC-connector components from the previous step. Now in this step the the outputs from the CoojaPlatform should be used as the input for our Plant model and the output of the plant model should be used as the input for the Cooja platform. following picture shows a simple environment and the relation between the Cooja platform and the plant model.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >

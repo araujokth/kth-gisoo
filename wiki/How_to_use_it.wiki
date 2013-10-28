@@ -63,7 +63,11 @@ In the result of previous step the Simulink Connector plug-in for the selected m
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
 
 == Simulink preparation ==
+During the installation section Gisoo library should already be added to the Simulink (you can see the instruction here????????????????). Then you have access to all the componenet which you need to be able to run your simulation in GISOO. You can see the components of the library in the following picture.
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
+=== Adding Cooja platform ===
+For the first step to create the simulation evironment in Cooja you need to add "Cooja Platform" block to your simulation environment. This block is place that simulate the Cooja in the Simulink. It will contain all the necessary motes and also handle the syncronization and communication between Simulink and Cooja. (More details will be explained in the next steps). next picture shows the "Cooja platform" block.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >
 

@@ -66,15 +66,15 @@ In the result of previous step the Simulink Connector plug-in for the selected m
 ---------------------------------------------------------
 
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/GISOOLib.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
 
 
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/LinkDisable.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/LinkDisable.png" >
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/AddingMote.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
 
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/ADC-DAC-Connectors.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.png" >
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/AddingPlant.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >

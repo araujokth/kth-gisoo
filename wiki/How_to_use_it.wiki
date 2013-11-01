@@ -125,18 +125,18 @@ In order to create such a system in GISOO we have to:
   * Create a proper CoojaPlatform in Simulink included all the motes that should have communication with the model of plant. 
   * Finally, we have to make a model of the plant in Simulink and connect it to the CoojPlatform.
 
-In the first step as yo can see in the following picture we have to create a simulation included for motes. According to the code of the mote that could download it in the last section, each mote should have its special id:
+In the first step as you can see in the following picture we have to create a simulation with four motes. According to the code of the motes that could download it in the next section, each mote should have its special id:
   * Sensor: 1
   * Relay: 2
   * Controller: 3
   * Actuator: 4
-To create motes with these ids, the order of mote creation should be the same as motes' ids.
+To create motes with these ids, the order of mote creation should be the same as motes' id.
 
 After adding these motes, since sensor should sense the water levels from plant and also actuator should be able to actuate the motors which is also in plant, both of them should be connected to the Simulink. So in it is needed to activate the "SimulinkConnector" plug-in for both of these motes. 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
 
-In the next step we we need to create a Simulink model, add a CoojaPlatform block to that and add to Sky-Mote block from Gisoo-library inside the CoojaPlatfor which are the mirror motes for Sensor and Actuator in the Cooja. So it is needed to allocate them a same id as their mirrors have in Cooja. This step has shown in the next figure.
+In the next step we need to create a Simulink model, add a CoojaPlatform block to that and add to Sky-Mote block from Gisoo-library inside the CoojaPlatfor which are the mirror motes for Sensor and Actuator in the Cooja. So it is needed to allocate them a same id as their mirrors have in Cooja. This step has shown in the next figure.
  
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_CoojaPlatform2.png" >
@@ -145,7 +145,6 @@ In order to create a model of the plant we can use the "Discrete State-Space(Pla
 
 The required MATLAB script for this experiment can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/initparameters.m here].
 
-In this scenarion since we have two water???????????????????????
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >
 

@@ -99,6 +99,7 @@ Now that both side of the simulation environment(Cooja and Simulink) has been co
 
 = Simple Scenario =
 
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
 

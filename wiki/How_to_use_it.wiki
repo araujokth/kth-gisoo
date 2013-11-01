@@ -119,6 +119,10 @@ In order to create such a system in GISOO we have to:
   * Create a proper CoojaPlatform in Simulink included all the motes that should have communication with the model of plant. 
   * Finally, we have to make a model of the plant in Simulink and connect it to the CoojPlatform.
 
+
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
+
 In the first step as yo can see in the following picture we have to create a simulation included for motes. According to the code of the mote that could download it in the last section, each mote should have its special id:
   * Sensor: 1
   * Relay: 2
@@ -127,8 +131,6 @@ In the first step as yo can see in the following picture we have to create a sim
 To create motes with these ids, the order of mote creation should be the same as motes' ids.
 
 After adding these motes, since sensor should sense the water levels from plant and also actuator should be able to actuate the motors which is also in plant, both of them should be connected to the Simulink. So in it is needed to activate the "SimulinkConnector" plug-in for both of these motes. 
-
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
 

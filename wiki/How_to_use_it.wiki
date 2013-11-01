@@ -141,6 +141,10 @@ In the next step we we need to create a Simulink model, add a CoojaPlatform bloc
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_CoojaPlatform2.png" >
 
+In order to create a model of the plant we can use the "Discrete State-Space(Plant)". For this aim we can write a MATLAB script and add it to the "initFcn" of callbacks in the Modelproperties.
+
+The required MATLAB script for this experiment can be downloaded from here.
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterLevels.png" >

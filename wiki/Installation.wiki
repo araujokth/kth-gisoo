@@ -18,7 +18,7 @@ sudo apt-get install ant
 
 Finally you have to download [http://www.contiki-os.org/ Continki] folder from [http://sourceforge.net/projects/contiki/files/Contiki/ here] and put it somewhere in your machine.
  == Cooja installation for Windows ==
-The installation procedure for Cooja on Windows can be divided to five steps:
+The installation procedure for Cooja on Windows can be divided into five steps:
   #Installing Java Runtime Environment (JRE) and JDK.
   #Installing Ant.
   #Installing Cygwin and path environmental configuration.
@@ -33,7 +33,7 @@ As the [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooj
 The build tool [http://ant.apache.org/ Ant], which is a java library and command-line tool, is needed for running [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja].[http://ant.apache.org/ Apache Ant] can be used for this aim and can be downloaded from this [http://code.google.com/p/winant/ link].
 
  === Installing Cygwin and path environmental configuration ===
-[http://www.cygwin.com/ Cygwin] is a Linux like environment for Windows users and contains DLL which acts as Linux API layer. This tool is recommended for running Cooja on Windows and can be downloaded from [http://www.cygwin.com/ here].
+[http://www.cygwin.com/ Cygwin] is a Linux like environment for Windows users and contains DLL which acts as Linux API layer. This tool is needed for running Cooja on Windows and can be downloaded from [http://www.cygwin.com/ here].
 By using the setup.exe, [http://www.cygwin.com/ Cygwin] installation will be started. The recommended path for Cygwin is C:\cygwin. In the step of selecting packages, although it is better to install all packages which takes, most of the packages can be left as “Default”. It is only required to change the installation status of one package named “Devel” to “install”, since it will not be installed by default.
 After installation, the [http://www.cygwin.com/ Cygwin] binaries path (for example c:\cygwin\bin) should be added to the PATH environmental variable which can be done by running the [http://www.cygwin.com/ Cygwin] and using the following command:
 
@@ -61,8 +61,7 @@ As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to
 **> ant run
 }}}
 
-After these steps inorder to verify the cooja installation we will create a Hello World simulation by the following steps:
-(This section is a summary of the same section in the second reference with some few changes)
+After these steps inorder to verify the cooja installation you can create a Hello World simulation by the following steps:
   * Open //File > New simulation//, and click //Create//
   * Open //Mote Types > Create mote type > Sky Mote Type//
   * Enter a suitable description: "My first hello world mote type"
@@ -74,7 +73,7 @@ After these steps inorder to verify the cooja installation we will create a Hell
 
 
 == Adding GISOO plug-in in Cooja ==
-After verifying the Cooja installation for the last step we should add the "Simulink Connector" plug-in which can be downloaded from [?????????????????] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
+After verifying the Cooja installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [?????????????????] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
 
 {{{/Contiki2.*/tools/cooa/apps}}}
 

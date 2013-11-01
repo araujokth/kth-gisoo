@@ -100,13 +100,13 @@ Now that both side of the simulation environment(Cooja and Simulink) has been co
 = Simple Scenario =
 
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/helloworld/SimpleTanks_Cooja.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/helloworld/SimpleTanks_CoojaPlatform2.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_CoojaPlatform2.png" >
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/helloworld/SimpleTanks_Simulink.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/helloworld/helloworld/WaterLevels.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/helloworld/WaterLevels.png" >
 
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/helloworld/ActuationVslues.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/ActuationVslues.png" >

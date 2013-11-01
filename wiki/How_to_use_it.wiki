@@ -145,9 +145,11 @@ In order to create a model of the plant we can use the "Discrete State-Space(Pla
 
 The required MATLAB script for this experiment can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/initparameters.m here].
 
-
+In this scenarion since we have two water???????????????????????
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >
+
+Finally after these steps the simulation environment is ready and you can run the simulation by running the Simulink first. Although you can save any kind of data from Simulink or Cooja for further analyzes, you can also monitor the changes in different values during the simulations. The next two figures show the changes in the water levels and actuation values during the experiments.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterLevels.png" >
 

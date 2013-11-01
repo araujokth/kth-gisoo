@@ -73,7 +73,7 @@ After these steps inorder to verify the cooja installation you can create a Hell
 
 
 == Adding GISOO plug-in in Cooja ==
-After verifying the Cooja installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [[https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
+After verifying the Cooja installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
 
 {{{/Contiki2.*/tools/cooa/apps}}}
 

@@ -110,11 +110,13 @@ sensors from the tank process, and collects and transmits this information to th
 
   * Controller Node: A T-mote sky is programmed with the controller algorithm. This node receives measurements from the Sensor Node, and
 transmits an appropriate control action to the Actuator Node.
+
   * Actuator Node: Another T-mote sky situated on the UPM is connected
 to the actuator of the tank process. This node receives the control signal from the controller and applies this voltage to the pump in the tank setup.
+
   * Relay Node: A T-mote sky is programmed to relay messages between
 the Sensor Node and the Controller Node. This introduces multi-hop
-communications in the network to make the situation more realistic,
+communications in the network to make the situation more realistic.
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
 

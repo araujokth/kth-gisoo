@@ -10,12 +10,12 @@ In this section you can find all the required details for each step including se
  = Cooja preparation =
 For preparing the Cooja, we have to execute it and create a new simulation including our required motes. Finally we must connect the sensors, actuators and all of the motes which they need serial communication to the same motes in our Simulink model. These steps has been explained in below:
   == Cooja Execution  ==
-For executing the Cooja first we should open a shell window of Cygwin and change the directory to the  Cooja directory. In this sample, the Cygwin has been located in the C:\\cygwin\  and contiki folder which contains the Cooja is located in the C:\\contiki-2.6\ . You can see the needed commands for changing the directories in the picture. Finally in the cooja folder you should use the “ant run” command to execute it. 
+For executing the Cooja first we should open a shell window of Cygwin and change the directory to the  Cooja directory. In this sample, the Cygwin has been located in the C:\\cygwin\  and contiki folder which contains the Cooja, is located in the C:\\contiki-2.6\ . You can see the needed commands for changing the directories in the picture. Finally in the Cooja's folder you should use the “ant run” command to execute it. 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExecution.png" height="282px" width="837px" >
 
   == Create a new simulation ==
-Excuting the cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
+Excuting the Cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png" >
 
@@ -34,9 +34,9 @@ Inorder to add a new mote to the simulation you can use the Motes menu and follo
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreation.png" >
 
 In the opened window you shoul follow these steps:
-  #Select a name for you mote.
-  #Use the browse button to find the main.exe of the application that you want to load it in your mote. (In TinyOS when you compile your nesC application for instant by using the "make telosb", it will automatically create a build folder for that application which contains some files including the "main.exe". This file will be used in Cooja as a mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands.)  
-  #Create the mote.
+  # Select a name for you mote.
+  # Use the browse button to find the main.exe of the application that you want to load it in your mote. (In TinyOS when you compile your nesC application for instance by using the "make telosb", it will automatically create a build folder for that application which contains some files including the "main.exe". This file will be used in Cooja as a mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands.)  
+  # Create the mote.
 These steps has been shown in the following picture:
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps2.png" >

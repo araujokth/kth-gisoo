@@ -96,3 +96,17 @@ After preparing the simulation environment for the very last configuration, it i
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/Configuration.png" >
 
 Now that both side of the simulation environment(Cooja and Simulink) has been configured, in order to run the simulation, we should first star the simulation in Simulink and the start the Cooja simulation. In this step first Simulink will start its simulation for very first milliseconds and then it will Waite until it receive a message from Cooja. The only important point in this action is that if Simulink cannot recive the message from Cooja in less than few seconds it will consider it as a problem and will go out from the simulation execution loop, so it is necessary to run the Cooja in few second after Simulink.
+
+= Simple Scenario =
+
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/SimpleTanks_Cooja.png" >
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/SimpleTanks_CoojaPlatform2.png" >
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/SimpleTanks_Simulink.png" >
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/WaterLevels.png" >
+
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ActuationVslues.png" >

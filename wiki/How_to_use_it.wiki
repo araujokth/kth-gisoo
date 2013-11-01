@@ -136,6 +136,9 @@ After adding these motes, since sensor should sense the water levels from plant 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
 
+In the next step we we need to create a Simulink model, add a CoojaPlatform block to that and add to Sky-Mote block from Gisoo-library inside the CoojaPlatfor which are the mirror motes for Sensor and Actuator in the Cooja. So it is needed to allocate them a same id as their mirrors have in Cooja. This step has shown in the next figure.
+ 
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_CoojaPlatform2.png" >
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >

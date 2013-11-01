@@ -112,7 +112,7 @@ The aim of this scenario is to create such a system which can stabilize the wate
 
   *Relay Node: A T-mote sky is programmed to relay messages between the Sensor Node and the Controller Node. This introduces multi-hop communications in the network to make the situation more realistic.
 
-For this sample you can download the prepared codes for these motes from here.
+For this sample you can download the prepared codes for these motes from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTankCodes.zip here].
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
 

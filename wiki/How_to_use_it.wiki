@@ -103,6 +103,17 @@ The wireless two-tank system is shown in the next figure. Water
 is pumped from a reservoir to the upper tank, from which it flows through an outlet to the lower tank. Water from the lower tank flows through a similar outlet back to the reservoir. The pump is controlled
 by an actuation signal, which is a control voltage applied to the motor. The water levels in both tanks are measured using pressure sensors in two T-mote Sky nodes. These motes contain ADCs (analogto-digital converters) and DACs (digital-to-analog converters), which are used to connect to the sensors and actuators in the physical system.
 A Sensor Node reads measurements from the pressure sensor of the lower tank, and sends it to a Relay Node. The Relay Node forwards this data packet to the Controller Node, which runs the control algorithm. It generates an appropriate control signal, and sends this to the Actuator node, which applies the control voltage to the pump.
+The aim of this scenario is to create such a system which can stabilize the water level in the lower tank on constant level (Level=5). As it has been explained for this experiment we have to program five different motes:
+ 
+  *Sensor Node: A T-mote sky situated on the UPM is connected to the
+sensors from the tank process, and collects and transmits this information to the Controller node.
+  *Controller Node: A T-mote sky is programmed with the controller algorithm. This node receives measurements from the Sensor Node, and
+transmits an appropriate control action to the Actuator Node.
+  *Actuator Node: Another T-mote sky situated on the UPM is connected
+to the actuator of the tank process. This node receives the control signal from the controller and applies this voltage to the pump in the tank setup.
+  *Relay Node: A T-mote sky is programmed to relay messages between
+the Sensor Node and the Controller Node. This introduces multi-hop
+communications in the network to make the situation more realistic,
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
 

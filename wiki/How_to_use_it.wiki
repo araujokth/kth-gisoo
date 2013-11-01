@@ -99,6 +99,11 @@ Now that both side of the simulation environment(Cooja and Simulink) has been co
 
 = Simple Scenario =
 
+The wireless two-tank system is shown in the next figure. Water
+is pumped from a reservoir to the upper tank, from which it flows through an outlet to the lower tank. Water from the lower tank flows through a similar outlet back to the reservoir. The pump is controlled
+by an actuation signal, which is a control voltage applied to the motor. The water levels in both tanks are measured using pressure sensors in two T-mote Sky nodes. These motes contain ADCs (analogto-digital converters) and DACs (digital-to-analog converters), which are used to connect to the sensors and actuators in the physical system.
+A Sensor Node reads measurements from the pressure sensor of the lower tank, and sends it to a Relay Node. The Relay Node forwards this data packet to the Controller Node, which runs the control algorithm. It generates an appropriate control signal, and sends this to the Actuator node, which applies the control voltage to the pump.
+
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >

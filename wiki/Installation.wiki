@@ -82,4 +82,4 @@ After verifying the Cooja installation, we have to add the "Simulink Connector" 
 To be able to run GISOO you need to have [http://www.mathworks.se/products/simulink/ Simulink] to be installed on your machine with [http://www.mathworks.se/products/xpctarget/?s_tid=hp_fp_list xPC Target].
  == Adding GISOO library in Simulink ==
 
-In the final step you need to download the GISOO-library folder from here[?????????????????] and add it to you Matlab path variable.
+In the final step you need to download the GISOO-library folder from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and add it to you Matlab path variable.

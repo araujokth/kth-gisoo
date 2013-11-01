@@ -155,3 +155,5 @@ Finally after these steps the simulation environment is ready and you can run th
 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/ActuationVslues.png" >
+
+You can download all of the required codes (Mote codes, plant Script, and Simulink Model) from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTanksFiles.zip here]. Then you just need to create the Cooja simulation and add the matlab folder to your Matlab path environment and run the simulation.

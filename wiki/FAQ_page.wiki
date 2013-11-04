@@ -9,13 +9,13 @@
 
 You will need to have:
 
-* A machine running either Linux or Windows
+# A machine running either Linux or Windows
 
-* [http://www.mathworks.se/products/matlab/ MATLAB], [http://www.mathworks.se/products/simulink/ Simulink] and the  [[http://www.mathworks.se/products/xpctarget/ xPC Target] Simulink toolbox
+# [http://www.mathworks.se/products/matlab/ MATLAB], [http://www.mathworks.se/products/simulink/ Simulink] and the  [[http://www.mathworks.se/products/xpctarget/ xPC Target] Simulink toolbox
 
-* COOJA installed (comes with Contiki OS)
+# COOJA installed (comes with Contiki OS)
 
-* TinyOS installed [optional] 
+# TinyOS installed (optional) 
 
 
 == What if the mote emulation in COOJA does not work as in the real motes? == 

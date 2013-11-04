@@ -1,4 +1,4 @@
-  * [Description_of_GISOO Introduction to GISOO]
+  * [Description_of_GISOO Welcome! Introduction to GISOO]
 
   * [Installation Installing GISOO]
  

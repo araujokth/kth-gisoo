@@ -1,10 +1,10 @@
 <wiki:toc />
 ----
 = Overview =
-Since GISOO is an integration of Simulink and Cooja, it is necessary to create different parts of our desired system in the following manner:
-  * Physical system (Plant) should be modelled in Simulink.
-  * Sensors, Actuator, Relays and their Wireless communication will be created in Cooja.
-  * Controller can be located in Simulink or Cooja.
+GISOO is an integration of Simulink and COOJA for performing simulation of wireless cyber-physical systems. Thus, each part of the wireless cyber-physical system can be implemented as follows:
+  * the *physical system model* is implemented in Simulink.
+  * the *wireless sensors, actuators* and *relays* (from physical layer to application layer) are emulated in COOJA 
+  * The *estimator/controller* can be implemented in either a wireless node in COOJA, or emulating its implementation in a CPU in Simulink. The implementation in Simulink allows for a faster design and evaluation since no recompilation of wireless nodes code is necessary.
 
 In this section you can find all the required details for each step including several screen shots that can help you to follow the procedure.
 

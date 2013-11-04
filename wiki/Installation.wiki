@@ -26,8 +26,6 @@ git clone https://github.com/contiki-os/contiki
 
 Now you have Contiki and COOJA in your computer.
 
-
-
  == Cooja installation for Windows ==
 The installation procedure for Cooja on Windows can be divided into five steps:
   #Installing Java Runtime Environment (JRE) and JDK.

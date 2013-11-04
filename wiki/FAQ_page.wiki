@@ -8,7 +8,7 @@
 
 == What if the mote emulation in COOJA does not work as in the real motes? == 
 
-This could be because there are some incomplete, incorrect or missing drivers in MSPsim. Debugging MSPsim is pretty straightforward if you know a bit of Java and know how to use printfs. 
+This could be because there are some incomplete, incorrect or missing drivers in MSPsim. Please let us know if this happens to you so we can be aware of it. Debugging MSPsim is pretty straightforward if you know a bit of Java and know how to use printfs. 
 
 You have to download MSPsim to your machine by doing the following:
 {{{
@@ -28,9 +28,4 @@ Copy the .jar file and place it in the following folder "YOUR_CONTIKI_FOLDER/too
 
 == What there is a driver in MSPsim that is incomplete, incorrect or missing?==
 
-If this is the case, we would really appreciate that you let us know f you are planning to use MSP430 motes (Telosb, sky, CM5000, Z1, etc.), installing MSPsim may be handy as COOJA uses it to simulate these motes. *_This is only necessary_* if you plan to develop MSP430 drivers that are missing or update the existing drivers. You can download MSPsim as follows:
-{{{
-cd ~
-cd local/src
-git clone https://github.com/mspsim/mspsim
-}}}
+Please let us know if this happens to you so we can be aware of it. If this is the case, you have to install MSPsim and either fix MSPsim, or develop your new driver. Please check "What if the mote emulation in COOJA does not work as in the real motes?" for more information on how to install and compile MSPsim.

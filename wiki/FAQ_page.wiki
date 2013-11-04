@@ -5,6 +5,7 @@
 
 = Frequently Asked Questions =
 
+----
 == What do I need in order to use GISOO? == 
 
 You will need to have:

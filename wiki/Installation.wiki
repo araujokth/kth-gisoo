@@ -1,14 +1,14 @@
 <wiki:toc />
 ----
 = GISOO's Overview =
-Since GISOO is an integration of [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja COOJA] and Simulink, you need to install COOJA and Simulink properly first, and then it is necessary to add the GISOO plug-in to both COOJA and GISOO-library to Simulink. More explanations about these steps can be found in the following steps. 
+Since GISOO is an integration of [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja COOJA] and Simulink, you need to install COOJA and Simulink properly first, and then it is necessary to add the **GISOO COOJA plug-in** and the **GISOO Simulink Library** to Simulink. More explanations about these steps can be found in the following steps. 
 
 GISOO works in both Linux and Windows machines and so, we provide installation procedures for both OSs.
 
 = COOJA =
 
 COOJA is a mote emulator which has been developed for [http://www.contiki-os.org/ Contiki OS] but also supports [http://www.tinyos.net/ TinyOS] applications. It can simulate motes using actual compiled and executable code Contiki OS or TinyOS code. 
-The following section explains the Cooja installation procedure.
+The following section explains the COOJA installation procedure.
 
 == COOJA installation for Linux ==
 
@@ -41,13 +41,13 @@ These steps are now explained in detail.
 
 === Installing Java Runtime Environment (JRE) and JDK ===
 
-As COOJA is a Java based simulator, Java Runtime Environment (JRE) is necessary. JDK (Java Development Kit) is needed for the next step (Installing [http://ant.apache.org/ Ant]). The JRE and the JDK can be both downloaded from [http://www.oracle.com/technetwork/java/javase/downloads/index.html here]
+As COOJA is a Java based simulator, Java Runtime Environment (JRE) is necessary. JDK (Java Development Kit) is needed for the next step (Installing [http://ant.apache.org/ Ant]). The JRE and the JDK can be both downloaded from [http://www.oracle.com/technetwork/java/javase/downloads/index.html here].
 
 === Installing Ant ===
-The build tool Ant, which is a java library and command-line tool, is needed for running COOJA.[http://ant.apache.org/ Apache Ant] can be used for this aim and can be downloaded from this [http://code.google.com/p/winant/ link].
+The build tool Ant, which is a java library and command-line tool, is needed for running COOJA. Ant can be used for this aim and can be downloaded from this [http://code.google.com/p/winant/ link].
 
 === Installing Cygwin and path environmental configuration ===
-This tool is needed for running Cooja on Windows and can be downloaded from [http://www.cygwin.com/ here].
+This tool is needed for running COOJA on Windows and can be downloaded from [http://www.cygwin.com/ here].
 By using the setup.exe, Cygwin installation will be started. The recommended path for Cygwin is C:\cygwin. In the step of selecting packages, it is required to change the installation status of the package named “Devel” to “install”, since it will not be installed by default. The rest of the packages you can leave them as Default. Of course, if you have some spare time, you can always install all Cygwin packages.
 
 After installation, the Cygwin binaries path should be added to the PATH environmental variable which can be done by running Cygwin and issuing the following command:
@@ -57,7 +57,8 @@ export PATH=$PATH:/bin
 }}}
 
 === Installing the MSPGCC (The GCC tool chain for MSP430) ===
-In order to run Cooja, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] (Tool chain for [http://en.wikipedia.org/wiki/TI_MSP430 MSP430]) is required. You can find the [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows download link] of [[http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] for windows in [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows here]. After extract it, you need to add the /bin and /msp430/bin to the environmental variable in cygwin by these commands:
+
+In order to run COOJA, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] (Tool chain for [http://en.wikipedia.org/wiki/TI_MSP430 MSP430]) is required. You can find the download link of MSPGCC for Windows [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows here]. After extracting it, you need to add the "/bin" and "/msp430/bin" to the environmental variable in Cygwin by issuing these commands:
 
 {{{
 export PATH=$PATH: /cygdrive/c/mspgss/bin
@@ -65,29 +66,31 @@ export PATH=$PATH: /cygdrive/c/mspgcc/msp430/bin
 }}}
 
 
-=== Downloading the latest Contiki and run the Cooja in Cygwin ===
-As the last step, the latest [http://www.contiki-os.org/ Contiki] version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to the C drive and running [http://www.cygwin.com/ Cygwin], one should change the directory to Cooja folder in the Contiki directory using the following command.
+=== Downloading the latest Contiki and run COOJA in Cygwin ===
+As the last step, the latest Contiki version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to desired folder, one is now able to run COOJA. This can be done by running Cygwin, and then navigate to 
 
 {{{
-**> cd contiki-2.x/tools/cooja
+cd contiki-2.x/tools/cooja
 }}}
-
+and issuing the command
 {{{
-**> ant run
+ant run
 }}}
 
-After these steps inorder to verify the cooja installation you can create a Hello World simulation by the following steps:
-  * Open //File > New simulation//, and click //Create//
-  * Open //Mote Types > Create mote type > Sky Mote Type//
-  * Enter a suitable description: "My first hello world mote type"
-  * Click Browse, and select the Contiki Hello World application**: hello-world.c**
-  * Compile the Contiki shared library by clicking **Compile**
+
+== Testing your installation of COOJA ==
+
+After these steps are performed, one can Verify the correct installation of COOJA by running an Hello World simulation by performing following steps:
+  * Open "File > New simulation", and click **Create**
+  * Open "Mote Types > Create mote type > **Sky Mote Type**"
+  * Enter a suitable description, e.g., "hello_world_mote"
+  * Click Browse, and select the "Contiki Hello World application **: hello-world.c**
+  * Compile the Contiki library by clicking **Compile**
   * When the compilation finishes, load the library and create the mote type by clicking "Create".
-  * Enter **10** and click **Create and Add**
+  * Enter, e.g., **10** and click **Create and Add**
   * Press **Start** (or CTRL+S) in the **Control Panel** plugin to start simulating.
 
-
-== Adding GISOO plug-in in Cooja ==
+== Adding the GISOO COOJA plug-in ==
 After verifying the Cooja installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
 
 {{{/Contiki2.*/tools/cooa/apps}}}

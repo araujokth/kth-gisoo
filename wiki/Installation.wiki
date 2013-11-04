@@ -1,23 +1,33 @@
 <wiki:toc />
 ----
 = GISOO's Overview =
-Since GISOO is an integration of Cooja and Simulink, in the first step we need to install Cooja and Simulink properly and then it is necessary to add the GISOO plug-in to the Cooja and also GISOO-library to the Simulink. More explanations about these steps can be found in the following:
+Since GISOO is an integration of Cooja and Simulink, you need to install Cooja and Simulink properly firt, and then it is necessary to add the GISOO plug-in to both Cooja and also GISOO-library to Simulink. More explanations about these steps can be found in the following steps.
 
+= COOJA =
 
-
-= Cooja =
-
-[https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja Cooja] is a [http://en.wikipedia.org/wiki/Motes mote] [http://en.wikipedia.org/wiki/Emulator emulator] which Basically has been developed for the [http://www.contiki-os.org/ Continki] but also supports [http://www.tinyos.net/ TinyOS] applications and it can stimulate motes' networks and communications.
+[https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja COOJA] is a mote emulator which has been developed for [http://www.contiki-os.org/ Contiki OS] but also supports [http://www.tinyos.net/ TinyOS] applications. It can simulate motes using actual compiled and executable code Contiki OS or TinyOS code. 
 The following section explains the Cooja installation procedure.
-== Cooja installation for Linux ==
 
-In order to be able to run Cooja on you linux system first you need to install java virtual machine (JVM) which can find the installation procedure [http://www.java.com/en/download/help/download_options.xml#linux here]. You also need to install [http://ant.apache.org/ Apache Ant]. You can find its installation details in its [http://ant.apache.org/manual/install.html web page] or you may install it by the following command:
+== COOJA installation for Linux ==
+
+In order to be able to run COOJA on your Linux machine, firstly you need to install the latest Java virtual machine (JVM). The JVM installation procedure can be found [http://www.java.com/en/download/help/download_options.xml#linux here]. You also need to install [http://ant.apache.org/ Apache Ant]. You can install it by issuing the following command:
 
 {{{
 sudo apt-get install ant
 }}}
 
-Finally you have to download [http://www.contiki-os.org/ Continki] folder from [http://sourceforge.net/projects/contiki/files/Contiki/ here] and put it somewhere in your machine.
+Finally, you can download Contiki from [https://github.com/contiki-os/contiki GIT], to a local folder in your system, issuing the following commands: 
+{{{
+cd ~
+mkdir -p local/src
+cd local/src
+git clone https://github.com/contiki-os/contiki
+}}}
+
+Now you have Contiki and COOJA in your computer.
+
+
+
  == Cooja installation for Windows ==
 The installation procedure for Cooja on Windows can be divided into five steps:
   #Installing Java Runtime Environment (JRE) and JDK.

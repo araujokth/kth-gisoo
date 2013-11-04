@@ -78,22 +78,28 @@ ant run
 }}}
 
 
-== Testing your installation of COOJA ==
+== Testing your COOJA installation ==
 
+In order to test COOJA, we recommend you to go to the Contiki page [http://www.contiki-os.org/start.html here], and follow the instructions in Step 3: **Run Contiki in simulation**. You should be able to get the same results as shown there if you were successful at installing Contiki and COOJA.
+
+<wiki:comment>
 After these steps are performed, one can Verify the correct installation of COOJA by running an Hello World simulation by performing following steps:
   * Open "File > New simulation", and click **Create**
   * Open "Mote Types > Create mote type > **Sky Mote Type**"
   * Enter a suitable description, e.g., "hello_world_mote"
-  * Click Browse, and select the "Contiki Hello World application **: hello-world.c**
+  * Click Browse, and select the Contiki "Hello World" application **: hello-world.c**
   * Compile the Contiki library by clicking **Compile**
   * When the compilation finishes, load the library and create the mote type by clicking "Create".
   * Enter, e.g., **10** and click **Create and Add**
-  * Press **Start** (or CTRL+S) in the **Control Panel** plugin to start simulating.
+  * Press **Start** (or CTRL+S) in the **Control Panel** plugin to start simulating. You now should be able to see the motes communication 
+
+</wiki:comment>
 
 == Adding the GISOO COOJA plug-in ==
-After verifying the Cooja installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
 
-{{{/Contiki2.*/tools/cooa/apps}}}
+After verifying the COOJA installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
+
+{{{/Contiki2.*/tools/cooja/apps}}}
 
  = Simulink =
 == Simulink installation ==

@@ -1,5 +1,5 @@
 <wiki:toc />
-= Overview =
+= GISOO's Overview =
 Since GISOO is an integration of Cooja and Simulink, in the first step we need to install Cooja and Simulink properly and then it is necessary to add the GISOO plug-in to the Cooja and also GISOO-library to the Simulink. More explanations about these steps can be found in the following:
 
 

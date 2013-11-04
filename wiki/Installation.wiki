@@ -1,7 +1,7 @@
 <wiki:toc />
 ----
 = GISOO's Overview =
-Since GISOO is an integration of [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja COOJA] and Simulink, you need to install COOJA and Simulink properly first, and then it is necessary to add the **GISOO COOJA plug-in** and the **GISOO Simulink Library** to Simulink. More explanations about these steps can be found in the following steps. 
+Since GISOO is an integration of [https://github.com/contiki-os/contiki/wiki/An-Introduction-to-Cooja COOJA] and Simulink, you need to install COOJA and Simulink properly first, and then it is necessary to add the *GISOO COOJA plug-in* and the *GISOO Simulink Library* to Simulink. More explanations about these steps can be found in the following steps. 
 
 GISOO works in both Linux and Windows machines and so, we provide installation procedures for both OSs.
 
@@ -80,7 +80,7 @@ ant run
 
 == Testing your COOJA installation ==
 
-In order to test COOJA, we recommend you to go to the Contiki page [http://www.contiki-os.org/start.html here], and follow the instructions in Step 3: **Run Contiki in simulation**. You should be able to get the same results as shown there if you were successful at installing Contiki and COOJA.
+In order to test COOJA, we recommend you to go to the Contiki page [http://www.contiki-os.org/start.html here], and follow the instructions in Step 3: *Run Contiki in simulation*. You should be able to get the same results as shown there if you were successful at installing Contiki and COOJA.
 
 <wiki:comment>
 After these steps are performed, one can Verify the correct installation of COOJA by running an Hello World simulation by performing following steps:
@@ -97,13 +97,19 @@ After these steps are performed, one can Verify the correct installation of COOJ
 
 == Adding the GISOO COOJA plug-in ==
 
-After verifying the COOJA installation, we have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to locate it on the following path:
+After verifying the COOJA installation, you are now ready to add GISOO to COOJA. First, you have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to place it on the following path:
 
-{{{/Contiki2.*/tools/cooja/apps}}}
+{{{
+YOUR_CONTIKI_FOLDER/tools/cooja/apps
+}}}
 
- = Simulink =
-== Simulink installation ==
-To be able to run GISOO you need to have [http://www.mathworks.se/products/simulink/ Simulink] to be installed on your machine with [http://www.mathworks.se/products/xpctarget/?s_tid=hp_fp_list xPC Target].
- == Adding GISOO library in Simulink ==
+= Simulink =
 
-In the final step you need to download the GISOO-library folder from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and add it to you Matlab path variable.
+[http://www.mathworks.se/products/simulink/ Simulink] is the most widely used tool for simulation and
+model-based control design by Mathworks. Simulink is part of MATLAB and you will have to have a valid MATLAB license to be able to use it.
+
+Note that to be able to run GISOO, you *must* Simulink installed on your machine with the *[http://www.mathworks.se/products/xpctarget/ xPC Target] toolbox*.
+
+== Adding GISOO Simulink Library to Simulink ==
+
+You need to download the GISOO Simulink Library folder from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and add it to you MATLAB path variable. This is done by opening "File/Set path" in MATLAB. 

@@ -5,4 +5,4 @@
  
   * [How_to_use_it How to use GISOO]
 
-  * [Frequently Asked Questions]
+  * [Frequently Asked Questions FAQ_page]

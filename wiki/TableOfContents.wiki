@@ -1,2 +1,2 @@
-* [Installation]
-* [How to use GISOO]
+* [Installation Installing GISOO]
+* [How_to_use_it How to use GISOO]

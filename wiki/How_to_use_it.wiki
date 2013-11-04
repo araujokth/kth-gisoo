@@ -6,6 +6,8 @@ GISOO is an integration of Simulink and COOJA for performing simulation of wirel
   * the *wireless sensors, actuators* and *relays* (from physical layer to application layer) are emulated in COOJA 
   * The *estimator/controller* can be implemented in either a wireless node in COOJA, or emulated in a CPU in Simulink. The implementation in Simulink allows for a faster design and evaluation since no recompilation of wireless nodes code is necessary.
 
+----
+
 In this section you can find all the required details for each step including several screen shots that can help you to follow the procedure.
 
 = Cooja preparation =
@@ -19,7 +21,8 @@ For executing the Cooja first we should open a shell window of Cygwin and change
 == Create a new simulation ==
 Excuting the Cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png" >
+
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png"> 
 
 In the window of new simulation creator, you can select a name for your simulation and select your desired radio medium. You can also select the random seed for your simulation which should be the same if you want to reload exactly the same simulation. The "Create new simulation" window has been shown below:
 

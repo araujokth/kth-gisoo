@@ -1,26 +1,30 @@
-What is GISOO?
-The increasing demand for wireless cyber-physical systems (CPS) requires correct design, implementation and validation of computation, communication and control methods. Traditional simulation tools, which focus on either computation, communication or control, are insufficient when the three aspects interact. Efforts to extend the traditional tools to cover multiple domains, e.g., from simulating only control aspects to simulating both control and communication, often rely on simplistic models of a small subset of possible communication solutions.
+== What is GISOO? ==
+The increasing demand for wireless cyber-physical systems (CPS) requires correct design, implementation and validation of computation, communication and control methods. Traditional simulation tools, which focus on either computation, communication or control, are insufficient when the three aspects interact. Efforts to extend the traditional tools to cover multiple domains, e.g., from simulating only control aspects to simulating both control and communication, often rely on simplistic models of a small subset of possible communication solutions. 
 
-We developed GISOO, a virtual testbed for simulation of wireless cyber-physical systems that integrates two state-of-the art simulators, Simulink and COOJA. GISOO enables users to evaluate actual embedded code for the wireless nodes in realistic cyber-physical experiments, observing the effects of both the control and communication components. In this way, a wide range of communication solutions can be evaluated without developing abstract models of their control-relevant aspects, and changes made to the networking code in simulations is guaranteed to be translated into production code without errors.
+We developed GISOO, a virtual testbed for simulation of wireless cyber-physical systems that integrates two state-of-the art simulators, [http://www.mathworks.se/products/simulink/ Simulink] and [http://www.contiki-os.org/start.html COOJA]. GISOO enables users to evaluate actual embedded code for the wireless nodes in realistic cyber-physical experiments, observing the effects of both the control and communication components. In this way, a wide range of communication solutions can be evaluated without developing abstract models of their control-relevant aspects, and changes made to the networking code in simulations is guaranteed to be translated into production code without errors.
 
-What can I find here?
+== What can I find here? ==
+
 In this google-code project you can find GISOO's code, examples and all related documentation. We will be adding many example codes so that you can develop your own wireless CPS experiments!
 
-GISOO's examples are currently developed for telosb, tmote sky or CM5000 nodes, which all have an MSP430 uC and a CC2420 radio. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: TinyOS and Contiki OS.
+GISOO's examples are currently developed for telosb, tmote sky or CM5000 nodes, which all have an [http://www.ti.com/lsds/ti/microcontroller/16-bit_msp430/overview.page?DCMP=MCU_other&HQS=msp430 MSP430 uC] and a [http://www.ti.com/product/cc2420 CC2420 radio]. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: [http://www.tinyos.net/ TinyOS] and [http://www.contiki-os.org/start.html Contiki OS].
 
-Help and suggestions?
-You are welcome to contact Behdad Aminian (behdad@kth.se) and José Araújo (araujo@kth.se) if you have any doubts, need help with GISOO or you have any suggestions to improve it!
+== Help and suggestions? ==
 
-News
-We will present GISOO at IEEE IECON 2013 on a special session on Industrial Wireless Communication and its Applications, organized by M. Gidlund and J. Åkerberg . The paper is available here!
+You are welcome to contact *Behdad Aminian* (behdad@kth.se) and *José Araújo* (araujo@kth.se) if you have any doubts, need help with GISOO or you have any suggestions to improve it!
 
-The Team
-Behdad Aminian - Research engineer - behdad@kth.se
+== News ==
 
-José Araújo - PhD student - araujo@kth.se
+We will present GISOO at [http://www.iecon2013.org/ IEEE IECON 2013] on a special session on  Industrial Wireless Communication and its Applications, organized by M. Gidlund and J. Åkerberg . The paper is available [http://people.kth.se/~araujo/publications/GISOO_IECON13.pdf here!]
 
-Mikael Johansson - Professor - mikaelj@kth.se
+== The Team == 
 
-Karl Henrik Johansson - Professor - kallej@kth.se
+* Behdad Aminian - Research engineer - behdad@kth.se
+
+* [http://people.kth.se/~araujo/ José Araújo] - PhD student - araujo@kth.se 
+
+* [http://www.s3.kth.se/~mikaelj/ Mikael Johansson] - Professor - mikaelj@kth.se
+
+* [http://www.s3.kth.se/~kallej/ Karl Henrik Johansson] - Professor - kallej@kth.se
 
 Department of Automatic Control - KTH The Royal Institute of Technology, Stockholm, Sweden

@@ -18,7 +18,7 @@ You will need to have:
 
   * TinyOS installed (optional) 
 
-Want to start using it? Follow the installation instructions on the "Installing GISOO" link!
+Want to install GISOO? Follow the installation instructions on the "Installing GISOO" link!
 
 == What if the mote emulation in COOJA does not work as in the real motes? == 
 

@@ -4,3 +4,5 @@
   * [Installation Installing GISOO]
  
   * [How_to_use_it How to use GISOO]
+
+  * [Frequently Asked Questions]

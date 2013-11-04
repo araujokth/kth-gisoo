@@ -39,6 +39,6 @@ ant jar
 this command will compile the new code and create a .jar file.
 Copy the .jar file and place it in the following folder "YOUR_CONTIKI_FOLDER/tools/mspsim". Then just run COOJA again to test your new driver!
 
-== What there is a driver in MSPsim that is incomplete, incorrect or missing?==
+== What if there is a driver in MSPsim that is incomplete, incorrect or missing?==
 
 Please let us know if this happens to you so we can be aware of it. If this is the case, you have to install MSPsim and either fix MSPsim, or develop your new driver. Please check "What if the mote emulation in COOJA does not work as in the real motes?" for more information on how to install and compile MSPsim.

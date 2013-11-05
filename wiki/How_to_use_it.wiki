@@ -6,9 +6,16 @@ GISOO is an integration of Simulink and COOJA for performing simulation of wirel
   * the *wireless sensors, actuators* and *relays* (from physical layer to application layer) are emulated in COOJA 
   * The *estimator/controller* can be implemented in either a wireless node in COOJA, or emulated in a CPU in Simulink. The implementation in Simulink allows for a faster design and evaluation since no recompilation of wireless nodes code is necessary.
 
+One of our main goals is that the code you use in your simulations, will be the *exact same code* you upload to the real wireless nodes for performing a real experiment. Thus, GISOO provides the following interfaces:
+
+  * *Analog-to-digital converter (ADC)*, for interfacing wireless nodes with real sensors
+  * *Digital-to-analog converter (DAC)*, for interfacing wireless nodes with real actuators
+  * *Serial interface*, for allowing communication to sensor, actuators and processing units (CPUs, embedded computers, microcontrollers, etc). This interface is particularly interesting as it allows you to develop estimators and controllers in Simulink for fast design and evaluation, without the need to recompile embedded code.
+
+In this section you can find all the information on how to use GISOO and a simple example which you can build your own application from. 
+
 ----
 
-In this section you can find all the required details for each step including several screen shots that can help you to follow the procedure.
 
 = Cooja preparation =
 For preparing the Cooja, we have to execute it and create a new simulation including our required motes. Finally we must connect the sensors, actuators and all of the motes which they need serial communication to the same motes in our Simulink model. These steps has been explained in below:

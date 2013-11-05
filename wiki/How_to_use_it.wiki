@@ -19,7 +19,7 @@ In this section you can find all the information on how to use GISOO and a simpl
 
 = Cooja setup =
 
-In order to use GISOO, we must start COOJA, create a new simulation and include our required motes. Particularly, we must connect the sensors, actuators and all of the wireless nodes which have a direct interface to Simulink. For example, a sensor is likely to take ADC measurements from the physical system (Simulink model), and an actuator is likely to send a control signal to the actuator which affects the physical system. These steps are explained in the following.
+In order to use GISOO, we must start COOJA, create a new simulation and include our required motes. Particularly, we must connect the sensors, actuators and all of the wireless nodes which have a direct interface to Simulink. For example, a sensor is likely to take ADC measurements from the physical system (Simulink model), and an actuator is likely to send a control signal (either DAC or serial communication) to the actuator which affects the physical system. We explain these steps below.
 
 == Cooja Execution  ==
 For executing the Cooja first we should open a shell window of Cygwin and change the directory to the  Cooja directory. In this sample, the Cygwin has been located in the C:\\cygwin\  and contiki folder which contains the Cooja, is located in the C:\\contiki-2.6\ . You can see the needed commands for changing the directories in the picture. Finally in the Cooja's folder you should use the “ant run” command to execute it. 

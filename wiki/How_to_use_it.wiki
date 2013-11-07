@@ -114,24 +114,30 @@ As seen in the previous image, GISOO COOJA plug-in is created for the selected m
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
 <p>
  
-
 = Simulink preparation =
-During the installation section "Gisoo library" should already be added to the Simulink (you can see the instruction here????????????????). Then you have access to all the component which you need to be able to run your simulation in GISOO. You can see the components of the library in the following picture.
+
+To follow these steps it is assumed that the GISOO Simulink Library was added already to MATLAB. Now you have access to all the component which you need to be able to run your simulation with GISOO. 
+
+Start by creating a new model from MATLAB by going to "File>New>Model", in order to open Simulink. Now in your model window, go to "View>Library Browser" and you should be able to see the GISOO Library and shown in the following image:
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
 <p>  
 
-== Adding Cooja platform ==
-For the first step to create the simulation environment in Cooja you need to add "Cooja Platform" block to your simulation environment. This block is the place that simulate Cooja inside the Simulink. It will contain all the necessary motes and also handle the synchronization and communication between Simulink and Cooja. (More details will be explained in the next steps). next picture shows the "Cooja platform" block.
+== Adding GISOO Simulation Environment (GSE) ==
+
+The first step in order to perform the simulation is to add the "GISOO Simulation Environment" (GSE) block to your simulation environment. This block is the place that allows for GISOO simulations to take place and where the interface between Simulink and COOJA takes place. It will contain all the necessary virtual motes and also handle the synchronization and communication between Simulink and COOJA. The next image shows the GSE block.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >
 <p>
   
 
-== Adding Mote to the Cooja platform ==
-In the next step, the necessary motes should be added inside the Cooja platform block. THis can be done by double click on the CoojaPlatform block and drag a "SkyMote" block from the "Gisoo-library" to the "CoojaPlatform" block. On the first attempt to add a mote inside the Cooja platform you may face a message which ask you to disable the link to the library and it should be done by clicking on the "disable" part in the pop-up message, as it has shown in the following picture. (If you did not face this message you can just add your mote inside the "Cooja platform" with out any concern)
+== Adding a mote to the GSE ==
+
+In the next step, the necessary motes are be added inside the GSE block. This can be performed by double clicking on the GSE block and drag a "SkyMote" block from the "GISOO Library" to the GSE block. 
+
+Note that on the first attempt to add a mote inside the GSE you may face a message which ask you to disable the link to the library and it should be done by clicking on the "disable" part in the pop-up message, as it has shown in the following picture. If you did not see this message you can just add your mote inside the GSE without any concern.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/LinkDisable.png" >

@@ -12,7 +12,7 @@ One of our main goals is that the code you use in your simulations, will be the 
   * *Digital-to-analog converter (DAC)*, for interfacing wireless nodes with real actuators
   * *Serial interface*, for allowing communication to sensor, actuators and processing units (CPUs, embedded computers, microcontrollers, etc).
 
-In this section you can find all the information on how to use GISOO and a simple example which you can help you build your own applications from. 
+In this section you can find all the information on how to use GISOO and a simple example which can help you build your own applications from. 
 
 ----
 

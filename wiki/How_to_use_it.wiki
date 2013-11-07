@@ -23,7 +23,7 @@ In order to use GISOO, we must start COOJA, create a new simulation and include 
 == Cooja Execution  ==
 _*Note:* We now present the execution details in a Windows system, however, we note that the execution for a Linux system is identical. The only difference comes from the fact that Cygwin is used in the Windows system, while the terminal is used in the Linux system_ 
 
-For executing COOJA, we have to open a shell window of Cygwin and change the directory to the COOJA directory. In this sample, the Cygwin has been located in the C:\\cygwin\  and contiki folder which contains the Cooja, is located in the C:\\contiki-2.6\ . You can see the needed commands for changing the directories in the picture. Finally in the Cooja's folder you should use the “ant run” command to execute it. 
+For executing COOJA, we open a shell window of Cygwin and navigate to COOJA's directory. In this example, Cygwin has been installed at C:\cygwin  and the Contiki folder which contains COOJA, is located in the C:\contiki-2.6. This step is shown in the screenshot below. Finally in the Cooja's folder you should use the “ant run” command to execute it. 
 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExecution.png" height="282px" width="837px" >
 

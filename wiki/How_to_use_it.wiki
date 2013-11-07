@@ -89,9 +89,9 @@ Finally, after the previous procedure, the virtual mote will be created.
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CreatedMote2.png" >
 <p>
 
-== Activating the GISOO Plug-in ==
+== Activating the GISOO COOJA Plug-in ==
 
-In order to connect motes in COOJA to Simulink you need to use the GISOO plug-in which you have previously downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and added to your COOJA folder (this has been explained in the installation procedure) 
+In order to connect motes in COOJA to Simulink you need to use the GISOO COOJA plug-in which you have previously downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and added to your COOJA folder (this has been explained in the installation procedure) 
 
 In order to use this plug-in, when running COOJA for the first time, you need to select and activate the plug-in in the COOJA extension list which you can reach and select in "Setting-> COOJA extensions", as depicted in the next image:
 
@@ -99,15 +99,15 @@ In order to use this plug-in, when running COOJA for the first time, you need to
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExtensionsSetting.png" >
 <p>
 
-== Executing the SimulinkConnector plug-in ==
-Now for each mote that you want to connect it to its mirror mote in Simulink, you have to write click on that mote and select "Mote tools Sky1 -> SimmulinkConnector". You can see the procedure in the picture below:
+== Executing the GISOO COOJA plug-in ==
+
+In each wireless node which interfaces with Simulink (reads data from it, or writes data to it), you have to right click on that mote and select "Mote tools Sky -> GISOO COOJA plug-in". *This plugin allows the communication between the mote in COOJA and the virtual mote in Simulink.* You can see the procedure in the next image:
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorSelection.png" >
 <p>
 
-
-In the result of previous step the Simulink Connector plug-in for the selected mote will be created. This plug in will connect this mote to the mirror mote (mote with the same mote-id) in Simulink.
+As seen in the previous image, GISOO COOJA plug-in is created for the selected mote. The same node-id is created for both the mote in COOJA and the virtual mote in Simulink.
 
 
 <p align="center">  

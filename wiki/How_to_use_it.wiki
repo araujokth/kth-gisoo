@@ -114,7 +114,7 @@ As seen in the previous image, GISOO COOJA plug-in is created for the selected m
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
 <p>
  
-= Simulink preparation =
+= Simulink setup =
 
 To follow these steps it is assumed that the GISOO Simulink Library was added already to MATLAB. Now you have access to all the component which you need to be able to run your simulation with GISOO. 
 

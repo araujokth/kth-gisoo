@@ -23,7 +23,7 @@ First, you should compile the code which you want to upload to your wireless nod
 
 In TinyOS you compile your application in a wireless node by executing for eaxmple: "make telosb" for a telosb/tmote sky/cm5000 device. When you do such operation, a "build" folder is automatically created in the application folder, which contains some files including the "main.exe". This file will be used in COOJA as the mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands. 
 
-Note also that you can load several distinct wireless nodes with different applications in the same COOJA simulation.
+Note that you can load several distinct wireless nodes with different applications in the same COOJA simulation.
 
 = COOJA setup =
 
@@ -79,15 +79,21 @@ After selecting the "main.exe" and creating the mote, the next window will ask y
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MotePositioning.png" >
 <p>
 
-Finally after the prevouse procedure the virtual mote will be created. The number which has been appeared on each mote is its mote-id and it has been selected automatically (in-order) which is not configurable by user. This is an important for the applications that each mote should have an especific id. For these type of scenarios you should create motes in an order that each mote receive your desired id.
+You can repeat this procedure for all nodes and all different applications you would like to simulate.
+
+Finally, after the previous procedure, the virtual mote will be created. 
+
+*Note that the number which has been appeared on each mote is its mote-id and it has been selected automatically (in-order) which is not configurable by the user*. This is important to remember since in many applications each nodes operation will depend on their node-id. *For these type of scenarios you should create motes in an order that each mote receive your desired id.*
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CreatedMote2.png" >
 <p>
 
-== Activating the SimulikConnector plug-in ==
-In order to connect motes in Cooja to the Simulink you need to use the Simulink Connector plug-in which you previously download it from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and added it to your Cooja folder (It has been explained in the installation procedure) But in order to use this plug-in, in the first time you need to select and activate it in the Cooja extension list which you can reach and select it in "Setting-> Cooja extensions".
+== Activating the GISOO Plug-in ==
 
+In order to connect motes in COOJA to Simulink you need to use the GISOO plug-in which you have previously downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and added to your COOJA folder (this has been explained in the installation procedure) 
+
+In order to use this plug-in, when running COOJA for the first time, you need to select and activate the plug-in in the COOJA extension list which you can reach and select in "Setting-> COOJA extensions", as depicted in the next image:
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExtensionsSetting.png" >

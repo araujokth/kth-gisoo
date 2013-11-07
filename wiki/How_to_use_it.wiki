@@ -124,7 +124,7 @@ Start by creating a new model from MATLAB by going to "File>New>Model", in order
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
 <p>  
 
-== Adding GISOO Simulation Environment (GSE) ==
+== Adding the GISOO Simulation Environment (GSE) ==
 
 The first step in order to perform the simulation is to add the "GISOO Simulation Environment" (GSE) block to your simulation environment. This block is the place that allows for GISOO simulations to take place and where the interface between Simulink and COOJA takes place. It will contain all the necessary virtual motes and also handle the synchronization and communication between Simulink and COOJA. The next image shows the GSE block.
 
@@ -153,14 +153,21 @@ After adding all the virtual nodes to this environment, it is necessary to set t
 
 == Adding ADC/DAC connectors ==
 
-For each mote, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to act as a sensor which should sense some data on the ADC0 pin, then you have to connect the ADC-Connector component to ADC0 input of that mote, or if you want to receive some actuation data on the DAC0, you need to add the DAC connector component on the DAC0 output of your mote. these components and their location has been shown in the following picture.
+For each node, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to operate as a sensor which should measure data on the ADC0 pin (input to the node), then you have to connect the ADC-Connector component to ADC0 input of that mote, or if you want to receive some actuation data on the DAC0 (output of the node), you need to add the DAC connector component on the DAC0 output of your mote. These components and their location is shown in the following picture.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
 <p>
 
-== Adding the plant model ==
-In the final step we need to add a model of our plant which can be modeled in a Discrete State-Space block in our simulation (out of the Cooja platform.) in this step we will have different number of input and out put from our Cooja platform block, which has been created by the ADC-connector or DAC-connector components from the previous step. Now in this step the the outputs from the CoojaPlatform should be used as the input for our Plant model and the output of the plant model should be used as the input for the Cooja platform. following picture shows a simple environment and the relation between the Cooja platform and the plant model.
+== Adding Serial Communication connectors ==
+
+*TODO*
+
+== Adding the plant/physical system model  ==
+
+In the final step, we need to add a physical model of our plant which can be modeled in a Discrete State-Space block outside the GSE. We now have different number of input and output from our GSE block, which has been created by the ADC-connector or DAC-connector components from the previous step. 
+
+Now in this step the outputs from the GSE should be used as the input for our plant model and the output of the plant model should be used as the input for the COOJA platform. The following picture shows a simple environment and the interaction between the GSE and the plant model.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >
@@ -168,17 +175,20 @@ In the final step we need to add a model of our plant which can be modeled in a 
  
 
 = Configuration and running the simulation =
-After preparing the simulation environment for the very last configuration, it is needed to set the Simulink simulation to act in a fix-step instead of variable-step. You can apply this configuration in the "configuration parameter" window which is accessible from "Simulation->Model Configuration Parameter" and finally change the type in the solver option to the fix-step. Now can also select the size of the sample time which we configured it to "0.001" to have an accuracy of one millisecond.
+
+After preparing the simulation environment for the very last configuration, you have to setup the Simulink simulation to act in a fix-step instead of variable-step. You can apply this configuration in the "Configuration parameter" window which is accessible from "Simulation->Model Configuration Parameter" and finally change the type in the solver option to the fix-step. Now you can select the size of the sample time which we usually configure to "0.001" s to have an accuracy of one millisecond (1 ms).
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/Configuration.png" >
 <p>
 
-Now that both sides of the simulation environment(Cooja and Simulink) has been configured, in order to run the simulation, we should first star the simulation in Simulink and then start the Cooja simulation. In this step first Simulink will start its simulation for very first milliseconds and then it will Waite until it receive a message from Cooja. The only important point in this action is that if Simulink cannot recive the message from Cooja in less than few seconds it will consider it as a problem and will go out from the simulation execution loop, so it is necessary to run the Cooja in few second after Simulink.
+Now that both sides of the simulation environment(COOJA and Simulink) have been configured we are ready to run the simulation. We have to *first start the simulation in Simulink and then start the COOJA simulation*. In this step first Simulink will start its simulation for very first milliseconds and then it will *wait* until it receives any incoming data from COOJA. The only important point in this action is that if Simulink cannot receive the message from COOJA in less than few seconds it will consider it as a problem and will go out from the simulation execution loop, so it is necessary to run the COOJA in few second after Simulink. 
 
 = Simple Scenario =
 
-The wireless two-tank system is shown in the next figure. Water
+We now present an example of a closed-loop control experiment in GISOO.
+
+The wireless double-tank system is shown in the next figure. Water
 is pumped from a reservoir to the upper tank, from which it flows through an outlet to the lower tank. Water from the lower tank flows through a similar outlet back to the reservoir. The pump is controlled
 by an actuation signal, which is a control voltage applied to the motor. The water levels in both tanks are measured using pressure sensors in two T-mote Sky nodes. These motes contain ADCs (analogto-digital converters) and DACs (digital-to-analog converters), which are used to connect to the sensors and actuators in the physical system.
 A Sensor Node reads measurements from the pressure sensor of the lower tank, and sends it to a Relay Node. The Relay Node forwards this data packet to the Controller Node, which runs the control algorithm. It generates an appropriate control signal, and sends this to the Actuator node, which applies the control voltage to the pump.

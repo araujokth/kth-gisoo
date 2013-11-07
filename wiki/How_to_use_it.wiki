@@ -14,14 +14,22 @@ One of our main goals is code* you upload to the real wireless nodes for perform
 
 In this section you can find all the information on how to use GISOO and a simple example which can help you build your own applications from. 
 
-*Note:* As standard in the wireless sensor network literature, we will the terms _wireless node_, _wireless mote_, or simlpy _node_ or _mote_ to mean a low-rate wireless device.
+*Note:* As standard in the wireless sensor network literature, we will the terms _wireless node_, _wireless mote_, _wireless sensor node_ or simply _node_ or _mote_ to mean a low-rate wireless device communicating using a IEEE 802.15.4 radio.
 ----
 
-= Cooja setup =
+= Compiling your wireless node code =
+
+First, you should compile the code which you want to upload to your wireless nodes. You can either use TinyOS code or Contiki code for your applications. However, we remind you that at the moment all our examples are based on TinyOS.
+
+In TinyOS you compile your application in a wireless node by executing for eaxmple: "make telosb" for a telosb/tmote sky/cm5000 device. When you do such operation, a "build" folder is automatically created in the application folder, which contains some files including the "main.exe". This file will be used in COOJA as the mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands. 
+
+Note also that you can load several distinct wireless nodes with different applications in the same COOJA simulation.
+
+= COOJA setup =
 
 In order to use GISOO, we must start COOJA, create a new simulation and include the required wireless nodes. Particularly, we must connect the sensors, actuators and all of the wireless nodes which have a direct interface to Simulink. For example, a sensor is likely to take ADC measurements from the physical system (Simulink model), and an actuator is likely to send a control signal (either DAC or serial communication) to the actuator which affects the physical system. We explain these steps below.
 
-== Cooja Execution  ==
+== COOJA Execution  ==
 _*Note:* We now present the execution details in a Windows system, however, we note that the execution for a Linux system is identical. The only difference comes from the fact that Cygwin is used in the Windows system, while the terminal is used in the Linux system_ 
 
 For executing COOJA, open a shell window of Cygwin and navigate to COOJA's directory. In this example, Cygwin has been installed at C:\cygwin  and the Contiki folder which contains COOJA, is located at C:\contiki-2.6. This step is shown in the screenshot below. Finally in the COOJA's folder you should use execute “ant run” command to run COOJA. 
@@ -50,17 +58,17 @@ After following these steps, the new simulation environment will be created whic
 
 After creating the new simulation environment you have to add all the wireless nodes to the simulation. Although COOJA supports different types of nodes and operating systems, we used the Sky Mote (MSP430-based node) and TinyOS in all of our experiments. However, one can simulate nodes using btoh Contiki OS and TinyOS at the same time in COOJA.
 
-In order to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:
+In order to add a new mote to the simulation you can use the Motes menu and navigate to "Motes>Add motes>Create new mote type>Sky mote" as shown in the following image:
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreation.png" >
 <p>
 
-In the opened window you shoul follow these steps:
-  # Select a name for you mote.
-  # Use the browse button to find the main.exe of the application that you want to load it in your mote. (In TinyOS when you compile your nesC application for instance by using the "make telosb", it will automatically create a build folder for that application which contains some files including the "main.exe". This file will be used in Cooja as a mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands.)  
-  # Create the mote.
+In the opened window you should follow these steps:
+  # Select a name for you mote
+  # Use the browse button to find the "main.exe" of the application that you want to load in your mote 
+  # Create the mote
 
-These steps has been shown in the following picture:
+These steps are shown in the following image:
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps2.png" >
 <p>

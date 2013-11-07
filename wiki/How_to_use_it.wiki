@@ -143,13 +143,16 @@ Note that on the first attempt to add a mote inside the GSE you may face a messa
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/LinkDisable.png" >
 <p>
 
-Finally you should add all the necessary mote to the CoojaPlatform. In fact all the motes which are need to be in contact with the plant such as sensors or actuators or motes which are doing the serial communications should be added to the Cooja platform.After adding each mote to the platform it is necessary to double click on them an set their mote-id exactly the same as the id of their mirror motes in the Cooja. (Each mote in Simulink can only communicate with the mote with the same id in Cooja.)
+Finally, you should add all the motes which were enabled with GISOO COOJA Plug-in in COOJA to the GSE. Thus, all nodes that need to be in contact with the plant such as wireless sensors or wireless actuators or other motes which interface with computing nodes in Simulink (e.g., through serial communications), such as a controller implemented in Simulink, should be added to the GSE. 
+
+After adding all the virtual nodes to this environment, it is necessary to set their node-id by double clicking on them. This number should be set to the the same id of their mirror motes in COOJA. As expected, GISOO only allows for a mote in Simulink to communicate with the mote in COOJA if both have the same node-id.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
 <p>
 
 == Adding ADC/DAC connectors ==
+
 For each mote, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to act as a sensor which should sense some data on the ADC0 pin, then you have to connect the ADC-Connector component to ADC0 input of that mote, or if you want to receive some actuation data on the DAC0, you need to add the DAC connector component on the DAC0 output of your mote. these components and their location has been shown in the following picture.
 
 <p align="center">  

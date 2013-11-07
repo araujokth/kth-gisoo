@@ -6,7 +6,7 @@ GISOO is an integration of Simulink and COOJA for performing simulation of wirel
   * the *wireless sensors, actuators* and *relays* (from physical layer to application layer) are emulated in COOJA 
   * the *estimator/controller* can be implemented in either a wireless node in COOJA, or emulated in a CPU in Simulink. The implementation in Simulink allows for a faster design and evaluation since no recompilation of wireless nodes code is necessary.
 
-One of our main goals is that the code you use in your simulations, will be the *exact same code* you upload to the real wireless nodes for performing a real experiment. For this to be achieved, GISOO provides the following interfaces:
+One of our main goals is code* you upload to the real wireless nodes for performing a real experiment. For this to be achieved, GISOO provides the following interfaces:
 
   * *Analog-to-digital converter (ADC)*, for interfacing wireless nodes with real sensors
   * *Digital-to-analog converter (DAC)*, for interfacing wireless nodes with real actuators
@@ -14,6 +14,7 @@ One of our main goals is that the code you use in your simulations, will be the 
 
 In this section you can find all the information on how to use GISOO and a simple example which can help you build your own applications from. 
 
+*Note:* As standard in the wireless sensor network literature, we will the terms _wireless node_, _wireless mote_, or simlpy _node_ or _mote_ to mean a low-rate wireless device.
 ----
 
 = Cooja setup =
@@ -47,7 +48,7 @@ After following these steps, the new simulation environment will be created whic
 
 == Adding motes to the simulation ==
 
-After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used Sky Mote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for [http://en.wikipedia.org/wiki/TinyOS TinyOS]).
+After creating the new simulation environment you have to add all the wireless nodes to the simulation. Although COOJA supports different types of nodes and operating systems, we used the Sky Mote (MSP430-based node) and TinyOS in all of our experiments. However, one can simulate nodes using btoh Contiki OS and TinyOS at the same time in COOJA.
 
 In order to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:
 <p align="center">  

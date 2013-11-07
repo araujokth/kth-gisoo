@@ -12,7 +12,7 @@ One of our main goals is that the code you use in your simulations, will be the 
   * *Digital-to-analog converter (DAC)*, for interfacing wireless nodes with real actuators
   * *Serial interface*, for allowing communication to sensor, actuators and processing units (CPUs, embedded computers, microcontrollers, etc).
 
-In this section you can find all the information on how to use GISOO and a simple example which you can build your own application from. 
+In this section you can find all the information on how to use GISOO and a simple example which you can help you build your own applications from. 
 
 ----
 
@@ -23,27 +23,30 @@ In order to use GISOO, we must start COOJA, create a new simulation and include 
 == Cooja Execution  ==
 _*Note:* We now present the execution details in a Windows system, however, we note that the execution for a Linux system is identical. The only difference comes from the fact that Cygwin is used in the Windows system, while the terminal is used in the Linux system_ 
 
-For executing COOJA, we open a shell window of Cygwin and navigate to COOJA's directory. In this example, Cygwin has been installed at C:\cygwin  and the Contiki folder which contains COOJA, is located in the C:\contiki-2.6. This step is shown in the screenshot below. Finally in the Cooja's folder you should use the “ant run” command to execute it. 
+For executing COOJA, open a shell window of Cygwin and navigate to COOJA's directory. In this example, Cygwin has been installed at C:\cygwin  and the Contiki folder which contains COOJA, is located at C:\contiki-2.6. This step is shown in the screenshot below. Finally in the COOJA's folder you should use execute “ant run” command to run COOJA. 
 
+<p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExecution.png" height="282px" width="837px" >
+<p>
 
 == Create a new simulation ==
-Excuting the Cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
+To start a new simulation, create a new simulation environment by going to the file menu as shown in the picture:
 
 <p align="center">      
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png"> <p>
 
-In the window of new simulation creator, you can select a name for your simulation and select your desired radio medium. You can also select the random seed for your simulation which should be the same if you want to reload exactly the same simulation. The "Create new simulation" window has been shown below:
+In the window of new simulation creation, you can select a name for your simulation and select your desired radio medium. You can also select the random seed for your simulation, which should be always the same if you want to perform exactly the same simulation every time. The "Create new simulation" window is shown below:
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulation_Start_config.png" >
 <p>
-In the result of the mentioned steps the new simulation environment will be created such as following picture:
+After following these steps, the new simulation environment will be created which will result in the following:
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaEnv.png" >
 <p>
 
 == Adding motes to the simulation ==
+
 After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used Sky Mote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for [http://en.wikipedia.org/wiki/TinyOS TinyOS]).
 
 In order to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:

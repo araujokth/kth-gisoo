@@ -29,24 +29,26 @@ For executing the Cooja first we should open a shell window of Cygwin and change
 == Create a new simulation ==
 Excuting the Cooja, we should create a new simulation environment which can be done from the file menu as has been shown in the picture:
 
-
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png"> 
+<p align="center">      
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/NewSimulation.png"> <p>
 
 In the window of new simulation creator, you can select a name for your simulation and select your desired radio medium. You can also select the random seed for your simulation which should be the same if you want to reload exactly the same simulation. The "Create new simulation" window has been shown below:
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulation_Start_config.png" >
-
+<p>
 In the result of the mentioned steps the new simulation environment will be created such as following picture:
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaEnv.png" >
-
+<p>
 
 == Adding motes to the simulation ==
 After creating the new simulation environment we have to add all the motes to the simulation. Although Cooja supports different types of motes and operating systems, we used Sky Mote and [http://en.wikipedia.org/wiki/TinyOS TinyOS] in all of our experiments and all the available codes have been developed in [http://en.wikipedia.org/wiki/NesC nesC] (for [http://en.wikipedia.org/wiki/TinyOS TinyOS]).
 
 In order to add a new mote to the simulation you can use the Motes menu and follow the "Motes->Add motes->Create new mote type->Sky mote" as it has been shown in the following picture:
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreation.png" >
+<p>
 
 In the opened window you shoul follow these steps:
   # Select a name for you mote.
@@ -54,76 +56,95 @@ In the opened window you shoul follow these steps:
   # Create the mote.
 
 These steps has been shown in the following picture:
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MoteCreationSteps2.png" >
+<p>
 
 After selecting the "main.exe" and creating the mote, the next window will ask you about the number of desired motes from that application and the location of the motes which by default will be selected randomly.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/MotePositioning.png" >
+<p>
 
 Finally after the prevouse procedure the virtual mote will be created. The number which has been appeared on each mote is its mote-id and it has been selected automatically (in-order) which is not configurable by user. This is an important for the applications that each mote should have an especific id. For these type of scenarios you should create motes in an order that each mote receive your desired id.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CreatedMote2.png" >
- 
+<p>
 
 == Activating the SimulikConnector plug-in ==
 In order to connect motes in Cooja to the Simulink you need to use the Simulink Connector plug-in which you previously download it from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and added it to your Cooja folder (It has been explained in the installation procedure) But in order to use this plug-in, in the first time you need to select and activate it in the Cooja extension list which you can reach and select it in "Setting-> Cooja extensions".
 
+
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/CoojaExtensionsSetting.png" >
-  
+<p>
 
 == Executing the SimulinkConnector plug-in ==
 Now for each mote that you want to connect it to its mirror mote in Simulink, you have to write click on that mote and select "Mote tools Sky1 -> SimmulinkConnector". You can see the procedure in the picture below:
 
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorSelection.png" >
+<p>
+
 
 In the result of previous step the Simulink Connector plug-in for the selected mote will be created. This plug in will connect this mote to the mirror mote (mote with the same mote-id) in Simulink.
 
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
 
+<p align="center">  
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/SimulinkConnectorPlug-in.png" >
+<p>
  
 
 = Simulink preparation =
 During the installation section "Gisoo library" should already be added to the Simulink (you can see the instruction here????????????????). Then you have access to all the component which you need to be able to run your simulation in GISOO. You can see the components of the library in the following picture.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
-  
+<p>  
 
 == Adding Cooja platform ==
 For the first step to create the simulation environment in Cooja you need to add "Cooja Platform" block to your simulation environment. This block is the place that simulate Cooja inside the Simulink. It will contain all the necessary motes and also handle the synchronization and communication between Simulink and Cooja. (More details will be explained in the next steps). next picture shows the "Cooja platform" block.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >
-
+<p>
   
 
 == Adding Mote to the Cooja platform ==
 In the next step, the necessary motes should be added inside the Cooja platform block. THis can be done by double click on the CoojaPlatform block and drag a "SkyMote" block from the "Gisoo-library" to the "CoojaPlatform" block. On the first attempt to add a mote inside the Cooja platform you may face a message which ask you to disable the link to the library and it should be done by clicking on the "disable" part in the pop-up message, as it has shown in the following picture. (If you did not face this message you can just add your mote inside the "Cooja platform" with out any concern)
 
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/LinkDisable.png" >
+<p>
 
 Finally you should add all the necessary mote to the CoojaPlatform. In fact all the motes which are need to be in contact with the plant such as sensors or actuators or motes which are doing the serial communications should be added to the Cooja platform.After adding each mote to the platform it is necessary to double click on them an set their mote-id exactly the same as the id of their mirror motes in the Cooja. (Each mote in Simulink can only communicate with the mote with the same id in Cooja.)
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingMote.png" >
-  
+<p>
 
 == Adding ADC/DAC connectors ==
 For each mote, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to act as a sensor which should sense some data on the ADC0 pin, then you have to connect the ADC-Connector component to ADC0 input of that mote, or if you want to receive some actuation data on the DAC0, you need to add the DAC connector component on the DAC0 output of your mote. these components and their location has been shown in the following picture.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
+<p>
 
 == Adding the plant model ==
 In the final step we need to add a model of our plant which can be modeled in a Discrete State-Space block in our simulation (out of the Cooja platform.) in this step we will have different number of input and out put from our Cooja platform block, which has been created by the ADC-connector or DAC-connector components from the previous step. Now in this step the the outputs from the CoojaPlatform should be used as the input for our Plant model and the output of the plant model should be used as the input for the Cooja platform. following picture shows a simple environment and the relation between the Cooja platform and the plant model.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >
-
+<p>
  
 
 = Configuration and running the simulation =
 After preparing the simulation environment for the very last configuration, it is needed to set the Simulink simulation to act in a fix-step instead of variable-step. You can apply this configuration in the "configuration parameter" window which is accessible from "Simulation->Model Configuration Parameter" and finally change the type in the solver option to the fix-step. Now can also select the size of the sample time which we configured it to "0.001" to have an accuracy of one millisecond.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/Configuration.png" >
+<p>
 
 Now that both sides of the simulation environment(Cooja and Simulink) has been configured, in order to run the simulation, we should first star the simulation in Simulink and then start the Cooja simulation. In this step first Simulink will start its simulation for very first milliseconds and then it will Waite until it receive a message from Cooja. The only important point in this action is that if Simulink cannot recive the message from Cooja in less than few seconds it will consider it as a problem and will go out from the simulation execution loop, so it is necessary to run the Cooja in few second after Simulink.
 
@@ -144,9 +165,9 @@ The aim of this scenario is to create such a system which can stabilize the wate
 
 For this sample, you can download the prepared codes for these motes from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTankCodes.zip here].
 
-
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
+<p>
 
 In order to create such a system in GISOO we have to:
   * Create all the motes in the Cooja.  
@@ -162,25 +183,32 @@ To create motes with these ids, the order of mote creation should be the same as
 
 After adding these motes, since sensor should sense the water levels from plant and also actuator should be able to actuate the motors which is also in plant, both of them should be connected to the Simulink. So in it is needed to activate the "SimulinkConnector" plug-in for both of these motes. 
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
+<p>
 
 In the next step we need to create a Simulink model, add a CoojaPlatform block to that and add to Sky-Mote block from Gisoo-library inside the CoojaPlatfor which are the mirror motes for Sensor and Actuator in the Cooja. So it is needed to allocate them a same id as their mirrors have in Cooja. This step has shown in the next figure.
  
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_CoojaPlatform2.png" >
+<p>
 
 In order to create a model of the plant we can use the "Discrete State-Space(Plant)". For this aim we can write a MATLAB script and add it to the "initFcn" of callbacks in the Modelproperties.
 
 The required MATLAB script for this experiment can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/initparameters.m here].
 
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >
+<p>
 
 Finally after these steps the simulation environment is ready and you can run the simulation by running the Simulink first. Although you can save any kind of data from Simulink or Cooja for further analyzes, you can also monitor the changes in different values during the simulations. The next two figures show the changes in the water levels and actuation values during the experiments.
 
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterLevels.png" >
+<p>
 
-
+<p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/ActuationVslues.png" >
+<p>
 
 You can download all of the required codes (Mote codes, plant Script, and Simulink Model) from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTanksFiles.zip here]. Then you just need to create the Cooja simulation and add the matlab folder to your Matlab path environment and run the simulation.

@@ -1,3 +1,9 @@
 <wiki:toc />
 ----
 = Samples Overview =
+
+
+
+<p align="center">   
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >
+<p>

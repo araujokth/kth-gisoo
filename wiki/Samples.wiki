@@ -4,7 +4,7 @@
 This section will gradually introduce you different scenarios to show the GISOO capabilities and also provide nece 
 
 == Serial Communication ==
-More over to ADC and DAC, GISOO also support the Serial communication 
+More over to ADC and DAC, GISOO also support the Serial communication between Simulink and Cooja. This facility make it possible to simulate system which needs a powerful processing resource for their controller. In this situation by using some motes with some standard application such as baseStasion as a gateway  
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >
 <p>

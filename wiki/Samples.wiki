@@ -1,9 +1,10 @@
 <wiki:toc />
 ----
 = Samples Overview =
-This section will gradually provide different scenarios to show the GISOO capabilities and also provide nece 
+This section will gradually introduce you different scenarios to show the GISOO capabilities and also provide nece 
 
 == Serial Communication ==
+More over to ADC and DAC, GISOO also support the Serial communication 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >
 <p>

@@ -124,9 +124,9 @@ Start by creating a new model from MATLAB by going to "File>New>Model", in order
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/GISOOLib.png" >
 <p>  
 
-== Adding the GISOO Simulation Environment (GSE) ==
+== Adding the GISOO Simulink Environment (GSE) ==
 
-The first step in order to perform the simulation is to add the "GISOO Simulation Environment" (GSE) block to your simulation environment. This block is the place that allows for GISOO simulations to take place and where the interface between Simulink and COOJA takes place. It will contain all the necessary virtual motes and also handle the synchronization and communication between Simulink and COOJA. The next image shows the GSE block.
+The first step in order to perform the simulation is to add the "GISOO Simulink Environment" (GSE) block to your simulation environment. This block is the place that allows for GISOO simulations to take place and where the interface between Simulink and COOJA takes place. It will contain all the necessary virtual motes and also handle the synchronization and communication between Simulink and COOJA. The next image shows the GSE block.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/CoojaPlatform.png" >

@@ -3,7 +3,7 @@
 = Samples Overview =
 
 
-
+== Serial Communication ==
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >
 <p>
@@ -40,4 +40,3 @@
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/CoojaPaltform_LargeScenario.png>
 <p>
-

@@ -103,6 +103,12 @@ After verifying the COOJA installation, you are now ready to add GISOO to COOJA.
 YOUR_CONTIKI_FOLDER/tools/cooja/apps
 }}}
 
+In the second step you hve to download the our modified MSPSim.jar from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/mspsim.zip here] and after extracting the mspsim.jsr you should substitute it instead of one that you have in your contiki folder in this path:
+
+{{{
+YOUR_CONTIKI_FOLDER/tools/mspsim
+}}}
+
 = Simulink =
 
 [http://www.mathworks.se/products/simulink/ Simulink] is the most widely used tool for simulation and

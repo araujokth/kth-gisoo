@@ -1,7 +1,7 @@
 <wiki:toc />
 ----
 = Samples Overview =
-
+This section will gradually provide different scenarios to show the GISOO capabilities and also provide nece 
 
 == Serial Communication ==
 <p align="center">   

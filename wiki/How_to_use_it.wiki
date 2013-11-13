@@ -223,13 +223,13 @@ In the first step we have to create a simulation with four nodes, as it is shown
   * Actuator: 4
 *To create motes with these ids, the order of mote creation in COOJA, should be the same as the motes' id.*
 
-After adding these motes, since sensor should sense the water levels from plant and also actuator should be able to actuate the motors which is also in plant, both of them should be connected to the Simulink. So in it is needed to activate the "SimulinkConnector" plug-in for both of these motes. 
+After adding these nodes, since the sensor should sense the water levels from the plant and the actuator should be able to actuate the plant, both of them should be connected to Simulink. It is then needed to activate the "GISOO COOJA Plug-in" for both of these nodes. 
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Cooja.png" >
 <p>
 
-In the next step we need to create a Simulink model, add a CoojaPlatform block to that and add to Sky-Mote block from Gisoo-library inside the CoojaPlatfor which are the mirror motes for Sensor and Actuator in the Cooja. So it is needed to allocate them a same id as their mirrors have in Cooja. This step has shown in the next figure.
+In the next step, you have to create a Simulink model, add a GSE block and add two sky node blocks from the GISOO library. Tese node blocks are the mirror nodes for the Sensor and Actuator in COOJA. Thus, they must have the same node id as the nodes in COOJA. This step is shown in the next figure.
  
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_CoojaPlatform2.png" >
@@ -243,7 +243,9 @@ The required MATLAB script for this experiment can be downloaded from [https://k
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >
 <p>
 
-Finally after these steps the simulation environment is ready and you can run the simulation by running the Simulink first. Although you can save any kind of data from Simulink or Cooja for further analyzes, you can also monitor the changes in different values during the simulations. The next two figures show the changes in the water levels and actuation values during the experiments.
+Finally, the simulation environment is ready and you can run the simulation by running Simulink first, followed by starting COOJA.
+
+Although you can save all data from Simulink or COOJA for further analyzes, you may also monitor online the signals in both simulators. The next two figures show the changes in the water levels and actuation values during the experiments happening online.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterLevels.png" >
@@ -253,4 +255,4 @@ Finally after these steps the simulation environment is ready and you can run th
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/ActuationVslues.png" >
 <p>
 
-You can download all of the required codes (Mote codes, plant Script, and Simulink Model) from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTanksFiles.zip here]. Then you just need to create the Cooja simulation and add the matlab folder to your Matlab path environment and run the simulation.
+You can download all of the required codes (node codes, plant script, and Simulink model) from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTanksFiles.zip here]. Then you just need to create the COOJA simulation and run the simulation!

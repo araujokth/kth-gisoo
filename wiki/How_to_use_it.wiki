@@ -190,16 +190,19 @@ We now present an example of a closed-loop control experiment in GISOO.
 
 The wireless double-tank system is shown in the next figure. Water
 is pumped from a reservoir to the upper tank, from which it flows through an outlet to the lower tank. Water from the lower tank flows through a similar outlet back to the reservoir. The pump is controlled
-by an actuation signal, which is a control voltage applied to the motor. The water levels in both tanks are measured using pressure sensors in two T-mote Sky nodes. These motes contain ADCs (analogto-digital converters) and DACs (digital-to-analog converters), which are used to connect to the sensors and actuators in the physical system.
-A Sensor Node reads measurements from the pressure sensor of the lower tank, and sends it to a Relay Node. The Relay Node forwards this data packet to the Controller Node, which runs the control algorithm. It generates an appropriate control signal, and sends this to the Actuator node, which applies the control voltage to the pump.
-The aim of this scenario is to create such a system which can stabilize the water level in the lower tank on constant level (Level=5). As it has been explained for this experiment we have to program four different motes:
+by an actuation signal, which is a control voltage applied to the pump motor. The water levels in both tanks are measured using pressure sensors.
  
-  * Sensor Node: A T-mote sky situated on the UPM is connected to the sensors from the tank process, and collects and transmits this information to the Controller node.
-  * Controller Node: A T-mote sky is programmed with the controller algorithm. This node receives measurements from the Sensor Node, and transmits an appropriate control action to the Actuator Node.
+For sensing and actuation we use sky wireless nodes. These motes contain ADCs (analog-to-digital converters) and DACs (digital-to-analog converters), which are used to connect to the sensors and actuators in the physical system. 
 
-  *Actuator Node: Another T-mote sky situated on the UPM is connected to the actuator of the tank process. This node receives the control signal from the controller and applies this voltage to the pump in the tank setup.
+The aim of this scenario is to create such a system which can stabilize the water level in the lower tank on constant level (in this example, the level is set to 5cm). The system is composed by 4 different devices:
+ 
+  * Sensor Node: A sky node is connected to the pressure sensors from the tank process, and takes measurements using the ADC and transmits this information to the Relay node.
 
-  *Relay Node: A T-mote sky is programmed to relay messages between the Sensor Node and the Controller Node. This introduces multi-hop communications in the network to make the situation more realistic.
+ * Relay Node: Another node is programmed to relay messages between the Sensor Node and the Controller Node. This introduces multi-hop communications.
+
+  * Controller Node: The control algorithm is implemented inside the wireless node. This node receives measurements from the Relay Node, computes the actuation value and transmits an appropriate control action to the Actuator Node.
+
+  * Actuator Node: Another node is connected to the pump motor using the DAC. This node receives the control signal from the controller and applies this voltage to the pump in the tank setup.
 
 For this sample, you can download the prepared codes for these motes from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTankCodes.zip here].
 

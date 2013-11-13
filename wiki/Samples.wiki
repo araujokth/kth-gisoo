@@ -13,8 +13,7 @@ In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it , How to
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimpleScenarioMix.png >
 <p>
 
-
-
+In order to simulate the scenario with the controller on PC  
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >

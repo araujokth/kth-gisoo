@@ -123,7 +123,7 @@ In this scenario since we have 10 sets of double tanks, we will need 10 mote to 
 
 On the other hand in order to use CTP as dynamic routing protocol between sensors and controller we modified the code of the simple tank scenario and by adding the CTP to its structure. You can download the TinOS codes for this scenario from here[??????????????].
 
-Finally the created scenario in Cooja will be like the following picture. The GISOO plug-in (SimulinkConnector) become activated for all the sensors and actuators. The picture also shows the "Radio messages" logger which will be explained later in this section.  
+Finally the created scenario in Cooja will be like the following picture. The GISOO plug-in (SimulinkConnector) become activated for all the sensors and actuators. The picture also shows the "Radio messages" logger which can be activated from "Tools" menu. This is one of the great plug-ins in Cooja which shows all radio messages during the simulation with complete details.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Cooja_LargeScenario.png>

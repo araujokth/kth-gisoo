@@ -121,7 +121,9 @@ In this scenario we simulate a water tank laboratory which contains 10 different
 
 In this scenario since we have 10 sets of double tanks, we will need 10 mote to receive the sensor data from each set, 10 actuators that can actuate the motor in each set separately, 1 mote as a central controller and 17 relays to forward the sensor data to the central controller. In this scenario mote-ids 1 - 10 belong to sensors, 21 - 30 belongs to actuators, controller has mote-id 41 and relay are 42 - 58 
 
-On the other hand in order to use CTP as dynamic routing protocol between sensors and controller we modified the code of the simple tank scenario and by adding the CTP to its structure. 
+On the other hand in order to use CTP as dynamic routing protocol between sensors and controller we modified the code of the simple tank scenario and by adding the CTP to its structure. You can download the TinOS codes for this scenario from here[??????????????].
+
+Finally the created scenario in Cooja will be like the following picture. The GISOO plug-in (SimulinkConnector) become activated for all the sensors and actuators. The picture also shows the "Radio messages" logger which will be explained later in this section.  
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Cooja_LargeScenario.png>

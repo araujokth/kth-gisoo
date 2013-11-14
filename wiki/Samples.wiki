@@ -86,8 +86,7 @@ So we have to create the motes with the mentioned id but instead of Coordinator 
 
 The important point about this scenario is the serial communication which will be performed by using the Base-Station. GISOO support two type of serial communication in its scenarios. 
   #Mote in Cooja send data via serial to the Simulink without expecting to receive data from Serial. (In these types of scenarios The SeimmulinkConnector plug-in will automatically forward the motes serial data to it mirror motes in Simulink)
-  #Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the checkBox in the SimmulinkConnector plug-in and also mentioning the specific amount of in the provided testBox.)
-As you can see in the above picture the checkBox of the plug-in for the baseStation has been ticked and it expect to receive the reply 1 millisecond (default value) after the serial data has been send via the serial to Simulink.
+  #Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the checkBox in the SimmulinkConnector plug-in and also mentioning the specific amount of in the provided testBox.) As you can see in the above picture the checkBox of the plug-in for the baseStation has been ticked and it expect to receive the reply 1 millisecond (default value) after the serial data has been send via the serial to Simulink.
 
 
 

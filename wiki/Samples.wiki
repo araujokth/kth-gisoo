@@ -77,14 +77,21 @@ After preparing our TinyOS codes we have to create all the motes in Cooja. It ha
 	RELAYNODE_ADDRESS 	= 	3,
 }}}
 
-So we have to create the motes with the mentioned id but instead of Coordinator (Controller) we have to create our base-station. After creating, for those motes which needs to be connected to the plant or PC(for controlling purposes) we have to activate the "SimulinkConnector" plug-in. In this scenario sensor needs to sense the water level from the plant, actuator should be able to send the actuataion value to the plant, and also base station should be able to transfer the serial data to the controller model in the PC and receive the results back from that model. As it has shown the SimulinkConnector has been activated for these motes.
+So we have to create the motes with the mentioned id but instead of Coordinator (Controller) we have to create our base-station. After creating, for those motes which needs to be connected to the plant or PC(for controlling purposes) we have to activate the "SimulinkConnector" plug-in. In this scenario sensor needs to sense the water level from the plant, actuator should be able to send the actuataion value to the plant, and also base station should be able to transfer the serial data to the controller model in the PC and receive the results back from that model. As it has shown the SimulinkConnector has been activated for these motes. 
 
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >
 <p>
 
+The important point about this scenario is the serial communication which will be performed by using the Base-Station. GISOO support two type of serial communication in its scenarios. 
+  #Mote in Cooja send data via serial to the Simulink without expecting to receive data from Serial. (In these types of scenarios The SeimmulinkConnector plug-in will automatically forward the motes serial data to it mirror motes in Simulink)
+  #Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the checkBox in the SimmulinkConnector plug-in and also mentioning the specific amount of in the provided testBox.)
 
+
+
+
+ 
 
 
 

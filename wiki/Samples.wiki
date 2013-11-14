@@ -26,6 +26,14 @@ typedef struct SensorValues {
 } SensorValues;
 }}}
 
+For the same reason the message that will be sent from base-station to the actuator also has 16 bytes structure so that the structure of the message that should be received by actuator should also be changed to 16 byte:
+
+{{{
+// Type of message send by the controller (base-station) to the actuator node
+typedef nx_struct EncMsg2SensorsAct {
+	nx_uint16_t u[8]; // Actuation value send to the actuator(from base-station). u[0] contains the actuation value and the rest of the data structure is empty.
+}EncMsg2SensorsAct;
+}}}
 
  
 <p align="center">   

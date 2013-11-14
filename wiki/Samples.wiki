@@ -111,7 +111,10 @@ The Following picture shows the structure of the Cooja platform for this scenari
 <p>
 
 == CTP ==
-
+This sample is an advanced version of previous water-tank scenario with some interesting specification. The main important modification in this sample has been done in the routing layer but in overall the main specification of this sample can be listed like this:
+  *Using CTP as a routing protocol in a scenario and simulate it in the GISOO.
+  *Creating a scenario with several number of motes and different connections between Simulink an Cooja.
+  *Creating a single simulation containing several plants.
 
 
 <p align="center">   

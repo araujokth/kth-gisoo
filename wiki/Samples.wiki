@@ -96,6 +96,16 @@ Like all other scenarios in GISOO the other side of simulation should be designe
 
 The main difference between this scenario and the simple scenario without serial communication is inside the Cooja platform. As it has shown in the following picture in this scenario we have to add another mote as baseStasion to the platform which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the baseStation in order to forward the value to the actuator.
 
+Since in GISOO the serial data should have the fix 16 bytes data structure, the output serial data should be divided to it 16 bytes and then acording to your defined data types you can recreate your data from the serial message. Since in this scenario we send two values as a water levels that each of them has two bytes (the message structure of sensor has been explained previously in this page)
+
+{{{
+nx_uint16_t tankLevel[8]; // tankLevel[0] for the tank-1 and  tankLevel[1] for tank-2 
+}}}
+So after receiving the serial data we have to recreate two water tank values and for this aim we can use the provided blocks in GISOO Simulink Library to generate different data types from bytes.
+
+After generating the water level values we have to use these values as the input of the controller model which has been shown as a block in this model. Finally the results of the model should be sent back to the and we have to convert this value to its corresponding bytes.
+
+The Following picture shows the structure of the Cooja platform for this scenario. The important point that should never mistaken is the location of the controller model. This model should always be located inside the Cooja Platform. The outside of the Cooja Platform is our <b>physical environment or Plant</b> and the controller model is not part of the plant!   
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/inside_CoojaPlatform_SerialCommunication.png>
 <p>

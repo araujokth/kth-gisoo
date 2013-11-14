@@ -90,17 +90,11 @@ The important point about this scenario is the serial communication which will b
 
 Like all other scenarios in GISOO the other side of simulation should be designed in Simulink. In the Simulink part, the location of plant and the CoojaPlatfor are exactly the same as the simple scenario without serial communication, which has been shown in the following picture.
 
-
-
-
- 
-
-
-
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimulationModelForSerialCommunication.png>
 <p>
 
+The main difference between this scenario and the simple scenario without serial communication is inside the Cooja platform. As it has shown in the following picture in this scenario we have to add another mote as baseStasion to the platform which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the baseStation in order to forward the value to the actuator.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/inside_CoojaPlatform_SerialCommunication.png>

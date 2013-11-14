@@ -129,7 +129,7 @@ Finally the created scenario in Cooja will be like the following picture. The GI
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Cooja_LargeScenario.png>
 <p>
 
-
+The GISOO environment in Simulink contains of One Cooja platform and 10 separate plant that each of them act as one set of double tank. The following picture shows the GISOO environment in Simulink.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Simulink_LargeScenario.png>

@@ -35,7 +35,7 @@ typedef nx_struct EncMsg2SensorsAct {
 }EncMsg2SensorsAct;
 }}}
 
-The other point that has been mentioned about the codes in this scenario was the modified base-station. Since we would like to forward all the actuation values from PC to the actuator (not the other motes) we modified the send function of the basestaion so that it just forward the radio messages to the actuator (mote with id:5 in this scenario) 
+The other point that has been mentioned about the codes in this scenario was the modified base-station. Since we would like to forward all the actuation values from PC to the actuator (not the other motes) we modified the send function of the basestaion so that it just forward the radio messages to the actuator (mote with id:5 in this scenario). As it has been shown in the following code, the "addr" value has been changed to a fix id of actuator mote (5).  
 {{{
 task void radioSendTask() {
     uint8_t len;

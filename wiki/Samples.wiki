@@ -1,8 +1,9 @@
 <wiki:toc />
 ----
 = Samples tutorial =
-This section provide explanation about different sample scenarios. The scenarios have been selected so that they cover different areas of projects. At the beginning it has been tried to show how can use the ADC and DAC in GISOO and in the next step the required details foe serial communication has been explained and the usage of serial communication has been shown in a simple example. In the next step the the previous simple scenario has been extended to show the usage of CTP routing protocol in the routing layer. 
-
+This section provide explanations about different sample scenarios. The scenarios have been selected so that they cover different areas. At the beginning it has been tried to show how can use the ADC and DAC in GISOO and in the next step the required details for serial communication has been explained and the usage of serial communication has been shown in a simple example. In the next step the the previous simple scenario has been extended to show the usage of CTP routing protocol in the routing layer. This section tries to provide samples from very simple and basic aspects until advanced scenarios which also can be considered as tutorial for GISOO.
+== ADC data transmission in GISOO ==
+== DAC data transmission in GISOO ==
 == Serial Communication ==
 More over to ADC and DAC, GISOO also supports the Serial communication between Simulink and Cooja. This facility make it possible to simulate those systems with the need of powerful processing resource as a  controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.
 

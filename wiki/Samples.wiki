@@ -13,7 +13,7 @@ In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it , How to
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimpleScenarioMix.png >
 <p>
 
-In order to simulate the scenario with the controller on PC  
+In order to simulate the scenario with the controller on PC first we should create all of our motes  in Cooja, so we should four motes: one Sensor, one relay, one Base-Station and, one actuator. You can download the TinyOS code for the motews from here (?????????????) these codes are exactly the same code as those we had for our simple scenario with the new message structure for the sensor and actuator and also instead of a code for controller we have a modified code for base-station which send the radio messages to the actuator instead of broadcast which will be explained in the following.  
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >

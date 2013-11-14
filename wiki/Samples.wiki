@@ -22,7 +22,7 @@ The details od designed messages structure for data transmission between Simulin
 {{{
 // Type of message send by the sensor node to the relay node
 typedef struct SensorValues {
-	nx_uint16_t tankLevel[8]; // Values for the tank-1 and tank-2
+	nx_uint16_t tankLevel[8]; // tankLevel[0] for the tank-1 and tankLevel[1] for tank-2 and the rest of the structure will not be used.
 } SensorValues;
 }}}
 

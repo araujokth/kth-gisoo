@@ -1,6 +1,6 @@
 <wiki:toc />
 ----
-= Samples Overview =
+= Samples tutorial =
 This section provide explanation about different sample scenarios. The scenarios have been selected so that they cover different areas of projects. At the beginning it has been tried to show how can use the ADC and DAC in GISOO and in the next step the required details foe serial communication has been explained and the usage of serial communication has been shown in a simple example. In the next step the the previous simple scenario has been extended to show the usage of CTP routing protocol in the routing layer. 
 
 == Serial Communication ==

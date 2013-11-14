@@ -135,7 +135,7 @@ The GISOO environment in Simulink contains of One Cooja platform and 10 separate
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Simulink_LargeScenario.png>
 <p>
 
-
+Inside the COoja platform block in Simulink, we added one mote in mirror of each sensor and actuator in the Cooja. It is necessary to emphasize that a mirror mote is a mote with same mote-id which act the same as the mote with Id do in the other environment. 
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/CoojaPaltform_LargeScenario.png>

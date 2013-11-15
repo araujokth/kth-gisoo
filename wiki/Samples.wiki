@@ -142,4 +142,4 @@ Inside the COoja platform block in Simulink, we added one mote in mirror of each
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/CoojaPaltform_LargeScenario.png>
 <p>
 
-Results for this scenario and some other similar scenarios which contains the interference or mote removal has been explained in our paper[????????????????] 
+Results for this scenario and some other similar scenarios which contains the interference or mote removal has been explained in our paper[????????????????].

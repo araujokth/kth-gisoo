@@ -3,7 +3,7 @@
 = Samples tutorial =
 This section provide explanations about different sample scenarios. The scenarios have been selected so that they cover different areas. At the beginning it has been tried to show how can use the ADC and DAC in GISOO and in the next step the required details for serial communication has been explained and the usage of serial communication has been shown in a simple example. In the next step the the previous simple scenario has been extended to show the usage of CTP routing protocol in the routing layer. This section tries to provide samples from very simple and basic aspects until advanced scenarios which also can be considered as tutorial for GISOO.
 == ADC data transmission in GISOO ==
-TinyOS codes: [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/adcread/ADCReader.zip , Download_ADCReader]
+TinyOS codes: [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/adcread/ADCReader.zip  Download_ADCReader]
 Simulink Model: Download_ADCReader
 
 <p align="center">  

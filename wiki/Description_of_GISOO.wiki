@@ -15,7 +15,7 @@ You are welcome to contact *Behdad Aminian* (behdad@kth.se) and *José Araújo* 
 
 == The Team == 
 
-* Behdad Aminian - Research engineer - behdad@kth.se
+* [http://people.kth.se/~behdad/ Behdad Aminian] - Research engineer - behdad@kth.se
 
 * [http://people.kth.se/~araujo/ José Araújo] - PhD student - araujo@kth.se 
 

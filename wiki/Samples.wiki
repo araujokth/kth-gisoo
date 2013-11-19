@@ -22,6 +22,11 @@ TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwrit
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter.png" >
 <p>
 
+<p align="center">  
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter_CoojaPlatform.png" >
+<p>
+
+
 
 == Serial Communication ==
 More over to ADC and DAC, GISOO also supports the Serial communication between Simulink and Cooja. This facility make it possible to simulate those systems with the need of powerful processing resource as a  controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.

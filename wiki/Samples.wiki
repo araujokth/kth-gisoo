@@ -18,7 +18,7 @@ Simulink Model: Download_ADCReader
 == DAC data transmission in GISOO ==
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter.zip Download_DACWriter] 
 
-Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter_SimulinkModel.zip  Download_ADCReader] 
+Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter_SimulinkModel.zip  Download_DACWriter_SimulinkModel] 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter.png" >
 <p>

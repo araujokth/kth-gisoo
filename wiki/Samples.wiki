@@ -6,7 +6,7 @@ In overall this section provides examples from very simple and basic aspects unt
 == ADC data transmission in GISOO ==
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/adcreader/ADCReader.zip Download_ADCReader] 
 
-Simulink Model: Download_ADCReader
+Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/adcreader/ADCReader_SimulinkModel.zip Download_ADCReader_SimulinkModel] 
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADCReader.png" >

@@ -12,7 +12,7 @@ This example explains the ADC communication procedure in GISOO. For this example
 {{{
 make telosb install
 }}}
-More explanation about TinyOS and its command can be found in the [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials , TinyOS tutorials]
+More explanation about TinyOS and its command can be found in the [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials  TinyOS tutorials]
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADCReader.png" >
 <p>

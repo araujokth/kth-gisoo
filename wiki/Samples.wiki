@@ -45,6 +45,7 @@ The following picture shows the amount of the received counter value in the Simu
 
 
 == Serial Communication ==
+More over to the ADC and DAC, GISOO also support the serial Communication between Simulink and Cooja.
 === One Way Serial Communication ===
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
 

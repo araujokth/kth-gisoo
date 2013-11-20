@@ -36,6 +36,8 @@ This example is a sample for DAC communication and similar to the previous examp
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter.png" >
 <p>
 
+As the previous picture shows the mote generate the counter values and send it over the DAC0. For each DAC value the led2 toggled. On the other side the Simulink will receive this value and show it in the scope.
+The following picture shows the amount of the received counter value in the Simulink on the right side and inside of the CoojaPlatform on the left side.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter_CoojaPlatform.png" >
 <p>

@@ -1,7 +1,8 @@
 <wiki:toc />
 ----
 = Examples tutorial =
-This section provide explanations about different example scenarios. The scenarios have been selected so that they cover different areas. At the beginning it has been tried to show how can use the ADC and DAC in GISOO and in the next step the required details for serial communication has been explained and the usage of serial communication has been shown in a simple example. In the next step the the previous simple scenario has been extended to show the usage of CTP routing protocol in the routing layer. This section tries to provide samples from very simple and basic aspects until advanced scenarios which also can be considered as tutorial for GISOO.
+This section provide explanations about different example scenarios. The scenarios have been selected so that they cover different areas. At the beginning it has been tried to show how the ADC and DAC can be used in GISOO and in the next step the required details for serial communication has been explained. The usage of serial communication also has been shown in a simple example. In the next section the previous simple scenario (water tanks scenario) has been modified to  provide use serial communications in its scenario. In the next section the water-tanks scenario has been extended to show the usage of CTP routing protocol in the routing layer. 
+In overall this section provides examples from very simple and basic aspects until advanced ones which also can be considered as tutorial for GISOO.
 == ADC data transmission in GISOO ==
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/adcreader/ADCReader.zip Download_ADCReader] 
 

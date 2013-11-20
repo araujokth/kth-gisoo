@@ -20,6 +20,8 @@ In the next step you have to download the Simulink model and after extract it th
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADCReader.png" >
 <p>
 
+As it has been shown in the previous picture after running the simulation the Leds will blink according to the data which it could read in the ADC0.
+The following picture shows inside of the Cooja platform in the Simulink model which contains one mote with two income one for ADC0 and another one by ADC1.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADCReader_CoojaPlatform.png" >

@@ -13,7 +13,7 @@ This example explains the ADC communication procedure in GISOO. For this example
 make telosb install
 }}}
 More explanation about TinyOS and its command can be found in the [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials  TinyOS tutorials]. This code will read the ADC values of ADC0 and ADC1 in the mote every 200 ms and whenever a ADC data is received, the three least significant bits in the ADC0 value are displayed by the motes' LEDs.
-After compiling the ADCReader code, you should run a new simulation in Cooja and create a new mote in that simulation environment by using the main.exe file of ADCReader which will be created in the build folder after its compilation. More details about adding mote in Cooja has been explained [https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Adding_motes_to_the_simulation  here].
+After compiling the ADCReader code, you should run a new simulation in Cooja and create a new mote in that simulation environment by using the main.exe file of ADCReader which will be created in the build folder after its compilation. More details about adding mote in Cooja has been explained [https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Adding_motes_to_the_simulation  here]. Finally you should activated the SimmulinkConnector plug-in for the created mote.
 In the next step you have to download the Simulink model and after extract it the simulation is ready. This Simulink model will generate the different values by using the sin function to be read as the ADC value bye the mote. The following figure shows the simulation environment in the Cooja and Simulink.
 
 <p align="center">  
@@ -53,6 +53,8 @@ The next two example explain each of these methods in details.
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
 
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/SerialCommunication_OneWay.zip Download_SerialCommunication_OneWay_Simulink_Model] 
+
+Like all the scenario in GISOO this example also contains two parts, TinyOS code and the Simulink model. The provided TinyOS code for this example is a modified version of standard "testserial" code which has located in the  "tinyos-2.x/apps/tests/TestSerial" or you also can download it from [http://www.tinyos.net/tinyos-2.1.0/apps/tests/TestSerial/ here].
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >

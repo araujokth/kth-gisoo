@@ -52,6 +52,8 @@ The next two example explain each of these methods in details.
 === One Way Serial Communication ===
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
 
+TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/SerialCommunication_OneWay.zip Download_SerialCommunication_OneWay_Simulink_Model] 
+
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >
 <p>

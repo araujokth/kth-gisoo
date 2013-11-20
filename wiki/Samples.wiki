@@ -30,6 +30,8 @@ The following picture shows inside of the Cooja platform in the Simulink model w
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter.zip Download_DACWriter] 
 
 Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter_SimulinkModel.zip  Download_DACWriter_SimulinkModel] 
+
+This example is a sample for DAC communication and similar to the previous example you can download the provided TinyOS code and Simulink model for this example. The provided TinyOS code (DACWriter) will write a counter value on the DAC0 of the mote and whenever the DAC value is written the Led2 will toggle. Following picture shows the Simulink and Cooja environment together. 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter.png" >
 <p>

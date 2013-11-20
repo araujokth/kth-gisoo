@@ -13,7 +13,7 @@ This example explains the ADC communication procedure in GISOO. For this example
 make telosb install
 }}}
 More explanation about TinyOS and its command can be found in the [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials  TinyOS tutorials].
-After compiling the ADCReader code you should created a new simulation in Cooja and create a new mote in that simulation environment by using the main.exe file of ADCReader which will be created in the build folder after its compilation. More details about adding mote in Cooja has been explained [https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Adding_motes_to_the_simulation  here].
+After compiling the ADCReader code, you should run a new simulation in Cooja and create a new mote in that simulation environment by using the main.exe file of ADCReader which will be created in the build folder after its compilation. More details about adding mote in Cooja has been explained [https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Adding_motes_to_the_simulation  here].
 
 
 <p align="center">  

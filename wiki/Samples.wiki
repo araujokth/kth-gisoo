@@ -91,6 +91,13 @@ But in order to receive a serial message back, in Cooja we should select the pro
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays2.png" >
 <p>
 
+
+
+<p align="center">  
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/images/samples/serialcommunication/SerialComm_TwoWays_CoojaPlatform.png" >
+<p>
+
+
 More over to ADC and DAC, GISOO also supports the Serial communication between Simulink and Cooja. This facility make it possible to simulate those systems with the need of powerful processing resource as a  controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.
 
 === double-tank system with the controller on PC ===

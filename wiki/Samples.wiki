@@ -140,6 +140,14 @@ One of the simplest mixed scenario is only made of combination of ADC and DAC. T
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/ADCDACComm.png" height="250px" width="250px">
 <p>
 
+<p align="center">  
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType1.png" height="250px" width="250px">
+<p>
+
+<p align="center">  
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType2.png" height="250px" width="250px">
+<p>
+
 
 
 

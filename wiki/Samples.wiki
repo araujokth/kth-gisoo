@@ -242,7 +242,7 @@ The important point about this scenario is the serial communication which will b
 Like all other scenarios in GISOO the other side of simulation should be designed in Simulink. In the Simulink part, the location of plant and the CoojaPlatfor are exactly the same as the simple scenario without serial communication, which has been shown in the following picture.
 
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimulationModelForSerialCommunication.png" height="450px" width="450px">
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimulationModelForSerialCommunication.png" height="450px" width="650px">
 
 <p>
 

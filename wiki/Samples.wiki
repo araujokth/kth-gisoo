@@ -156,7 +156,7 @@ The other scenario is so that the same as previuse one and the base station will
 This type of scenario is useful to simulate those systems with the need of powerful processing resource as a controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.
 To show the usage of this model we modified the water tank scenario so that the controller will be located in a PC instead of one mote in original sample. The new controller is a Simulink model and will receive the serial data from base station and send back the actuation data to the Cooja. The details about this system had been explained in the following section.
 
-=== double-tank system with the controller on PC ===
+=== Double-tank system with the controller on PC ===
 In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it ,How to use GISOO]" we introduced the double-tank system as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario ,simple scenario]". In this section we explain the same simulation scenario but by locating the control process on a PC instead of a mote. The following picture shows both scenarios with controller in a mote or in a PC.
 
 
@@ -260,7 +260,7 @@ The Following picture shows the structure of the Cooja platform for this scenari
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/inside_CoojaPlatform_SerialCommunication.png>
 <p>
 
-=== CTP Routing Protocol and Multiple Tanks Scenario ====
+=== CTP Routing protocol and multiple tanks scenario ====
 This section will explain an advanced version of previous water-tank scenario with some interesting specification. The main important characteristic of this sample has laid on the routing layer but in overall the main specification of this sample can be listed like this:
   * Using [http://sing.stanford.edu/gnawali/ctp/ , CTP] as a routing protocol in a scenario and simulate it in the GISOO.
   * Creating a scenario with several number of motes and different connections between Simulink an Cooja.

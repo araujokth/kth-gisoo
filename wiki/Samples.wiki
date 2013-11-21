@@ -83,9 +83,9 @@ Following picture shows inside of the CoojaPlatform block in left and the counte
 === Two Ways Serial Communication ===
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
 
-Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunkfiles/examples/serialcommunication/SerialCommunication_TwoWays.zip Download_SerialCommunication_OneWay_Simulink_Model] 
+Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunkfiles/examples/serialcommunication/SerialCommunication_TwoWays.zip Download_SerialCommunication_TwoWay_Simulink_Model] 
 
-
+As it has been mentioned, another supported type of the serial communication in GISOO is two way communication. In this method first the virtual mote in Cooja will send a serial message to its mirror mote in Simulink and will request for receiving a serial message as reply after specific amount of time. This example explains the required details for this type of serial communication. The TinyOS code that we used for this example is the the "testSerial" application, the same as we used in the previous example. But in this example in Cooja we should select the provided check-box in the GISOO plug-in which will specify the require of receiving the serial message after a specific amount of time which should be mentioned in provided text-box. The general view of the simulated scenario and mentioned check box in the plug-in has been shown in the following figure.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays2.png" >
 <p>

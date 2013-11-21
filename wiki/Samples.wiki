@@ -137,7 +137,7 @@ Most of the real scenarios are not only a simple sensor or actuator but they are
 One of the simplest mixed scenario is only made of combination of ADC and DAC. The schematic of these environment has been shown in the following picture.
 
 <p align="center">  
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/ADCDACComm.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/ADCDACComm.png" height="250px" width="250px">
 <p>
 
 

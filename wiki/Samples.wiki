@@ -70,6 +70,7 @@ typedef nx_struct test_serial_msg {
 } test_serial_msg_t;
 }}}
 
+We also removed the java application which were not needed in this scenario and modified the make-file.  
 The following figure shows the implemented scenario in GISOO. In this scenario the virtual mote in Cooja will generate a counter value periodically and send it to its mirror mote in Simulink. Then the mirror mote extract the counter value from the received serial message and show it in a scope.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >

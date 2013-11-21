@@ -91,7 +91,38 @@ But in order to receive a serial message back, in Cooja we should select the pro
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays2.png" >
 <p>
 
+The following picture shows the inside of the Coojaplatform block in the Simulink model. As you can see the counter value from received serial message will wend back via the serial port to the mote in Cooja. But there are two important points in this model which worse to be mentioned. 
+The first point is about the location of counter value in the received serial message. Since in the defined message structure in the testserial.h the first two bytes belongs to the counter value and the rest of the 16 bytes are unused. So when we receive the the serial message in Simulink, the counter value should be rebuild from the first two bytes and also we should put it in the proper location (same location in this scenario) when we want to send it back to mote. You can see the testSerial.h in the following:
 
+{{{
+
+#ifndef TEST_SERIAL_H
+#define TEST_SERIAL_H
+
+typedef nx_struct test_serial_msg {
+nx_uint16_t counter;
+nx_uint16_t counter2[7];
+
+} test_serial_msg_t;
+
+enum {
+  AM_TEST_SERIAL_MSG = 6, 
+};
+
+#endif
+}}}
+
+The other important point, is about the "AM_TEST_SERIAL_MSG" value which is 6 in this sample. This value has been used in the "ModifiedTestSerialAppC" as it has been shown in the following:
+
+{{{
+components SerialActiveMessageC as AM;
+.
+.
+.
+ App.Receive -> AM.Receive[AM_TEST_SERIAL_MSG];
+ App.AMSend -> AM.AMSend[AM_TEST_SERIAL_MSG];
+}}} 
+This Value will act similar as the port number for the serial message and specify this message belongs to which application. This point is important when we want to send a serial message from Simulink to Cooja because this value should be the same with the its corresponding value in the generated serial message in Simulink otherwise the generated message will be distorted in the mote. So for this aim in the mote parameter in Simulink, there is a value of "Serial Packet Type" which should be set with the same value of AM_TEST_SERIAL_MSG in this sample (6 in this scenario).
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays_CoojaPlatform.png" >

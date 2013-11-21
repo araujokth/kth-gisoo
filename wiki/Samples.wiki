@@ -66,10 +66,11 @@ For this example in order to adapt the testserial application with the required 
 {{{
 typedef nx_struct test_serial_msg {
     nx_uint16_t counter;
-    nx_uint16_t counter2[7];   //Added to the original structure.
+    nx_uint16_t counter2[7];   //Added to the original structure to convert it to a 16 bytes structure.
 } test_serial_msg_t;
 }}}
 
+The following figure shows the implemented scenario in GISOO. In this scenario the virtual mote in Cooja will generate a counter value periodically and send it to its mirror mote in Simulink. Then the mirror mote extract the counter value from the received serial message and show it in a scope.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >
 <p>

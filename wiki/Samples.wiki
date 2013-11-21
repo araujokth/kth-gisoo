@@ -153,10 +153,8 @@ The other scenario is so that the same as previuse one and the base station will
 <p>
 
 
-
-
-More over to ADC and DAC, GISOO also supports the Serial communication between Simulink and Cooja. This facility make it possible to simulate those systems with the need of powerful processing resource as a  controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.
-
+ This type of scenario is useful to simulate those systems with the need of powerful processing resource as a controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.
+To show the usage of this model we modified the water tank scenario so that the controller will be located in a PC instead of one mote in original sample. The new controller is a Simulink model and will receive the serial data from base station and send back the actuation data to the Cooja. The details about this system had been explained in the following section.
 
 === double-tank system with the controller on PC ===
 In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it ,How to use GISOO]" we introduced the double-tank system as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario ,simple scenario]". In this section we explain the same simulation scenario but by locating the control process on a PC instead of a mote. The following picture shows both scenarios with controller in a mote or in a PC.

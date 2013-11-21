@@ -74,14 +74,11 @@ The following figure shows the implemented scenario in GISOO. In this scenario t
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >
 <p>
-
+Following picture shows inside of the CoojaPlatform block in left and the counter valued in scope in right.
 <p align="center">  
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay_CoojaPlatform.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay_Result.png" >
 <p>
 
-<p align="center">  
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay_Scop.png" >
-<p>
 === Two Ways Serial Communication ===
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
 

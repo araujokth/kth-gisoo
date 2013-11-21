@@ -94,7 +94,7 @@ But in order to receive a serial message back, in Cooja we should select the pro
 
 
 <p align="center">  
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/images/samples/serialcommunication/SerialComm_TwoWays_CoojaPlatform.png" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays_CoojaPlatform.png" >
 <p>
 
 

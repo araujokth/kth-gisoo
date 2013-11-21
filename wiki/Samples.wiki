@@ -146,6 +146,7 @@ The other type of scenario is which we locate the Controller on the PC (in need 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType1.png" height="250px" width="250px">
 <p>
 
+The other scenario is so that the same as previuse one and the base station will send the sensor data to the CPU block in the PC (or Simulink controller model) but in this senaraio the CPU block will send back the calculated actuation data as a reply to the BaseStation and BaseStation will forward it to the actuator mote in Cooja which can send the actuation value via a DAC message to the plant model in the Simulink.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType2.png" height="250px" width="250px">

@@ -139,7 +139,9 @@ One of the simplest mixed scenario is only made of combination of ADC and DAC. T
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/ADCDACComm.png" height="250px" width="250px">
 <p>
+In these types of scenarios the sensor in Cooja will sense the required sensing data from the plant model in Simulink and after passing some relays and doing some controlling calculation in some other motes, the actuation data will be sent via DAC communication to the plant model. The above model can also be considered as the simulation environme in Simulink and the relation between mote blocks in the CoojaPlatform and the plant model. One example of this type of scenarios are the Water tank scenario with the controller in one mote which we explained it as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario Simple Scenario]" in "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it  How to Use GISOO]" 
 
+The other ty
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType1.png" height="250px" width="250px">
 <p>

@@ -243,6 +243,7 @@ Like all other scenarios in GISOO the other side of simulation should be designe
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimulationModelForSerialCommunication.png>
+height="350px" width="350px"
 <p>
 
 The main difference between this scenario and the simple scenario without serial communication is inside the Cooja platform. As it has shown in the following picture in this scenario we have to add another mote as baseStasion to the platform which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the baseStation in order to forward the value to the actuator.

@@ -52,7 +52,7 @@ The next two example explain each of these methods in details.
 === One Way Serial Communication ===
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
 
-TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/SerialCommunication_OneWay.zip Download_SerialCommunication_OneWay_Simulink_Model] 
+Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/SerialCommunication_OneWay.zip Download_SerialCommunication_OneWay_Simulink_Model] 
 
 Like all the scenario in GISOO this example also contains two parts, TinyOS code and the Simulink model. The provided TinyOS code for this example is a modified version of standard "testserial" code which has located in the  "tinyos-2.x/apps/tests/TestSerial" or you also can download it from [http://www.tinyos.net/tinyos-2.1.0/apps/tests/TestSerial/ here].
 The original TestSerial application send a counter value on the serial port every 1 second and also it shows the last three significant byte of the received serial data. This application contain a java program which also generate a counter value on PC and send it to the mote serial port. 
@@ -82,6 +82,9 @@ Following picture shows inside of the CoojaPlatform block in left and the counte
 
 === Two Ways Serial Communication ===
 TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
+
+Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunkfiles/examples/serialcommunication/SerialCommunication_TwoWays.zip Download_SerialCommunication_OneWay_Simulink_Model] 
+
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays2.png" >

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010, KTH Royal Institute of Technology
+ * Copyright (c) 2013, KTH Royal Institute of Technology
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -33,8 +33,7 @@
  * @author Joao Faria <jfff@kth.se>
  * @author David Andreu <daval@kth.se>
  *
- * @version  $Revision: 1.0 Date: 2010/11/03 $
- * @modified 2011/10/29
+ * @modified 2013/11/22
  */
 
 #ifndef APP_PARAMETERS_H
@@ -49,7 +48,7 @@
 *********************************************************************/
 enum {
 	AM_CHANNEL 		= 15, 		// Frequency channel used
-	SAMPLING_PERIOD 	= 1000, 		// 200 ms periodic sampling
+	SAMPLING_PERIOD 	= 1000 		// 200 ms periodic sampling
 };
 /*********************************************************************
 		* Other variables

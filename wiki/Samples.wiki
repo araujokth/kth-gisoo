@@ -139,21 +139,21 @@ One of the simplest mixed scenario is only made of combination of ADC and DAC. T
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/ADCDACComm.png" height="250px" width="250px">
 <p>
-In these types of scenarios the sensor in Cooja will sense the required sensing data from the plant model in Simulink and after passing some relays and doing some controlling calculation in some other motes, the actuation data will be sent via DAC communication to the plant model. The above model can also be considered as the simulation environme in Simulink and the relation between mote blocks in the CoojaPlatform and the plant model. One example of this type of scenarios are the Water tank scenario with the controller in one mote which we explained it as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario Simple Scenario]" in "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it  How to Use GISOO]".
+In these types of scenarios the sensor in Cooja will sense the required sensing data from the plant model in Simulink and after passing some relays and doing some controlling calculation in some other motes, the actuation data will be sent via DAC communication to the plant model. The above model can also be considered as the model of simulation environmet in Simulink and the relation between mote blocks in the CoojaPlatform and the plant model. One example of this type of scenarios is the Water-tanks scenario with the controller in one mote which has been explained as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario Simple Scenario]" in "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it  How to Use GISOO]".
 
-The other type of scenario is which we locate the Controller on the PC (in need of powerful computation resource). Sensor will sense the sensing data from plant model and pass it to Base-Station mote. Base-Station will send the data to the PC (for instance a controller model in Simulink) Which has shown as CPU block. Finally this CPU block will calculate the actuation value and send it directly to the plant model.
+The other type of scenario is which we locate the Controller inside a PC instead of one mote (in the need of powerful computation resource). Sensor will sense the sensing data from plant model and pass it to a Base-Station mote. Base-Station will send the data to the PC (for instance a controller model in Simulink) Which has shown as CPU block. Finally this CPU block will calculate the actuation value and send it directly to the plant model.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType1.png" height="250px" width="250px">
 <p>
 
-The other scenario is so that the same as previuse one and the base station will send the sensor data to the CPU block in the PC (or Simulink controller model) but in this senaraio the CPU block will send back the calculated actuation data as a reply to the BaseStation and BaseStation will forward it to the actuator mote in Cooja which can send the actuation value via a DAC message to the plant model in the Simulink.
+The other type of scenario is similar to the previous one and the base station will send the sensor data to the CPU block in the PC (or Simulink controller model) but in these scenarios the CPU block will send back the calculated actuation data as a reply to the BaseStation and BaseStation will forward it to the actuator mote inside the Cooja which can send the actuation value via a DAC message to the plant model in the Simulink.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/SerialType2.png" height="250px" width="250px">
 <p>
 
 
-This type of scenario is useful to simulate those systems with the need of powerful processing resource as a controller. In this situation by using a motes with a "BaseStasion" application which can act as a gateway we can transfer our collected data to a PC where the controlling computation will be done and finally the results can be send back via the serial communication to the wireless system to be used in order to control the plant.
+This type of scenario is useful to simulate those systems with the need of powerful processing resource as a controller and also exist of actuation motes. In this situation the "BaseStasion" application will act as a gateway that can be used to transfer our collected data to a PC where the controlling computation will be done and then sending back the results to the wireless system in Cooja.
 To show the usage of this model we modified the water tank scenario so that the controller will be located in a PC instead of one mote in original sample. The new controller is a Simulink model and will receive the serial data from base station and send back the actuation data to the Cooja. The details about this system had been explained in the following section.
 
 === Double-tank system with the controller on PC ===

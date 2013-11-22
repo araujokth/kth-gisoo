@@ -26,9 +26,7 @@ The following picture shows inside of the Cooja platform in the Simulink model w
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADCReader_CoojaPlatform.png" >
 <p>
 === DAC data transmission in GISOO ==
-TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter.zip Download_DACWriter] 
-
-Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/dacwriter/DACWriter_SimulinkModel.zip  Download_DACWriter_SimulinkModel] 
+TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fdac_data_transmission here] 
 
 This example is a sample for DAC communication and similar to the previous example you can download the provided TinyOS code and Simulink model for this example. The provided TinyOS code (DACWriter) will write a counter value on the DAC0 of the mote and whenever the DAC value is written the Led2 will toggle. Following picture shows the Simulink and Cooja environment together. 
 <p align="center">  
@@ -49,9 +47,7 @@ More over to the ADC and DAC, GISOO also support the serial Communication betwee
   # Mote In Cooja send data via serial to the Simulink and it expects to receive a reply serial data from Simulink after a specific amount of time.
 The next two example explain each of these methods in details.
 ==== One Way Serial Communication ====
-TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
-
-Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/SerialCommunication_OneWay.zip Download_SerialCommunication_OneWay_Simulink_Model] 
+TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fserial_communication here]  
 
 Like all the scenario in GISOO this example also contains two parts, TinyOS code and the Simulink model. The provided TinyOS code for this example is a modified version of standard "testserial" code which has located in the  "tinyos-2.x/apps/tests/TestSerial" or you also can download it from [http://www.tinyos.net/tinyos-2.1.0/apps/tests/TestSerial/ here].
 The original TestSerial application send a counter value on the serial port every 1 second and also it shows the last three significant byte of the received serial data. This application contain a java program which also generate a counter value on PC and send it to the mote serial port. 
@@ -80,9 +76,7 @@ Following picture shows inside of the CoojaPlatform block in left and the counte
 <p>
 
 ==== Two Ways Serial Communication ====
-TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/serialcommunication/Modified_TestSerial.zip Download_Modified_TestSerial] 
-
-Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunkfiles/examples/serialcommunication/SerialCommunication_TwoWays.zip Download_SerialCommunication_TwoWay_Simulink_Model] 
+TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fserial_communication here] 
 
 As it has been mentioned, another supported type of the serial communication in GISOO is two way communication. In this method first the virtual mote in Cooja will send a serial message to its mirror mote in Simulink and will request for receiving a serial message as reply after specific amount of time. This example explains the required details for this type of serial communication. The TinyOS code that we used for this example is the the "testSerial" application, the same as we used in the previous example. But in this example the serial messages will path a sircle from Cooja to Simulink and then from Simulink to Cooja. In this Scenario the virtual mote in Cooja first will send a counter value via the serial data to its mirror mote in Simulink but it also will request to receive a serial message in 1 ms after the sending the message. On the other side in the Simulink the mirror mote will receive the serial message and extract the counter value but again will send the received counter value via another serial message the mote in Cooja and in the result the virtual mote in Cooja will show the last three bits of the received counter value by with its Leds. 
 But in order to receive a serial message back, in Cooja we should select the provided check-box in the GISOO plug-in which will specify the require of receiving the serial message after a specific amount of time which should be mentioned in provided text-box. The general view of the simulated scenario and mentioned check box in the plug-in has been shown in the following figure. It also shows the mote's leds which blink in result of receiving a serial message back from Simulink. 
@@ -154,7 +148,8 @@ The other type of scenario is similar to the previous one and the base station w
 This type of scenario is useful to simulate those systems with the need of powerful processing resource as a controller and also exist of actuation motes. In this situation the "BaseStasion" application will act as a gateway that can be used to transfer our collected data to a PC where the controlling computation will be done and then sending back the results to the wireless system in Cooja.
 To show the usage of this model we modified the water tank scenario so that the controller will be located in a PC instead of one mote in original sample. The new controller is a Simulink model and will receive the serial data from base station and send back the actuation data to the Cooja. The details about this system had been explained in the following section.
 
-=== Double-tank system with the controller on PC ===
+=== Double-tank system with the controller in PC ===
+TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_controller_in_pc here]
 In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it ,How to use GISOO]" we introduced the double-tank system as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario ,simple scenario]". In this section we explain the same simulation scenario but by locating the control process on a PC instead of a mote. The following picture shows both scenarios with controller in a mote or in a PC.
 
 
@@ -162,7 +157,7 @@ In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it ,How to 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimpleScenarioMix.png >
 <p>
 
-In order to simulate the scenario with the controller on PC first we should create all of our motes  in Cooja, so we should four motes: one Sensor, one relay, one Base-Station and, one actuator. You can download the TinyOS code for the motes from here (?????????????) these codes are exactly the same code as those we had for our simple scenario with the new message structure for the sensor and actuator and also instead of a code for controller we have a modified code for base-station which send the radio messages to the actuator instead of broadcast which will be explained in the following.  
+In order to simulate the scenario with the controller in PC first we should create all of our motes  in Cooja. so four motes should be created: one Sensor, one relay, one Base-Station and, one actuator. You can download the TinyOS code for the motes from TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_controller_in_pc here]. These codes are exactly the same code as those we had for our simple scenario with the new message structure for the sensor and actuator and also instead of a code for controller we have a modified code for base-station which send the radio messages to the actuator instead of broadcast which will be explained in the following.  
 
 As we had explained in "[https://code.google.com/p/kth-gisoo/wiki/Samples#Message_structure_for_the_serial_communication_in_GISOO  Message structure for the serial communication in GISOO]" the message structure for sending via serial port should have 16 bytes. For this reason we changed the data struct of the message from sensor to the controller (relay will just forward the message without any modification) to make in a 16 bytes structure. In the define code for this scenario in the "app_parameters.h" the sensor data contains 16 bytes as it has shown in the following:
 
@@ -259,6 +254,8 @@ The Following picture shows the structure of the Cooja platform for this scenari
 <p>
 
 === CTP Routing protocol and multiple tanks scenario ====
+TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_ctp here]
+
 This section will explain an advanced version of previous water-tank scenario with some interesting specification. The main important characteristic of this sample has laid on the routing layer but in overall the main specification of this sample can be listed like this:
   * Using [http://sing.stanford.edu/gnawali/ctp/ , CTP] as a routing protocol in a scenario and simulate it in the GISOO.
   * Creating a scenario with several number of motes and different connections between Simulink an Cooja.

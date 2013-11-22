@@ -264,12 +264,12 @@ This section will explain an advanced version of previous water-tank scenario wi
 
 In this scenario we simulate a water tank laboratory which contains 10 different double tanks and all of them will work in parallel and be controlled by single central controller. In fact this is a simulation of our water tank laboratory environment which has been shown in the following picture:
 <p align="center">  
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/KTH_WaterTanks_Lab.jpg" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/KTH_WaterTanks_Lab.jpg" height="500px" width="500px>
 <p>
 
 In this scenario since we have 10 sets of double tanks, we will need 10 mote to receive the sensor data from each set, 10 actuators that can actuate the motor in each set separately, 1 mote as a central controller and 17 relays to forward the sensor data to the central controller. In this scenario mote-ids 1 - 10 belong to sensors, 21 - 30 belongs to actuators, controller has mote-id 41 and relay are 42 - 58 
 
-On the other hand in order to use CTP as dynamic routing protocol between sensors and controller we modified the code of the simple tank scenario and by adding the CTP to its structure. You can download the TinOS codes for this scenario from here[??????????????].
+On the other hand in order to use CTP as dynamic routing protocol between sensors and controller we modified the code of the simple tank scenario and by adding the CTP to its structure. You can download the TinOS codes for this scenario from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_ctp here].
 
 Finally the created scenario in Cooja will be like the following picture. The GISOO plug-in (SimulinkConnector) become activated for all the sensors and actuators. The picture also shows the "Radio messages" logger which can be activated from "Tools" menu. This is one of the great plug-ins in Cooja which shows all radio messages during the simulation with complete details.
 

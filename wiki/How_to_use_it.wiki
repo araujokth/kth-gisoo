@@ -204,7 +204,7 @@ The aim of this scenario is to create such a system which can stabilize the wate
 
   * Actuator Node: Another node is connected to the pump motor using the DAC. This node receives the control signal from the controller and applies this voltage to the pump in the tank setup.
 
-For this sample, you can download the prepared codes for these motes from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTankCodes.zip here].
+For this sample, you can download the prepared codes for these motes from https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fdac_data_transmission%253Fstate%253Dclosed here].
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/WaterTanksSystem.png" >
@@ -237,7 +237,7 @@ In the next step, you have to create a Simulink model, add a GSE block and add t
 
 In order to create a model of the plant we can use the "Discrete State-Space(Plant)". For this aim we can write a MATLAB script and add it to the "initFcn" of callbacks in the Modelproperties.
 
-The required MATLAB script for this experiment can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/initparameters.m here].
+The required MATLAB script (Simulink model) for this experiment can be downloaded from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_simple_scenario%2FSimulinkModel%253Fstate%253Dclosed here].
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/SimpleTanks_Simulink.png" >

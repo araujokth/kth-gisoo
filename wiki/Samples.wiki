@@ -5,9 +5,7 @@ This section provide explanations about different example scenarios. The scenari
 In overall this section provides examples from very simple and basic aspects until advanced ones which also can be considered as tutorial for GISOO.
 == Basic Examples ==
 === ADC data transmission in GISOO ==
-TinyOS codes: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/adcreader/ADCReader.zip Download_ADCReader] 
-
-Simulink Model: [https://kth-gisoo.googlecode.com/svn/trunk/files/examples/adcreader/ADCReader_SimulinkModel.zip Download_ADCReader_SimulinkModel] 
+TinyOS codes and Simulink Model can be reaced: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fadc_data_transmission here] 
 
 This example explains the ADC communication procedure in GISOO. For this example you can download provided TinyOS code which should be used to create the Cooja simulation. Also the designed Simulink model for this scenario is available for download. In the first step after extracting of the TinyOS code you have to compile the code by the following command:(To use this command you the TinyOS should be installed in advanced.) 
 {{{

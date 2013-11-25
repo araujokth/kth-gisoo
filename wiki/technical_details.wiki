@@ -1,7 +1,11 @@
 <wiki:toc />
 ----
 = Overview =
-<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and one in Simulink which are synchronous together with the possibility of data communication. So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. This section will explain the details of designed and implemented parts to achieve these goals.
+<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and one in Simulink which are synchronous together with the possibility of data communication. 
+In fact all the wireless system (which also can contain the controller) will be simulated in the Cooja and the plant will be simulated in Simulink, and whenever simulated system in Cooja needs to measure some variables in plant or actuate some actuators there, the sensor or actuator mote in Cooja will send the request for sensor value or the actuation data to their mirror sensor or actuator in the Simulink model which are in contact with the plant model and can receive the requested sensor data or apply the actuation value.
+
+
+So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. This section will explain the details of designed and implemented parts to achieve these goals. Since the data communication is also used for the synchronization as well, the first section explains the 
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png" height="582px" width="537px" >

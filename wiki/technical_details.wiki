@@ -11,7 +11,17 @@ In fact all the wireless system (which also can contain the controller) will be 
 In order to have the mentioned system worked, we needs to be able to have a proper data communication and also both systems should work synchronously. So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. The following sections will explain the details of designed and implemented parts to achieve these goals. Since the data communication is also used for the synchronization, firstly we need to understand the data communication details.
 
 = Data Communication=
-In the first step to prepare the simulation in GISOO we need to add all the wireless motes to the Cooja environment and then in the next step we need to activate the provided GISOO-plug-in in Cooja (SimmulinkConnector) to handle the data communication and synchronization for GISOO. This plug-in will create a UDP port which the port number is equal to "18000+Mote-id" and it will listen on this port to receive the data from Simulink which are related to this mote. It means that each mote in Cooja will have its own specific UDP port to receive data. On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 5555
+In the first step to prepare the simulation in GISOO we need to add all the wireless motes to the Cooja environment and then in the next step we need to activate the provided GISOO-plug-in in Cooja (SimmulinkConnector) to handle the data communication and synchronization for GISOO. This plug-in will create a UDP port which the port number is equal to "18000+Mote-id" and it will listen on this port to receive the data from Simulink which are related to this mote. It means that each mote in Cooja will have its own specific UDP port to receive data. On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 5555. This means that all the data which should be received by Simulink or even specific part of Simulink model should be sent to this port.
+
+<p align="center">   
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Cooja_Mote_PortNumber.png"  >
+<p>
+
+
+<p align="center">   
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulinkReceivePortnumber.png"  >
+<p>
+
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGStructure.png"  >
 <p>

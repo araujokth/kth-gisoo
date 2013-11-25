@@ -19,7 +19,7 @@ In the first step to prepare the simulation in GISOO we need to add all the wire
 
 
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulinkReceivePortnumber.png" height="582px" width="637px" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulinkReceivePortnumber.png" height="682px" width="737px" >
 <p>
 
 <p align="center">   

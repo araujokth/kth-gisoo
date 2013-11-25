@@ -1,7 +1,8 @@
 <wiki:toc />
 ----
 = Overview =
-<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>oo</b>ja.
+<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and one in Simulink which are synchronous together with the possibility of data communication. So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. This section will explain the details of designed and implemented parts to achieve these goals.
+
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png" height="582px" width="537px" >
 <p>

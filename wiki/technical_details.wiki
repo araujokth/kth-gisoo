@@ -1,7 +1,7 @@
 <wiki:toc />
 ----
 = Overview =
-
+<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>oo</b>ja.
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png" height="582px" width="537px" >
 <p>

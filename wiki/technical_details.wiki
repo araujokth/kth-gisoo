@@ -16,7 +16,7 @@
 
 
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGTimeLine.png" height="882px" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGTimeLine.png" height="782px" >
 <p>
 
 = Synchronization =

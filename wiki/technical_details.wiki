@@ -10,7 +10,7 @@ In fact all the wireless system (which also can contain the controller) will be 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png" height="582px" width="537px" >
 <p>
 
-So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. This section will explain the details of designed and implemented parts to achieve these goals. Since the data communication is also used for the synchronization as well, the first section explains the 
+In order to have the mentioned system worked, we needs to be able to have a proper data communication and also both systems should work synchronously.So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. The following sections will explain the details of designed and implemented parts to achieve these goals. Since the data communication is also used for the synchronization as well, the firstly we need tp asd
 
 = Data Communication=
 <p align="center">   

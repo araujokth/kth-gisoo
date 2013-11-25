@@ -5,7 +5,7 @@
 In fact all the wireless system (which also can contain the controller) will be simulated in the Cooja and the plant will be simulated in Simulink, and whenever simulated system in Cooja needs to measure some variables in plant or actuate some actuators there, the sensor or actuator mote in Cooja will send the request for sensor value or send the actuation data to their mirror sensor or actuator in the Simulink model which are in contact with the plant model and can receive the requested sensor data or apply the actuation value. The following picture show the genera view of the the GISOO which can show the mirror motes in Cooja and Simulink and the location of the motes in the relation with the plant. (The following picture show the situation that the controller located in one of the motes, but it is also possible to locate the controller in a PC)
 
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png" height="882px" width="837px" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png"  >
 <p>
 
 In order to have the mentioned system worked, we needs to be able to have a proper data communication and also both systems should work synchronously. So the main facts to create GISOO are providing a proper data communication system and accurate synchronization. The following sections will explain the details of designed and implemented parts to achieve these goals. Since the data communication is also used for the synchronization, firstly we need to understand the data communication details.

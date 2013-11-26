@@ -112,12 +112,13 @@ The following picture shows the "GISOO_Simulation_Environment" block.
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/GISOO_Simulation_Environment.png"  >
 <p>
 
-Inside the "GISOO_Simulation_Environment" has been shown in the following picture. 
+Inside the "GISOO_Simulation_Environment" has been shown in the following picture. As it has shown it contains a CoojaConnector block which is responsible for receiving the data from Cooja and also it will synchronize the Simulink with Cooja. The other block is "SynchronizerLoop" which just control the do while loop in Simulink.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png"  >
 <p>
 
+The next picture show the entire of the "CoojaConnector". As it has been marked in the picture This block will receive messages from Cooja and extract the SimulationTime, mote-pin-id, uValue and, Serial data and also compare the Simulation time in Simulink with the Simulation time in Cooja and if Simulink is behind it will continue simulation to reach the proper time.
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
 <p>

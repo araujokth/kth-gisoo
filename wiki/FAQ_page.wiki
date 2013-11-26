@@ -45,7 +45,10 @@ Copy the .jar file and place it in the following folder "YOUR_CONTIKI_FOLDER/too
 Please let us know if this happens to you so we can be aware of it. If this is the case, you have to install MSPsim and either fix MSPsim, or develop your new driver. Please check "What if the mote emulation in COOJA does not work as in the real motes?" for more information on how to install and compile MSPsim.
 
 == How to create a specific mote-id in Cooja? ==
-== How to use the printf command? ==
+Since Cooja creates motes in order (It means that the generated mote-id will only be one after the other), the only way to create a mote with a specific Id is to create all the previous motes first and then create your mote with that id. For instance if you need only one mote in your simulation with id=4, first you need to crate 4 motes from your mote's type and then you can delete the first three ones.
+(Mote-ids in Cooja will be shown as a number on the mote circle.)
+
+== How to use the printf command in Cooja? ==
 == Can we record the times and values of read ADCs and witted DAC in GISOO? ==
 == Why 1 second in TinyOS is not equal with 1 second in Cooja? Can it affect the result of Simulation? ==
 == What if I face a problem for Serial Communication in GISOO?==

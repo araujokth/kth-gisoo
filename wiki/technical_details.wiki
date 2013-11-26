@@ -47,8 +47,9 @@ and considered pin-ids are:
   * Serial data to be sent to Simulink = 18
   * Serial data to be received from Simulink = 19
 
+<b>Actuation value (uValue):</b> Although some the messages will be used to apply an actuation value to the plant because of need of fix message format in GISOO, these four bytes will be inside of all the messages by they will receive value and also their value will be used only when a mote in Cooja wants to apply an actuation value to the plant.
 
-
+<b>Serial data:</b> for the same reason as it mention for actuation value, all the message will carry 16 bytes of serial message but they will only used when some serial data is needed to be transmited from Cooja to Simulink or in vice versa.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGStructure.png"  >

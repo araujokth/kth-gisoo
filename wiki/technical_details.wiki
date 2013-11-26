@@ -98,7 +98,11 @@ The following picture shows the combination of Synchronization and message commu
 = GISOO Simulink Library Blocks =
 GISOO uses its specific Simulink library and this part will explain about the details of designed system for achieving the proper functionality in simulation. 
 == Synchronization and data communication ==
-GISOO-Simulink-library contains a main block to handle both of the synchronization and the data communication (receiving the data in Simulink) which known as "CoojaPlatform". This block Simulate the Cooja environment and motes in side the Simulink and also if we needed to implemented the controller model to the Simulink it should also be added inside this block. more explanation and examples can be find in [https://code.google.com/p/kth-gisoo/wiki/Samples  here] and [https://code.google.com/p/kth-gisoo/wiki/Samples#Double-tank_system_with_the_controller_in_PC  here]
+GISOO-Simulink-library contains a main block to handle both of the synchronization and the data communication (receiving the data in Simulink) which known as "CoojaPlatform". This block Simulate the Cooja environment and motes in side the Simulink and also if we needed to implemented the controller model to the Simulink it should also be added inside this block. And the plant model should be located out of this block. More explanation and examples can be find in [https://code.google.com/p/kth-gisoo/wiki/Samples  here] and [https://code.google.com/p/kth-gisoo/wiki/Samples#Double-tank_system_with_the_controller_in_PC  here].
+This block is a do-while block which can pause the simulation of the plant model "while" it has not receive a new time from Cooja and "do" continue the simulation of the plant model when it receive a new simulation time from Cooja.
+
+
+The folllowing picture sh
 
 
 == Mote structure ==

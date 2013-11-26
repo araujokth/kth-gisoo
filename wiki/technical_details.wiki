@@ -104,14 +104,14 @@ This block is a do-while block which can pause the simulation of the plant model
 This block also should be able to continuously receive the message from Cooja and for this aim we add additional parts which can handle the receiving the data.
 The following picture shows the structure of these blocks.
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/GISOO_Simulation_Environment.png" height="782px" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/GISOO_Simulation_Environment.png"  >
 <p>
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png" height="782px" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
 <p>
 
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png" height="782px" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png"  >
 <p>
 
 == Mote structure ==

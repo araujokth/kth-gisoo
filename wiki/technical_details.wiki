@@ -106,12 +106,15 @@ The following picture shows the structure of these blocks.
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/GISOO_Simulation_Environment.png"  >
 <p>
-<p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
-<p>
+
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png"  >
 <p>
+
+<p align="center">   
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
+<p>
+
 
 == Mote structure ==

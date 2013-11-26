@@ -49,6 +49,8 @@ Since Cooja creates motes in order (It means that the generated mote-id will onl
 (Mote-ids in Cooja will be shown as a number on the mote circle.)
 
 == How to use the printf command in Cooja? ==
+In Cooja there is a "Mote Output" plug-in (which will be appear by default when you run the Cooja). This plug-in will show all the printed data with the printf command. The only point which should be considered is that you use the "SerialPrintfC" component  instead of "PrintfC" in your TinyOS code, otherwise you will receive several unwanted character in your printed message. 
+
 == Can we record the times and values of read ADCs and witted DAC in GISOO? ==
 == Why 1 second in TinyOS is not equal with 1 second in Cooja? Can it affect the result of Simulation? ==
 == What if I face a problem for Serial Communication in GISOO?==

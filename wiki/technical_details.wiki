@@ -17,7 +17,7 @@ In the first step to prepare the simulation in GISOO we need to add all the wire
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Cooja_Mote_PortNumber.png"  >
 <p>
 
-On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 5555. This means that all the data which should be received by Simulink or even specific part of Simulink model should be sent to this port.
+On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 55555. This means that all the data which should be received by Simulink or even specific part of Simulink model should be sent to this port.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulinkReceivePortnumber.png" height="682px" width="737px" >
@@ -60,7 +60,7 @@ The following picture shows a schema of the designed message structure for GISOO
 
 = Synchronization =
 Another important factor for GISOO is its accurate synchronization system. In GISOO as it has been mentioned, the Cooja will control the simulation time and for this reason Cooja will run its simulation until the moment that a mote in Cooja needs to send or receive some data to/from Simulink. In this moment the GISOO plugin in Cooja for that mote will create a message and send it to Simulink which contain the accurate time of simulation time in Cooja (in millisecond). As soon as the plug-in send the message, it will pause the simulation in that moment to receive a reply from Simulink. This reply can be a sensor value or serial data or an acknowledgement, but receiving a data is important otherwise the Cooja will not continue its Simulation.
-This pause in Cooja always create by executing a "receive" command after sending a data. Since the "receive"command is a blocking function the simulation will stay on that moment until it could read some data and pass that part.
+This pause in Cooja always create by executing a "receive" command after sending a data. Since the "receive"command is a blocking function the simulation will stay on that moment until it could read some data and pass that part. The following code shows the part of code winch send a request for an ADC value and make a pause in simulation until the ADC for that moment be receives. 
 
 {{{
 protected int adcRequestSender(byte[] message, DatagramSocket dgSocket) {

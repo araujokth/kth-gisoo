@@ -43,3 +43,8 @@ Copy the .jar file and place it in the following folder "YOUR_CONTIKI_FOLDER/too
 == What if there is a driver in MSPsim that is incomplete, incorrect or missing?==
 
 Please let us know if this happens to you so we can be aware of it. If this is the case, you have to install MSPsim and either fix MSPsim, or develop your new driver. Please check "What if the mote emulation in COOJA does not work as in the real motes?" for more information on how to install and compile MSPsim.
+
+== How to create a specific mote-id in Cooja? ==
+== How to use the printf command? ==
+== Can we record the times and values of read ADCs and witted DAC in GISOO? ==
+== What if I face a problem for Serial Communication in GISOO?==

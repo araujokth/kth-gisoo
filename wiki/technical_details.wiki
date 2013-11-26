@@ -99,6 +99,7 @@ The following picture shows the combination of Synchronization and message commu
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGTimeLine.png" height="782px" >
 <p>
 
+The most important point which has been achieved in the result of the designed data communication system is that Since, both of the Simulink and Cooja will be completely frozen during the communication procedure, the delay of communication between Simulink and Cooja will affect the result of simulation.
 
 = GISOO Simulink Library Blocks =
 GISOO uses its specific Simulink library and this part will explain about the details of designed system for achieving the proper functionality in simulation. 
@@ -157,3 +158,5 @@ Since we always used the ADC0 and ADC1 we just use them and we terminate the res
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Mote.png">
 <p>
+
+The only action which needs extra procedure is the sending out of the serial-data. Since when we want to send the data to the serial port of a mote we should create a complete serial message including its header payload (serial data) and footer, in this model also we have pass the serial data from a specific designed block to create a serial message.(The block has been shown in light blue in the previous figure) The structure of serial message can be found in [http://tinyos.cvs.sourceforge.net/viewvc/tinyos/tinyos-2.x/doc/html/tep113.html  TEP 113]. But it should be mentioned that the two bytes of CRC should be created over P to end of the payload. (Not over S until end of the payload  as it has mentioned in the TEP-113)

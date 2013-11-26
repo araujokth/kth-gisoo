@@ -133,18 +133,17 @@ The Following picture shows the message created by Stop block when it could not 
 The SkyMote bloke has been designed to be able to mimic the actions of a real mote such as reading ADC writing on DAC, and sending and receiving the radio data in the Simulink.
 The following figure shows the structure of the SkyMote block. This block will receive four types of data from the CoojaConnector block in the "GISOO-Simulation-Environment" which are:
 
-  * Time-Is-Correct
-  * Interface-Identifier
-  * uValue
-  * Input Serial-Data
+  * Time-Is-Correct: is the value of the mote-pin-id which has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
 
-<b>Time-Is-Correct</b>: is a boolean value which shows that if the Simulink time is equal with the Cooja time that it has received from the message or not.
+  * Interface-Identifier: is a boolean value which shows that if the Simulink time is equal with the Cooja time that it has received from the message or not.
 
-<b>Interface-Identifier</b>: is the value of the mote-pin-id which has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
+  * uValue: is the actuation value for DACs, it also has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
 
-<b>uValue</b>: is the actuation value for DACs, it also has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
+  * Input Serial-Data: is the serial data that has been received from Cooja.
 
-<b>Input Serial-Data</b>: is the serial data that has been received from Cooja.
+
+
+
   
 Also the mote will receive the output serial data from the mote input.
 In the mote structure 

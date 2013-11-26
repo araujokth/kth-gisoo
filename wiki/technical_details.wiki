@@ -123,6 +123,7 @@ The next picture show the entire of the "CoojaConnector". As it has been marked 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
 <p>
 
+The Following picture shows the message created by Stop block when it could not receive a message from Cooja before it reach the maximum number of its iteration.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulationStop.png"  >

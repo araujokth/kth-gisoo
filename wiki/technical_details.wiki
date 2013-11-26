@@ -17,11 +17,20 @@ In the first step to prepare the simulation in GISOO we need to add all the wire
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Cooja_Mote_PortNumber.png"  >
 <p>
 
-On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 5555. This means that all the data which should be received by Simulink or even specific part of Simulink model should be sent to this port.(It is needed to mention that it is posibble to cha)
+On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 5555. This means that all the data which should be received by Simulink or even specific part of Simulink model should be sent to this port.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulinkReceivePortnumber.png" height="682px" width="737px" >
 <p>
+
+== Simulation procedure ==
+In GISOO Cooja is responsible to control the simulation procedure. It means that Cooja will start simulating the wireless system until the moment that one of the motes in Cooja need to send or receives some data from plant model. This can happen in four situations:
+  * A sensor mote need to sense some sensor data.
+  * An actuator mote needs to apply some actuation values on the plant
+  * A mote needs to send some serial data.
+  * A mote needs to receive some serial data.
+
+
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGStructure.png"  >

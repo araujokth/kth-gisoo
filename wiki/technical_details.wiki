@@ -25,9 +25,9 @@ On the other side Simulink model has different situation and all the Model will 
 
 == Simulation procedure ==
 
-In GISOO Cooja is responsible to control the simulation procedure. It means that Cooja will start simulating the wireless system until the moment that one of the motes in Cooja need to send or receives some data from plant model. This can happen in four situations:
+In GISOO, Cooja is responsible for controlling the simulation procedure. It means that Cooja will start simulating the wireless system until the moment that one of the motes in Cooja needs to send or receives some data to/from plant model. This can happen in four situations:
 
-  * A sensor mote need to sense some sensor data.
+  * A sensor mote needs to sense some sensor data.
   * An actuator mote needs to apply some actuation values on the plant
   * A mote needs to send some serial data.
   * A mote needs to receive some serial data.

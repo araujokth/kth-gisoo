@@ -132,7 +132,7 @@ The Following picture shows the message created by Stop block when it could not 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulationStop.png"  >
 <p>
 
- == SkyMote ==
+ == Sky Mote ==
 
 The SkyMote bloke has been designed to be able to mimic the actions of a real mote such as reading ADC writing on DAC, and sending and receiving the radio data in the Simulink.
 The following figure shows the structure of the SkyMote block. This block will receive four types of data from the CoojaConnector block in the "GISOO-Simulation-Environment" which are:

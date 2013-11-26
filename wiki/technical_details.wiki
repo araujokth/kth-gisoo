@@ -102,11 +102,12 @@ GISOO-Simulink-library contains a main block to handle both of the synchronizati
 This block is a do-while block which can pause the simulation of the plant model "while" it has not receive a new time from Cooja and "do" continue the simulation of the plant model when it receive a new simulation time from Cooja.
 
 This block also should be able to continuously receive the message from Cooja and for this aim we add additional parts which can handle the receiving the data.
-The following picture shows the structure of these blocks.
+The following picture shows the "GISOO_Simulation_Environment" block.
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/GISOO_Simulation_Environment.png"  >
 <p>
 
+Inside the "GISOO_Simulation_Environment" has been shown in the following picture. 
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png"  >

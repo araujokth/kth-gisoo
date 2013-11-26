@@ -141,12 +141,15 @@ The following figure shows the structure of the SkyMote block. This block will r
 
   * Input Serial-Data: is the serial data that has been received from Cooja.
 
-
-
-
   
 Also the mote will receive the output serial data from the mote input.
-In the mote structure 
+
+In the mote structure picture the first colorful column from left (light orange) are the constant blocks which represent the pin-id of the motes. The values of pin-ids has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]. These values will be used to fined the received data belongs to which pin.
+
+The other three colorful columns are three filter which finally can make the correct action in the mote based on the received data.
+
+The firs filter column from left which are shown in light green, will discover if the received pin-id id the same as the consatant number that has been compared or not. For each received message in Simulink one and only one of these block will return true and the rest will be false. 
+In the second comparison, firs the value of mote-id will be extracted from mote-pin-id value and then this value will be compared with id of the mote in Simulink. if the result of this comparison was true it means that the received message belonged to this mote otherwise it belongs to some other mote. In the final step of 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Mote.png">
 <p>

@@ -53,6 +53,7 @@ and considered pin-ids are:
 
 The following picture shows a schema of the designed message structure for GISOO.
 
+= Synchronization =
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGStructure.png"  >
 <p>
@@ -63,5 +64,5 @@ The following picture shows a schema of the designed message structure for GISOO
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGTimeLine.png" height="782px" >
 <p>
 
-= Synchronization =
+
 = GISOO Simulink Library Blocks =

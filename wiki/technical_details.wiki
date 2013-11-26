@@ -124,4 +124,8 @@ The next picture show the entire of the "CoojaConnector". As it has been marked 
 <p>
 
 
+<p align="center">   
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulationStop.png"  >
+<p>
+
 == Mote structure ==

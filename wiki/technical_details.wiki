@@ -76,7 +76,7 @@ protected int adcRequestSender(byte[] message, DatagramSocket dgSocket) {
         DatagramPacket receivedPacket = new DatagramPacket(receivedValue, receivedValue.length);
         try {
 
-            dgSocket.receive(receivedPacket);
+            dgSocket.receive(receivedPacket); //This line will make a pause in Cooja's simulation until the sensor data be received.
 
         } catch (IOException ex) {
             System.out.println("Error in receive UDP data adcRequestSender!!");

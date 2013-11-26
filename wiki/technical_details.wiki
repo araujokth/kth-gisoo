@@ -42,10 +42,10 @@ mote-pin-id = Mote-id*100 + pin number
 
 and considered pin-ids are:
 
-  ADC0 - ADC12 = 0 - 12
-  DAC0 - DAC1  = 16 - 17
-  Serial data to be sent to Simulink = 18
-  Serial data to be received from Simulink = 19
+  * ADC0 - ADC12 = 0 - 12
+  * DAC0 - DAC1  = 16 - 17
+  * Serial data to be sent to Simulink = 18
+  * Serial data to be received from Simulink = 19
 
 
 

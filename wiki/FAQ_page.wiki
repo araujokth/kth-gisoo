@@ -47,4 +47,5 @@ Please let us know if this happens to you so we can be aware of it. If this is t
 == How to create a specific mote-id in Cooja? ==
 == How to use the printf command? ==
 == Can we record the times and values of read ADCs and witted DAC in GISOO? ==
+== Why 1 second in TinyOS is not equal with 1 second in Cooja? Can it affect the result of Simulation? ==
 == What if I face a problem for Serial Communication in GISOO?==

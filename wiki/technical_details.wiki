@@ -29,9 +29,12 @@ In GISOO Cooja is responsible to control the simulation procedure. It means that
   * An actuator mote needs to apply some actuation values on the plant
   * A mote needs to send some serial data.
   * A mote needs to receive some serial data.
-
-
-
+In any of these situations a mote in Cooja will send a message to the Simulink model to inform Simulink that at which moment which kind of action in which mote is required. To achieve this aim an especial message structure has been designed. This message contains four different parts: 
+  * Simulation time
+  * Mote-Pin-ID 
+  * Actuation value (uValue)
+  * Serial data
+<b>Simulation time:</b> In the message structure the first four bytes considered for carrying the Simulation time (in millisecond). In fact Cooja will run until the moment that a mote needs an especial communication with Simulink, then it will generate a message and add the time of simulation in Cooja to the beginning of the message. On the other side in Simulink whenever 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGStructure.png"  >
 <p>

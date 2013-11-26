@@ -75,12 +75,13 @@ protected int adcRequestSender(byte[] message, DatagramSocket dgSocket) {
         byte[] receivedValue = new byte[4];
         DatagramPacket receivedPacket = new DatagramPacket(receivedValue, receivedValue.length);
         try {
+
             dgSocket.receive(receivedPacket);
+
         } catch (IOException ex) {
             System.out.println("Error in receive UDP data adcRequestSender!!");
             System.out.println(ex.getMessage());
         }
-     //   byte[] data = reverseArray(receivedPacket.getData());
         byte[] data = receivedPacket.getData();
         return (bytes2Int1(data));
     }

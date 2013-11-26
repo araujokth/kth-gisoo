@@ -87,7 +87,8 @@ protected int adcRequestSender(byte[] message, DatagramSocket dgSocket) {
     }
 }}}
 
-On the other side the Simulink is in the pause mode from the beginning and it will wait until it receives a message from Simulink. As soon as it receive a message, it will extract the time of simulation in Cooja and then it will continue the Simulation simulation until it reach the Simulation time in Cooja and then send back the requested data or apply the actuation data in that moment. In fact the time duration between two messages is the duration that Simulink can run the simulation independent of the simulation Cooja and normally simulation is much faster than simulation in Cooja so the Simulink can catch the simulation time in Cooja in very short period of time.(It will depend on the complexity of the plant model in Simulink)
+On the other side the Simulink is in the pause mode from the beginning and it will wait until it receives a message from Simulink. As soon as it receive a message, it will extract the time of simulation in Cooja and then it will continue the Simulation simulation until it reach the Simulation time in Cooja and then send back the requested data or apply the actuation data in that moment. In fact the time duration between two messages is the duration that Simulink can run the simulation independent of the simulation Cooja and normally simulation is much faster than simulation in Cooja so the Simulink can catch the simulation time in Cooja in very short period of time.(It will depend on the complexity of the plant model in Simulink). 
+The following picture shows the combination of Synchronization and message communication in GISOO.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGTimeLine.png" height="782px" >

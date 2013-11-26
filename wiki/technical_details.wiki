@@ -133,5 +133,5 @@ The Following picture shows the message created by Stop block when it could not 
 
 
 <p align="center">   
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Mote.png"   height="1002px" width="637px">
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Mote.png">
 <p>

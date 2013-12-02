@@ -163,4 +163,4 @@ Note that to be able to run GISOO, you *must* have Simulink installed on your ma
 
 == Adding GISOO Simulink Library to Simulink ==
 
-You need to download the GISOO Simulink Library folder from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/GisooLib.zip here] and add it to you MATLAB path variable. This is done by opening "File/Set path" in MATLAB. 
+You need to download the GISOO Simulink Library folder from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fgisoo_installation_files%2FGISOOSimulinkLib%253Fstate%253Dclosed here] and add it to you MATLAB path variable. This is done by opening "File/Set path" in MATLAB. 

@@ -99,15 +99,15 @@ The following picture shows the combination of Synchronization and message commu
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/MSGTimeLine.png" height="782px" >
 <p>
 
-The most important point which has been achieved in the result of the designed data communication system is that Since, both of the Simulink and Cooja will be completely frozen during the communication procedure, the delay of communication between Simulink and Cooja will not affect the result of simulation.
+The most important point which has been achieved in the result of the designed data communication system is that Since, both of the Simulink and Cooja will be completely frozen during the communication procedure, the delay of communication between Simulink and Cooja <b>will not</b> affect the result of simulation.
 
 = GISOO Simulink Library =
 GISOO uses its specific Simulink library and this part will explain about the details of designed system for achieving the proper functionality in simulation. 
 
 == GISOO Simulation Environment ==
 
-GISOO-Simulink-library contains a main block to handle both of the synchronization and the data communication (receiving the data in Simulink) which known as "GISOO-Simulation Environment". This block Simulate the Cooja environment and motes in side the Simulink and also if we needed to implemented the controller model to the Simulink it should also be added inside this block. And the plant model should be located out of this block. More explanation and examples can be find in [https://code.google.com/p/kth-gisoo/wiki/Samples  here] and [https://code.google.com/p/kth-gisoo/wiki/Samples#Double-tank_system_with_the_controller_in_PC  here].
-This block is a do-while block which can pause the simulation of the plant model "while" it has not receive a new time from Cooja and "do" continue the simulation of the plant model when it receive a new simulation time from Cooja.
+GISOO-Simulink-library contains a main block to handle both of the synchronization and the data communication (receiving the data in Simulink) which known as "GISOO-Simulation Environment". This block Simulate the Cooja environment and its motes inside the Simulink, and also if we needed to implement the controller model inside the Simulink, it should be added inside this block. The plant model should be located out of this block. More explanation and examples can be find in [https://code.google.com/p/kth-gisoo/wiki/Samples  here] and [https://code.google.com/p/kth-gisoo/wiki/Samples#Double-tank_system_with_the_controller_in_PC  here].
+"GISOO-Simulation Environment" block is a do-while block which can pause the simulation of the plant model "while" it has not receive a new time from Cooja and "do" continue the simulation of the plant model when it receive a new simulation time from Cooja.
 
 This block also should be able to continuously receive the message from Cooja and for this aim we add additional parts which can handle the receiving the data.
 The following picture shows the "GISOO_Simulation_Environment" block.
@@ -115,13 +115,13 @@ The following picture shows the "GISOO_Simulation_Environment" block.
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/GISOO_Simulation_Environment.png"  >
 <p>
 
-Inside the "GISOO_Simulation_Environment" has been shown in the following picture. As it has shown it contains a GISOO-Simulink plugin block which is responsible for receiving the data from Cooja and also it will synchronize the Simulink with Cooja. The other block is "SynchronizerLoop" which just control the do while loop in Simulink.
+Inside the "GISOO_Simulation_Environment" has been shown in the following picture. As it has been shown, it contains a GISOO-Simulink plugin block which is responsible for receiving the data from Cooja and also it will synchronize the Simulink with Cooja. The other block is "SynchronizerLoop" which just control the do while loop in Simulink.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png"  >
 <p>
 
-The next picture show the entire of the "GISOO-Simulink plugin". As it has been marked in the picture This block will receive messages from Cooja and extract the SimulationTime, mote-pin-id, uValue and, Serial data and also compare the Simulation time in Simulink with the Simulation time in Cooja and if Simulink is behind it will continue simulation to reach the proper time. The three blocks in the top right side of the picture shows the maximum number of the iteration that the while loop will do. This number will config the maximum time that Simulink can wait to receive a message from Cooja otherwise the Simulink will consider that the communication with Cooja and to avoid the infinitive simulation loop, the stop block will stop the Simulink Simulation with showing a message on the screen. (If in the scenario you need bigger time intervals to receive messages from Cooja, you can increase the default value of this block, which is 3000 in the following figure.) 
+The next picture shows the entire of the "GISOO-Simulink plugin". As it has been marked in the picture This block will receive messages from Cooja and extract the Simulation-Time, mote-pin-id, uValue and, Serial data and also compare the Simulation time in Simulink with the Simulation time in Cooja and if Simulink is behind, it will continue the simulation to reach the proper time. The three blocks in the top right side of the picture shows the maximum number of the iteration that the while loop will do. This number will config the maximum time that Simulink can wait to receive a message from Cooja and if Simulink do not receive any message in this duration will consider it as a result of problem in communication with Cooja and to avoid the infinitive simulation loop, the stop block will stop the Simulink Simulation which will show a message on the screen. (If in the scenario you need bigger time intervals to receive messages from Cooja, you can increase the default value of this block, which is 3000 in the following figure.) 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
 <p>

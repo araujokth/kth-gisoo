@@ -97,16 +97,61 @@ After these steps are performed, one can Verify the correct installation of COOJ
 
 == Adding the GISOO COOJA plug-in ==
 
-After verifying the COOJA installation, you are now ready to add GISOO to COOJA. First, you have to add the "Simulink Connector" plug-in which can be downloaded from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/SimulinkConnector.zip here] to the Cooja. After extracting the plug-in folder you have to place it on the following path:
+After verifying the COOJA installation, you are now ready to add GISOO to COOJA. First, you have to add the "GISOO-Simulink plug-in" which can be downloaded from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fgisoo_installation_files%2FGISOO_Simulink_Plugin here] to the Cooja. For this aim you have to do three steps:
+  # After Downloading the plug-in folder you have to place it on the following path:
 
 {{{
 YOUR_CONTIKI_FOLDER/tools/cooja/apps
 }}}
 
-In the second step you hve to download the our modified MSPSim.jar from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/mspsim.zip here] and after extracting the mspsim.jsr you should substitute it instead of one that you have in your contiki folder in this path:
+In the second step you have to download our modified MSPSim.jar from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/mspsim.zip here] and after extracting the.zip file you should substitute the mspsim.jar with the which is exist in your contiki folder in this path:
 
 {{{
 YOUR_CONTIKI_FOLDER/tools/mspsim
+}}}
+
+(This mspsim.jar has been modidied to support the DAC communication, and has been tested with Contiki2.6).
+
+  # In the third step you have to modify the build file in the Cooja folder and add
+
+{{{
+<ant antfile="build.xml" dir="apps/GISOO_Simulink_Plugin" target="jar" inheritAll="false"/>  
+}}}
+
+to the following part (in the following code we already added the mentioned line and you can see it in the last line):
+{{{
+<target name="jar" depends="jar_cooja">
+    <ant antfile="build.xml" dir="apps/mrm" target="jar" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/mspsim" target="jar" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/avrora" target="jar" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/serial_socket" target="jar" inheritAll="false"/>  
+    <ant antfile="build.xml" dir="apps/collect-view" target="jar" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/powertracker" target="jar" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/GISOO_Simulink_Plugin" target="jar" inheritAll="false"/>
+  </target>
+}}}
+
+
+And also add this line:
+
+{{{
+<ant antfile="build.xml" dir="apps/GISOO_Simulink_Plugin" target="clean" inheritAll="false"/>  
+}}}
+
+to the following part (It has already added in the following lines:
+
+{{{
+<target name="clean" depends="init">
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+    <ant antfile="build.xml" dir="apps/mrm" target="clean" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/mspsim" target="clean" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/avrora" target="clean" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/serial_socket" target="clean" inheritAll="false"/>  
+    <ant antfile="build.xml" dir="apps/collect-view" target="clean" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/powertracker" target="clean" inheritAll="false"/>
+    <ant antfile="build.xml" dir="apps/GISOO_Simulink_Plugin" target="clean" inheritAll="false"/> 
+  </target>
 }}}
 
 = Simulink =

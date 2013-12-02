@@ -51,14 +51,14 @@ The next two examples explain each of these methods in details.
 ==== One Way Serial Communication ====
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fserial_communication here]  
 
-Like all the scenario in GISOO this example also contains two parts, TinyOS code and the Simulink model. The provided TinyOS code for this example is a modified version of standard "testserial" code which has located in the  "tinyos-2.x/apps/tests/TestSerial" or you also can download it from [http://www.tinyos.net/tinyos-2.1.0/apps/tests/TestSerial/ here].
-The original TestSerial application send a counter value on the serial port every 1 second and also it shows the last three significant byte of the received serial data. This application contain a java program which also generate a counter value on PC and send it to the mote serial port. 
-To use this application in GISOO as an example for serial communication we need to do some modification on it and understanding these modification required to understand the message structure for the serial communication in GISOO which will be explained in below:
+Like all the scenarios in GISOO, this example also contains two parts, TinyOS code and the Simulink model. The provided TinyOS code for this example is a modified version of standard "testserial" code which has located in the  "tinyos-2.x/apps/tests/TestSerial" or you also can download it from [http://www.tinyos.net/tinyos-2.1.0/apps/tests/TestSerial/ here].
+The original TestSerial application sends a counter value on the serial port every 1 second and also it shows the last three significant bits of the received serial data by leds. This application contain a java program which also generate a counter value on PC and send it to the mote's serial port. 
+To use this application in GISOO as an example for serial communication, we need to modify it and understanding these modification required to understand the message structure for the serial communication in GISOO which will be explained in below:
 
 ===== Message structure for the serial communication in GISOO =====
-The details of designed messages structure for data transmission between Simulink and Cooja in GISOO has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication  Data Communication]. But in very short, to understand this part, we should know that GISOO has been designed so that for serial communication between Cooja and Simulink the serial data should have <b>16 bytes structure</b> (The data structure that you define in TinyOS code of your mote to be sent or received via serial should have 16 bytes). It means that the serial data can not be longer than 16 byes (if you need to communicate more than 16 bytes you should divide it to different messages) or also if your message is smaller than 16 byte you still have to define 16 byte data structure but you can leave the unneeded parts, empty. 
+The details of designed messages structure for data transmission between Simulink and Cooja in GISOO has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication  Data Communication]. But in very short, to understand this part, we should know that, GISOO has been designed so that for serial communication between Cooja and Simulink the serial data should have <b>16 bytes structure</b> (The data structure that you define in TinyOS code of your mote to be sent or received via serial should have 16 bytes). It means that the serial data can not be longer than 16 byes (if you need to communicate more than 16 bytes you should divide it to different messages) or also if your message is smaller than 16 byte you still have to define 16 byte data structure but you can leave the unneeded parts, empty. 
 
-For this example in order to adapt the testserial application with the required message type we changed the data structure of the counter message  to make in a 16 bytes structure. In the define code for this scenario in the "TestSerial.h" the serial message data contains 16 bytes as it has shown in the following:
+For this example in order to adapt the "testserial" application with the required message structure, we changed the data structure of the counter message to make it in a 16 bytes structure. In the defined code for this scenario, in the "TestSerial.h" the serial message data contains 16 bytes as it has been shown in the following:
 
 {{{
 typedef nx_struct test_serial_msg {
@@ -72,7 +72,7 @@ The following figure shows the implemented scenario in GISOO. In this scenario t
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >
 <p>
-Following picture shows inside of the "GISOO-Simulation Environment" block in left and the counter valued in scope in right.
+Following picture shows inside of the "GISOO-Simulation Environment" block in left and the scope of counter valued in right.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay_Result.png" >
 <p>

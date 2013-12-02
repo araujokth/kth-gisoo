@@ -28,13 +28,13 @@ The following picture shows inside of the "GISOO-Simulation Environment" in the 
 === DAC data transmission in GISOO ==
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fdac_data_transmission here] 
 
-This example is a sample for DAC communication and similar to the previous example you can download the provided TinyOS code and Simulink model for this example. The provided TinyOS code (DACWriter) will write a counter value on the DAC0 of the mote and whenever the DAC value is written the Led2 will toggle. Following picture shows the Simulink and Cooja environment together. 
+This example shows a simple DAC communication and similar to the previous example, you can download the provided TinyOS code and Simulink model for this example. The provided TinyOS code (DACWriter) will write a counter value on the DAC0 of the mote and whenever the DAC value is written the Led2 will toggle. Following picture shows the Simulink and Cooja environment together. 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter.png" >
 <p>
 
 As the previous picture shows the mote generate the counter values and send it over the DAC0. For each DAC value the led2 toggled. On the other side the Simulink will receive this value and show it in the scope.
-The following picture shows the amount of the received counter value in the Simulink on the right side and inside of the "GISOO-Simulation Environment" on the left side.
+The following picture shows the amount of the received counter values in the Simulink on the right side and inside of the "GISOO-Simulation Environment" on the left side.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter_CoojaPlatform.png" >
 <p>
@@ -43,9 +43,11 @@ The following picture shows the amount of the received counter value in the Simu
 
 === Serial Communication ===
 More over to the ADC and DAC, GISOO also support the serial Communication between Simulink and Cooja. The designed procedure in GISOO can provide two types of serial communication in its scenarios. 
-  # Mote in Cooja send data via serial port to the Simulink without expecting to receive data from Serial port. 
+
+  # Mote in Cooja send data via serial port to the Simulink, without expecting to receive data from Serial port. 
   # Mote In Cooja send data via serial to the Simulink and it expects to receive a reply serial data from Simulink after a specific amount of time.
-The next two example explain each of these methods in details.
+
+The next two examples explain each of these methods in details.
 ==== One Way Serial Communication ====
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fserial_communication here]  
 

@@ -12,7 +12,7 @@ This example explains the ADC communication procedure in GISOO. For this example
 make telosb install
 }}}
 More explanation about TinyOS and its command can be found in the [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials  TinyOS tutorials]. This code will read the ADC values of ADC0 and ADC1 in the mote every 200 ms and whenever a ADC data is received, the three least significant bits in the ADC0 value are displayed by the motes' LEDs.
-After compiling the ADCReader code, you should run a new simulation in Cooja and create a new mote in that simulation environment by using the main.exe file of ADCReader which will be created in the build folder after its compilation. More details about adding mote in Cooja has been explained [https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Adding_motes_to_the_simulation  here]. Finally you should activated the SimmulinkConnector plug-in for the created mote.
+After compiling the ADCReader code, you should run a new simulation in Cooja and create a new mote in that simulation environment by using the main.exe file of ADCReader which will be created in the build folder after its compilation. More details about adding mote in Cooja has been explained [https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Adding_motes_to_the_simulation  here]. Finally you should activated the "GISOO-Simulink plugin" for the created mote.
 In the next step you have to download the Simulink model and after extract it the simulation is ready. This Simulink model will generate the different values by using the sin function to be read as the ADC value bye the mote. The following figure shows the simulation environment in the Cooja and Simulink.
 
 <p align="center">  
@@ -20,7 +20,7 @@ In the next step you have to download the Simulink model and after extract it th
 <p>
 
 As it has been shown in the previous picture after running the simulation the Leds will blink according to the data which it could read in the ADC0.
-The following picture shows inside of the Cooja platform in the Simulink model which contains one mote with two income one for ADC0 and another one by ADC1.
+The following picture shows inside of the "GISOO-Simulation Environment" in the Simulink model which contains one mote with two income one for ADC0 and another one by ADC1.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADCReader_CoojaPlatform.png" >
@@ -34,7 +34,7 @@ This example is a sample for DAC communication and similar to the previous examp
 <p>
 
 As the previous picture shows the mote generate the counter values and send it over the DAC0. For each DAC value the led2 toggled. On the other side the Simulink will receive this value and show it in the scope.
-The following picture shows the amount of the received counter value in the Simulink on the right side and inside of the CoojaPlatform on the left side.
+The following picture shows the amount of the received counter value in the Simulink on the right side and inside of the "GISOO-Simulation Environment" on the left side.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/dacwriter/DACWriter_CoojaPlatform.png" >
 <p>
@@ -70,7 +70,7 @@ The following figure shows the implemented scenario in GISOO. In this scenario t
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay.png" >
 <p>
-Following picture shows inside of the CoojaPlatform block in left and the counter valued in scope in right.
+Following picture shows inside of the "GISOO-Simulation Environment" block in left and the counter valued in scope in right.
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_OneWay_Result.png" >
 <p>
@@ -84,7 +84,7 @@ But in order to receive a serial message back, in Cooja we should select the pro
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialComm_TwoWays2.png" >
 <p>
 
-The following picture shows the inside of the Coojaplatform block in the Simulink model. As you can see the counter value from received serial message will wend back via the serial port to the mote in Cooja. But there are two important points in this model which worse to be mentioned. 
+The following picture shows the inside of the "GISOO-Simulation Environment" block in the Simulink model. As you can see the counter value from received serial message will wend back via the serial port to the mote in Cooja. But there are two important points in this model which worse to be mentioned. 
 The first point is about the location of counter value in the received serial message. Since in the defined message structure in the testserial.h the first two bytes belongs to the counter value and the rest of the 16 bytes are unused. So when we receive the the serial message in Simulink, the counter value should be rebuild from the first two bytes and also we should put it in the proper location (same location in this scenario) when we want to send it back to mote. You can see the testSerial.h in the following:
 
 {{{
@@ -131,7 +131,7 @@ One of the simplest mixed scenario is only made of combination of ADC and DAC. T
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/advancescenarios/ADCDACComm.png" height="250px" width="250px">
 <p>
-In these types of scenarios the sensor in Cooja will sense the required sensing data from the plant model in Simulink and after passing some relays and doing some controlling calculation in some other motes, the actuation data will be sent via DAC communication to the plant model. The above model can also be considered as the model of simulation environmet in Simulink and the relation between mote blocks in the CoojaPlatform and the plant model. One example of this type of scenarios is the Water-tanks scenario with the controller in one mote which has been explained as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario Simple Scenario]" in "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it  How to Use GISOO]".
+In these types of scenarios the sensor in Cooja will sense the required sensing data from the plant model in Simulink and after passing some relays and doing some controlling calculation in some other motes, the actuation data will be sent via DAC communication to the plant model. The above model can also be considered as the model of simulation environmet in Simulink and the relation between mote blocks in the "GISOO-Simulation Environment" and the plant model. One example of this type of scenarios is the Water-tanks scenario with the controller in one mote which has been explained as a "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it#Simple_Scenario Simple Scenario]" in "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it  How to Use GISOO]".
 
 The other type of scenario is which we locate the Controller inside a PC instead of one mote (in the need of powerful computation resource). Sensor will sense the sensing data from plant model and pass it to a Base-Station mote. Base-Station will send the data to the PC (for instance a controller model in Simulink) Which has shown as CPU block. Finally this CPU block will calculate the actuation value and send it directly to the plant model.
 <p align="center">  
@@ -220,7 +220,7 @@ After preparing our TinyOS codes we have to create all the motes in Cooja. It ha
 	RELAYNODE_ADDRESS 	= 	3,
 }}}
 
-So we have to create the motes with the mentioned id but instead of Coordinator (Controller) we have to create our base-station. After creating, for those motes which needs to be connected to the plant or PC(for controlling purposes) we have to activate the "SimulinkConnector" plug-in. In this scenario sensor needs to sense the water level from the plant, actuator should be able to send the actuataion value to the plant, and also base station should be able to transfer the serial data to the controller model in the PC and receive the results back from that model. As it has shown the SimulinkConnector has been activated for these motes. 
+So we have to create the motes with the mentioned id but instead of Coordinator (Controller) we have to create our base-station. After creating, for those motes which needs to be connected to the plant or PC(for controlling purposes) we have to activate the "GISOO-Simulink plugin". In this scenario sensor needs to sense the water level from the plant, actuator should be able to send the actuation value to the plant, and also base station should be able to transfer the serial data to the controller model in the PC and receive the results back from that model. As it has shown the "GISOO-Simulink plugin" has been activated for these motes. 
 
 
 <p align="center">   
@@ -228,17 +228,17 @@ So we have to create the motes with the mentioned id but instead of Coordinator 
 <p>
 
 The important point about this scenario is the serial communication which will be performed by using the Base-Station. GISOO support two type of serial communication in its scenarios. 
-  # Mote in Cooja send data via serial to the Simulink without expecting to receive data from Serial. (In these types of scenarios The SeimmulinkConnector plug-in will automatically forward the motes serial data to it mirror motes in Simulink)
-  # Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the checkBox in the SimmulinkConnector plug-in and also mentioning the specific amount of in the provided testBox.) As you can see in the above picture the checkBox of the plug-in for the baseStation has been ticked and it expect to receive the reply 1 millisecond (default value) after the serial data has been send via the serial to Simulink.
+  # Mote in Cooja send data via serial to the Simulink without expecting to receive data from Serial. (In these types of scenarios The "GISOO-Simulink plugin" will automatically forward the motes serial data to it mirror motes in Simulink)
+  # Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the check-box in the "GISOO-Simulink plugin" and also mentioning the specific amount of in the provided testBox.) As you can see in the above picture the check-box of the plug-in for the base-station has been ticked and it expect to receive the reply 1 millisecond (default value) after the serial data has been send via the serial to Simulink.
 
-Like all other scenarios in GISOO the other side of simulation should be designed in Simulink. In the Simulink part, the location of plant and the CoojaPlatfor are exactly the same as the simple scenario without serial communication, which has been shown in the following picture.
+Like all other scenarios in GISOO the other side of simulation should be designed in Simulink. In the Simulink part, the location of plant and the "GISOO-Simulation Environment" are exactly the same as the simple scenario without serial communication, which has been shown in the following picture.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimulationModelForSerialCommunication.png" height="450px" width="650px">
 
 <p>
 
-The main difference between this scenario and the simple scenario without serial communication is inside the Cooja platform. As it has shown in the following picture in this scenario we have to add another mote as baseStasion to the platform which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the baseStation in order to forward the value to the actuator.
+The main difference between this scenario and the simple scenario without serial communication is inside the "GISOO-Simulation Environment". As it has shown in the following picture in this scenario we have to add another mote as baseStasion to the Simulation Environment which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the baseStation in order to forward the value to the actuator.
 
 Since in GISOO the serial data should have the fix 16 bytes data structure, the output serial data should be divided to it 16 bytes and then acording to your defined data types you can recreate your data from the serial message. Since in this scenario we send two values as a water levels that each of them has two bytes (the message structure of sensor has been explained previously in this page)
 
@@ -249,7 +249,7 @@ So after receiving the serial data we have to recreate two water tank values and
 
 After generating the water level values we have to use these values as the input of the controller model which has been shown as a block in this model. Finally the results of the model should be sent back to the and we have to convert this value to its corresponding bytes.
 
-The Following picture shows the structure of the Cooja platform for this scenario. The important point that should never be mistaken is the location of the controller model. This model should always be located inside the Cooja Platform. The outside of the Cooja Platform is our <b>physical environment or Plant</b> and the controller model is not part of the plant!   
+The Following picture shows the structure of the "GISOO-Simulation Environment" for this scenario. The important point that should never be mistaken is the location of the controller model. This model should always be located inside the "GISOO-Simulation Environment". The outside of the "GISOO-Simulation Environment" is our <b>physical environment or Plant</b> and the controller model is not part of the plant!   
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/inside_CoojaPlatform_SerialCommunication.png>
 <p>
@@ -271,19 +271,19 @@ In this scenario since we have 10 sets of double tanks, we will need 10 mote to 
 
 On the other hand in order to use CTP as dynamic routing protocol between sensors and controller we modified the code of the simple tank scenario and by adding the CTP to its structure. You can download the TinOS codes for this scenario from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_ctp here].
 
-Finally the created scenario in Cooja will be like the following picture. The GISOO plug-in (SimulinkConnector) become activated for all the sensors and actuators. The picture also shows the "Radio messages" logger which can be activated from "Tools" menu. This is one of the great plug-ins in Cooja which shows all radio messages during the simulation with complete details.
+Finally the created scenario in Cooja will be like the following picture. The GISOO plug-in ("GISOO-Simulink plugin") become activated for all the sensors and actuators. The picture also shows the "Radio messages" logger which can be activated from "Tools" menu. This is one of the great plug-ins in Cooja which shows all radio messages during the simulation with complete details.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Cooja_LargeScenario.png>
 <p>
 
-The GISOO environment in Simulink contains of One Cooja platform and 10 separate plant that each of them act as one set of double tank. The following picture shows the GISOO environment in Simulink.
+The GISOO environment in Simulink contains of One "GISOO-Simulation Environment" and 10 separate plant that each of them act as one set of double tank. The following picture shows the GISOO environment in Simulink.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/Simulink_LargeScenario.png>
 <p>
 
-Inside the COoja platform block in Simulink, we added one mote in mirror of each sensor and actuator in the Cooja. It is necessary to emphasize that a mirror mote is a mote with same mote-id which act the same as the mote with Id do in the other environment. 
+Inside the "GISOO-Simulation Environment" block in Simulink, we added one mote in mirror of each sensor and actuator in the Cooja. It is necessary to emphasize that a mirror mote is a mote with same mote-id which act the same as the mote with Id do in the other environment. 
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/CTP/CoojaPaltform_LargeScenario.png>

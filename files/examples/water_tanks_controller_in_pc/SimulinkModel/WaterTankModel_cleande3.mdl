@@ -1,12 +1,12 @@
 Model {
-  Name			  "WaterTankModel_ExternalController"
+  Name			  "WaterTankModel_cleande3"
   Version		  8.1
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.28"
+    ComputedModelVersion    "1.25"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -31,7 +31,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-8.0, 0.0, 1616.0, 876.0]
+      Location		      [0.0, 0.0, 1369.0, 860.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -48,37 +48,16 @@ Model {
 	$ClassName		"Simulink.ExplorerBarInfo"
 	Visible			[1]
       }
-      Array {
-	Type			"Simulink.EditorInfo"
-	Dimension		3
-	Object {
-	  $ObjectID		  5
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [2.5, 142.2916666666664]
-	}
-	Object {
-	  $ObjectID		  6
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [30.995839269956036, 11.633333333333212]
-	}
-	Object {
-	  $ObjectID		  7
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "1:1820"
-	  Extents		  [1566.0, 699.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [429.25, 10.0]
-	}
-	PropName		"EditorsInfo"
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1319.0, 686.0]
+	ZoomFactor		[1.0]
+	Offset			[191.46250593662262, 7.0]
       }
     }
   }
@@ -88,9 +67,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "behdad"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 21 21:24:53 2013"
-  RTWModifiedTimeStamp	  306969825
-  ModelVersionFormat	  "1.%<AutoIncrement:28>"
+  LastModifiedDate	  "Mon Dec 02 13:43:52 2013"
+  RTWModifiedTimeStamp	  307892609
+  ModelVersionFormat	  "1.%<AutoIncrement:25>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -125,13 +104,13 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    8
+    $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "WaterTankModel_ExternalController"
+    model_		    "WaterTankModel_cleande3"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "WaterTankModel_ExternalController"
+      Cell		      "WaterTankModel_cleande3"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -183,16 +162,16 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      9
+      $ObjectID		      7
       Version		      "1.13.0"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  10
+	  $ObjectID		  8
 	  Version		  "1.13.0"
 	  StartTime		  "0.0"
-	  StopTime		  "150.0"
+	  StopTime		  "180.0"
 	  AbsTol		  "auto"
 	  FixedStep		  "0.001"
 	  InitialStep		  "auto"
@@ -224,7 +203,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  11
+	  $ObjectID		  9
 	  Version		  "1.13.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -256,7 +235,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  12
+	  $ObjectID		  10
 	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
@@ -312,7 +291,7 @@ Model {
 	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  13
+	  $ObjectID		  11
 	  Version		  "1.13.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -402,7 +381,7 @@ Model {
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  14
+	  $ObjectID		  12
 	  Version		  "1.13.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -443,7 +422,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  15
+	  $ObjectID		  13
 	  Version		  "1.13.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -458,7 +437,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  16
+	  $ObjectID		  14
 	  Version		  "1.13.0"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
@@ -473,7 +452,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  17
+	  $ObjectID		  15
 	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
@@ -535,7 +514,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      18
+	      $ObjectID		      16
 	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
@@ -602,7 +581,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      19
+	      $ObjectID		      17
 	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
@@ -694,11 +673,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    9
+    $ObjectID		    7
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    20
+    $ObjectID		    18
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -765,6 +744,17 @@ Model {
       ActionType	      "unset"
     }
     Block {
+      BlockType		      Assertion
+      Enabled		      on
+      StopWhenAssertionFail   on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Bias
+      Bias		      "0"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
       BlockType		      Constant
       Value		      "1"
       VectorParams1D	      on
@@ -795,6 +785,10 @@ Model {
       BusSelectionMode	      off
     }
     Block {
+      BlockType		      DigitalClock
+      SampleTime	      "1"
+    }
+    Block {
       BlockType		      DiscreteStateSpace
       A			      "1"
       B			      "1"
@@ -820,6 +814,12 @@ Model {
       RndMeth		      "Floor"
       SaturateOnIntegerOverflow	on
       SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      GotoTag		      "A"
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
     }
     Block {
       BlockType		      If
@@ -904,6 +904,14 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
@@ -944,6 +952,26 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TriggerPort
+      TriggerType	      "rising"
+      StatesWhenEnabling      "inherit"
+      PropagateVarSize	      "During execution"
+      ShowOutputPort	      off
+      OutputDataType	      "auto"
+      SampleTimeType	      "triggered"
+      SampleTime	      "1"
+      ZeroCross		      on
+      PortDimensions	      "-1"
+      TriggerSignalSampleTime "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      Interpolate	      on
+    }
+    Block {
       BlockType		      WhileIterator
       MaxIters		      "5"
       WhileBlockType	      "while"
@@ -953,8 +981,8 @@ Model {
     }
   }
   System {
-    Name		    "WaterTankModel_ExternalController"
-    Location		    [-8, 0, 1608, 876]
+    Name		    "WaterTankModel_cleande3"
+    Location		    [0, 0, 1369, 860]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -966,7 +994,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "157"
     Block {
@@ -1000,14 +1028,39 @@ Model {
       SaturateOnIntegerOverflow	off
     }
     Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      SID		      "6"
+      Ports		      [1, 2]
+      Position		      [385, 92, 390, 243]
+      ZOrder		      -4
+      ShowName		      off
+      Outputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      DiscreteStateSpace
+      Name		      "Discrete State-Space\n(Plant)"
+      SID		      "2"
+      Position		      [515, 351, 625, 389]
+      ZOrder		      -8
+      BlockMirror	      on
+      A			      "Ad"
+      B			      "Bd"
+      C			      "Cd"
+      D			      "Dd"
+      X0		      "x0"
+      SampleTime	      "-1"
+    }
+    Block {
       BlockType		      SubSystem
-      Name		      "Cooja Platform"
-      SID		      "1"
+      Name		      "GISOO-Simulation Environment"
+      SID		      "157"
       Ports		      [2, 1]
-      Position		      [475, 21, 675, 319]
-      ZOrder		      -3
-      AncestorBlock	      "GisooLib/Gisoo Platform"
-      LibraryVersion	      "*1.6"
+      Position		      [480, 21, 680, 319]
+      ZOrder		      86
+      AncestorBlock	      "GisooLib/GISOO-Simulation Environment"
+      LibraryVersion	      "*1.47"
       TreatAsAtomicUnit	      on
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
@@ -1017,9 +1070,9 @@ Model {
       RequestExecContextInheritance off
       MaskHideContents	      off
       System {
-	Name			"Cooja Platform"
-	Location		[-8, 0, 1608, 876]
-	Open			on
+	Name			"GISOO-Simulation Environment"
+	Location		[0, 0, 1369, 860]
+	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1030,35 +1083,35 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
-	SIDHighWatermark	"1877"
-	SIDPrevWatermark	"1806"
+	ZoomFactor		"100"
+	SIDHighWatermark	"386"
+	SIDPrevWatermark	"329"
 	Block {
 	  BlockType		  Inport
 	  Name			  "ADC0"
-	  SID			  "1:1812"
-	  Position		  [325, 193, 355, 207]
-	  ZOrder		  -1
+	  SID			  "157:330"
+	  Position		  [420, 58, 450, 72]
+	  ZOrder		  131
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Inport
 	  Name			  "ADC1"
-	  SID			  "1:1818"
-	  Position		  [325, 283, 355, 297]
-	  ZOrder		  -2
+	  SID			  "157:331"
+	  Position		  [420, 123, 450, 137]
+	  ZOrder		  130
 	  Port			  "2"
 	  IconDisplay		  "Port number"
 	}
 	Block {
 	  BlockType		  Reference
 	  Name			  "Actuator"
-	  SID			  "1:1816"
+	  SID			  "157:385"
 	  Ports			  [3, 3]
-	  Position		  [640, 190, 735, 370]
-	  ZOrder		  -3
-	  LibraryVersion	  "1.47"
-	  SourceBlock		  "GisooLib/SkyMote"
+	  Position		  [715, 59, 825, 251]
+	  ZOrder		  143
+	  LibraryVersion	  "1.51"
+	  SourceBlock		  "GisooLib1/SkyMote"
 	  SourceType		  ""
 	  moteID		  "4"
 	  PacketType		  "6"
@@ -1066,12 +1119,12 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "BaseStation"
-	  SID			  "1:1824"
+	  SID			  "157:386"
 	  Ports			  [3, 3]
-	  Position		  [520, 442, 645, 668]
-	  ZOrder		  114
-	  LibraryVersion	  "1.47"
-	  SourceBlock		  "GisooLib/SkyMote"
+	  Position		  [615, 339, 725, 531]
+	  ZOrder		  144
+	  LibraryVersion	  "1.51"
+	  SourceBlock		  "GisooLib1/SkyMote"
 	  SourceType		  ""
 	  moteID		  "3"
 	  PacketType		  "6"
@@ -1079,10 +1132,10 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "BytesTo uint16 Convrtor"
-	  SID			  "1:1825"
+	  SID			  "157:334"
 	  Ports			  [2, 1]
-	  Position		  [795, 429, 940, 476]
-	  ZOrder		  121
+	  Position		  [890, 267, 1035, 323]
+	  ZOrder		  136
 	  LibraryVersion	  "1.47"
 	  SourceBlock		  "GisooLib/BytesTo uint16 Convrtor"
 	  SourceType		  "SubSystem"
@@ -1090,37 +1143,554 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "BytesTo uint16 Convrtor1"
-	  SID			  "1:1826"
+	  SID			  "157:335"
 	  Ports			  [2, 1]
-	  Position		  [795, 479, 940, 526]
-	  ZOrder		  122
+	  Position		  [890, 347, 1035, 403]
+	  ZOrder		  137
 	  LibraryVersion	  "1.47"
 	  SourceBlock		  "GisooLib/BytesTo uint16 Convrtor"
 	  SourceType		  "SubSystem"
 	}
 	Block {
-	  BlockType		  Reference
+	  BlockType		  SubSystem
 	  Name			  "CoojaConnector"
-	  SID			  "1:1820"
+	  SID			  "157:275"
 	  Ports			  [1, 1]
-	  Position		  [95, 28, 175, 72]
-	  ZOrder		  101
-	  LibraryVersion	  "1.47"
-	  LinkData {
-	    BlockName		    "Check that we don't loop forever,\nif Cooja never answers"
-	    DialogParameters {
-	      const		      "30000"
+	  Position		  [20, 18, 100, 62]
+	  ZOrder		  -1
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "CoojaConnector"
+	    Location		    [-8, 0, 1928, 1176]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "80"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DelayNum."
+	      SID		      "157:276"
+	      Position		      [850, 38, 880, 52]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Check if Cooja\nis not at same time\n(behind)"
+	      SID		      "157:277"
+	      Ports		      [2, 1]
+	      Position		      [520, 127, 550, 158]
+	      ZOrder		      -2
+	      Operator		      ">"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Check that we don't loop forever,\nif Cooja never answers"
+	      SID		      "157:278"
+	      Ports		      [1, 1]
+	      Position		      [915, 28, 985, 62]
+	      ZOrder		      -3
+	      SourceBlock	      "simulink/Logic and Bit\nOperations/Compare\nTo Constant"
+	      SourceType	      "Compare To Constant"
+	      relop		      "<"
+	      const		      "300000"
+	      OutDataTypeStr	      "uint8"
+	      ZeroCross		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant7"
+	      SID		      "157:279"
+	      Position		      [925, 120, 955, 150]
+	      ZOrder		      -4
+	      Value		      "99999"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "DACApplier4"
+	      SID		      "157:280"
+	      Ports		      [1, 0, 0, 1]
+	      Position		      [980, 114, 1080, 156]
+	      ZOrder		      -5
+	      AncestorBlock	      "BehdadLib/SIm_Cooj\nSynchronizer/Send"
+	      LibraryVersion	      "*"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"DACApplier4"
+		Location		[999, 52, 1700, 846]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"96"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In3"
+		  SID			  "157:280:92"
+		  Position		  [25, 238, 55, 252]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  TriggerPort
+		  Name			  "Trigger"
+		  SID			  "157:280:91"
+		  Ports			  []
+		  Position		  [295, 35, 315, 55]
+		  ZOrder		  -2
+		  StatesWhenEnabling	  "held"
+		}
+		Block {
+		  BlockType		  DataTypeConversion
+		  Name			  "Data Type Conversion1"
+		  SID			  "157:280:95"
+		  Position		  [225, 228, 300, 262]
+		  ZOrder		  -3
+		  OutDataTypeStr	  "uint32"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Pack"
+		  SID			  "157:280:93"
+		  Ports			  [1, 1]
+		  Position		  [370, 220, 450, 270]
+		  ZOrder		  -4
+		  SourceBlock		  "xpclib/UDP/Pack"
+		  SourceType		  "xpcany2byte"
+		  datatypes		  "{'uint32'}"
+		  byteAlign		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Send"
+		  SID			  "157:280:94"
+		  Ports			  [1]
+		  Position		  [475, 220, 555, 270]
+		  ZOrder		  -5
+		  SourceBlock		  "xpclib/UDP/Send"
+		  SourceType		  "xpcudpbytesend"
+		  ipAddress		  "255.255.255.255"
+		  ipPort		  "18006"
+		  localPort		  "-1"
+		  vblLen		  off
+		  sampletime		  "-1"
+		}
+		Line {
+		  SrcBlock		  "Pack"
+		  SrcPort		  1
+		  DstBlock		  "Send"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Data Type Conversion1"
+		  SrcPort		  1
+		  DstBlock		  "Pack"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In3"
+		  SrcPort		  1
+		  DstBlock		  "Data Type Conversion1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      DataTypeConversion
+	      Name		      "Data Type Conversion1"
+	      SID		      "157:281"
+	      Position		      [585, 187, 635, 213]
+	      ZOrder		      -6
+	      OutDataTypeStr	      "uint32"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "DataForMotes"
+	      SID		      "157:282"
+	      Position		      [725, 220, 765, 250]
+	      ZOrder		      -7
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      Goto
+	      Name		      "DataForMotes1"
+	      SID		      "157:283"
+	      Position		      [450, 555, 490, 585]
+	      ZOrder		      38
+	      GotoTag		      "SerialData"
+	      TagVisibility	      "global"
+	    }
+	    Block {
+	      BlockType		      DigitalClock
+	      Name		      "Digital Clock"
+	      SID		      "157:284"
+	      Position		      [315, 83, 380, 107]
+	      ZOrder		      -8
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "157:285"
+	      Ports		      [3, 1]
+	      Position		      [675, 183, 680, 287]
+	      ZOrder		      -9
+	      ShowName		      off
+	      Inputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux5"
+	      SID		      "157:286"
+	      Ports		      [16, 1]
+	      Position		      [405, 276, 410, 859]
+	      ZOrder		      37
+	      ShowName		      off
+	      Inputs		      "16"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "ReceiveFromCooja"
+	      SID		      "157:287"
+	      Ports		      [0, 2]
+	      Position		      [20, 502, 100, 553]
+	      ZOrder		      -10
+	      SourceBlock	      "xpclib/UDP/Receive"
+	      SourceType	      "xpcudpbytereceive"
+	      ipAddress		      "127.0.0.1"
+	      ipPort		      "55555"
+	      width		      "28"
+	      vblLen		      off
+	      sampletime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Assertion
+	      Name		      "Stop"
+	      SID		      "157:288"
+	      Position		      [1075, 22, 1135, 68]
+	      ZOrder		      -11
+	      AssertionFailFcn	      "warning('No time-synchronization with ns-2');"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "157:289"
+	      Position		      [165, 530, 185, 550]
+	      ZOrder		      -12
+	    }
+	    Block {
+	      BlockType		      Bias
+	      Name		      "Tolerance\ndue to rounding errors"
+	      SID		      "157:290"
+	      Position		      [415, 135, 470, 165]
+	      ZOrder		      -13
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Unpack"
+	      SID		      "157:291"
+	      Ports		      [1, 19]
+	      Position		      [195, 167, 260, 863]
+	      ZOrder		      -14
+	      SourceBlock	      "xpclib/UDP/Unpack"
+	      SourceType	      "xpcbyte2any"
+	      dimensions	      "{[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1],[1]}"
+	      datatypes		      "{'uint32','uint32','uint32','uint8','uint8','uint8','uint8','uint8','uint8','uint8','uint8','"
+	      "uint8','uint8','uint8','uint8','uint8','uint8','uint8','uint8'}"
+	      byteAlign		      "1"
+	      Port {
+		PortNumber		1
+		Name			"CoojaTime"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"MotePinID"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"uValue"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "to ms3"
+	      SID		      "157:292"
+	      Position		      [415, 77, 475, 113]
+	      ZOrder		      -15
+	      Gain		      "1000"
+	      ParamDataTypeStr	      "uint32"
+	      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Wait"
+	      SID		      "157:293"
+	      Position		      [730, 137, 760, 153]
+	      ZOrder		      -16
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      19
+	      DstBlock		      "Mux5"
+	      DstPort		      16
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      18
+	      DstBlock		      "Mux5"
+	      DstPort		      15
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      17
+	      DstBlock		      "Mux5"
+	      DstPort		      14
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      16
+	      DstBlock		      "Mux5"
+	      DstPort		      13
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      15
+	      DstBlock		      "Mux5"
+	      DstPort		      12
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      14
+	      DstBlock		      "Mux5"
+	      DstPort		      11
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      13
+	      DstBlock		      "Mux5"
+	      DstPort		      10
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      12
+	      DstBlock		      "Mux5"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      11
+	      DstBlock		      "Mux5"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      10
+	      DstBlock		      "Mux5"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      9
+	      DstBlock		      "Mux5"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      8
+	      DstBlock		      "Mux5"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      7
+	      DstBlock		      "Mux5"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      6
+	      DstBlock		      "Mux5"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      5
+	      DstBlock		      "Mux5"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Unpack"
+	      SrcPort		      4
+	      DstBlock		      "Mux5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux5"
+	      SrcPort		      1
+	      DstBlock		      "DataForMotes1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant7"
+	      SrcPort		      1
+	      DstBlock		      "DACApplier4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "DataForMotes"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "DelayNum."
+	      SrcPort		      1
+	      DstBlock		      "Check that we don't loop forever,\nif Cooja never answers"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Check that we don't loop forever,\nif Cooja never answers"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		DstBlock		"DACApplier4"
+		DstPort			trigger
+	      }
+	      Branch {
+		DstBlock		"Stop"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Data Type Conversion1"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "uValue"
+	      Labels		      [1, 1]
+	      SrcBlock		      "Unpack"
+	      SrcPort		      3
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Tolerance\ndue to rounding errors"
+	      SrcPort		      1
+	      DstBlock		      "Check if Cooja\nis not at same time\n(behind)"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Digital Clock"
+	      SrcPort		      1
+	      DstBlock		      "to ms3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ReceiveFromCooja"
+	      SrcPort		      1
+	      DstBlock		      "Unpack"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "to ms3"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      DstBlock		      "Check if Cooja\nis not at same time\n(behind)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Check if Cooja\nis not at same time\n(behind)"
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		DstBlock		"Wait"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 55]
+		DstBlock		"Data Type Conversion1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "ReceiveFromCooja"
+	      SrcPort		      2
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "CoojaTime"
+	      Labels		      [0, 1]
+	      SrcBlock		      "Unpack"
+	      SrcPort		      1
+	      Points		      [24, 0; 0, -50]
+	      DstBlock		      "Tolerance\ndue to rounding errors"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "MotePinID"
+	      Labels		      [1, 1]
+	      SrcBlock		      "Unpack"
+	      SrcPort		      2
+	      DstBlock		      "Mux"
+	      DstPort		      2
 	    }
 	  }
-	  SourceBlock		  "GisooLib/Cooja Platform/CoojaConnector"
-	  SourceType		  "SubSystem"
 	}
 	Block {
 	  BlockType		  DataTypeConversion
 	  Name			  "Data Type Conversion"
-	  SID			  "1:1832"
-	  Position		  [975, 488, 1050, 522]
-	  ZOrder		  123
+	  SID			  "157:336"
+	  Position		  [1070, 358, 1145, 392]
+	  ZOrder		  138
 	  OutDataTypeStr	  "double"
 	  RndMeth		  "Floor"
 	  SaturateOnIntegerOverflow off
@@ -1128,9 +1698,9 @@ Model {
 	Block {
 	  BlockType		  DataTypeConversion
 	  Name			  "Data Type Conversion1"
-	  SID			  "1:1833"
-	  Position		  [975, 438, 1050, 472]
-	  ZOrder		  124
+	  SID			  "157:337"
+	  Position		  [1070, 278, 1145, 312]
+	  ZOrder		  139
 	  NamePlacement		  "alternate"
 	  OutDataTypeStr	  "double"
 	  RndMeth		  "Floor"
@@ -1139,9 +1709,9 @@ Model {
 	Block {
 	  BlockType		  DataTypeConversion
 	  Name			  "Data Type Conversion2"
-	  SID			  "1:1834"
-	  Position		  [45, 438, 120, 472]
-	  ZOrder		  125
+	  SID			  "157:338"
+	  Position		  [140, 308, 215, 342]
+	  ZOrder		  140
 	  NamePlacement		  "alternate"
 	  OutDataTypeStr	  "uint16"
 	  RndMeth		  "Floor"
@@ -1150,10 +1720,10 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  "Demux2"
-	  SID			  "1:1827"
+	  SID			  "157:339"
 	  Ports			  [1, 16]
-	  Position		  [740, 403, 745, 852]
-	  ZOrder		  115
+	  Position		  [835, 276, 840, 719]
+	  ZOrder		  133
 	  ShowName		  off
 	  Outputs		  "16"
 	  DisplayOption		  "bar"
@@ -1161,10 +1731,10 @@ Model {
 	Block {
 	  BlockType		  Mux
 	  Name			  "Mux1"
-	  SID			  "1:1828"
+	  SID			  "157:340"
 	  Ports			  [16, 1]
-	  Position		  [425, 404, 430, 851]
-	  ZOrder		  116
+	  Position		  [520, 274, 525, 721]
+	  ZOrder		  134
 	  ShowName		  off
 	  Inputs		  "16"
 	  DisplayOption		  "bar"
@@ -1172,12 +1742,12 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "Sensor"
-	  SID			  "1:1815"
+	  SID			  "157:384"
 	  Ports			  [3, 3]
-	  Position		  [385, 190, 480, 370]
-	  ZOrder		  -5
-	  LibraryVersion	  "1.47"
-	  SourceBlock		  "GisooLib/SkyMote"
+	  Position		  [490, 34, 600, 226]
+	  ZOrder		  142
+	  LibraryVersion	  "1.51"
+	  SourceBlock		  "GisooLib1/SkyMote"
 	  SourceType		  ""
 	  moteID		  "1"
 	  PacketType		  "6"
@@ -1185,10 +1755,10 @@ Model {
 	Block {
 	  BlockType		  WhileIterator
 	  Name			  "SynchronizerLoop"
-	  SID			  "1:1821"
+	  SID			  "157:294"
 	  Ports			  [1, 1]
-	  Position		  [190, 28, 260, 72]
-	  ZOrder		  100
+	  Position		  [115, 18, 185, 62]
+	  ZOrder		  -2
 	  MaxIters		  "-1"
 	  WhileBlockType	  "do-while"
 	  ShowIterationPort	  on
@@ -1196,10 +1766,10 @@ Model {
 	Block {
 	  BlockType		  SubSystem
 	  Name			  "WaterTankController"
-	  SID			  "1:1835"
+	  SID			  "157:342"
 	  Ports			  [2, 1]
-	  Position		  [495, 875, 675, 955]
-	  ZOrder		  126
+	  Position		  [590, 745, 770, 825]
+	  ZOrder		  141
 	  BlockMirror		  on
 	  MinAlgLoopOccurrences	  off
 	  PropExecContextOutsideSubsystem off
@@ -1226,7 +1796,7 @@ Model {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Tank1"
-	      SID		      "1:1836"
+	      SID		      "157:343"
 	      Position		      [200, 33, 230, 47]
 	      ZOrder		      43
 	      IconDisplay	      "Port number"
@@ -1234,7 +1804,7 @@ Model {
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Tank2"
-	      SID		      "1:1837"
+	      SID		      "157:344"
 	      Position		      [200, 103, 230, 117]
 	      ZOrder		      44
 	      Port		      "2"
@@ -1243,7 +1813,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "0"
-	      SID		      "1:1838"
+	      SID		      "157:345"
 	      Position		      [940, 225, 970, 255]
 	      ZOrder		      39
 	      Value		      "0"
@@ -1251,7 +1821,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "1000"
-	      SID		      "1:1839"
+	      SID		      "157:346"
 	      Position		      [190, 260, 220, 290]
 	      ZOrder		      26
 	      Value		      "1000"
@@ -1259,7 +1829,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "273"
-	      SID		      "1:1840"
+	      SID		      "157:347"
 	      Position		      [655, 225, 685, 255]
 	      ZOrder		      34
 	      Value		      "273"
@@ -1267,7 +1837,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "4095"
-	      SID		      "1:1841"
+	      SID		      "157:348"
 	      Position		      [940, 325, 970, 355]
 	      ZOrder		      40
 	      Value		      "4095"
@@ -1275,7 +1845,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide"
-	      SID		      "1:1842"
+	      SID		      "157:349"
 	      Ports		      [2, 1]
 	      Position		      [255, 42, 285, 73]
 	      ZOrder		      22
@@ -1294,7 +1864,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide1"
-	      SID		      "1:1843"
+	      SID		      "157:350"
 	      Ports		      [2, 1]
 	      Position		      [255, 102, 285, 133]
 	      ZOrder		      23
@@ -1313,7 +1883,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide2"
-	      SID		      "1:1844"
+	      SID		      "157:351"
 	      Ports		      [2, 1]
 	      Position		      [255, 232, 285, 263]
 	      ZOrder		      25
@@ -1326,7 +1896,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide3"
-	      SID		      "1:1845"
+	      SID		      "157:352"
 	      Ports		      [2, 1]
 	      Position		      [390, 202, 420, 233]
 	      ZOrder		      27
@@ -1339,7 +1909,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide4"
-	      SID		      "1:1846"
+	      SID		      "157:353"
 	      Ports		      [2, 1]
 	      Position		      [520, 337, 550, 368]
 	      ZOrder		      28
@@ -1352,7 +1922,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide5"
-	      SID		      "1:1847"
+	      SID		      "157:354"
 	      Ports		      [2, 1]
 	      Position		      [445, 102, 475, 133]
 	      ZOrder		      30
@@ -1365,7 +1935,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide6"
-	      SID		      "1:1848"
+	      SID		      "157:355"
 	      Ports		      [2, 1]
 	      Position		      [445, 37, 475, 68]
 	      ZOrder		      31
@@ -1378,7 +1948,7 @@ Model {
 	    Block {
 	      BlockType		      Product
 	      Name		      "Divide7"
-	      SID		      "1:1849"
+	      SID		      "157:356"
 	      Ports		      [2, 1]
 	      Position		      [710, 197, 740, 228]
 	      ZOrder		      33
@@ -1391,7 +1961,7 @@ Model {
 	    Block {
 	      BlockType		      If
 	      Name		      "If"
-	      SID		      "1:1850"
+	      SID		      "157:357"
 	      Ports		      [1, 3]
 	      Position		      [770, 196, 870, 234]
 	      ZOrder		      32
@@ -1401,7 +1971,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "If Action\nSubsystem"
-	      SID		      "1:1851"
+	      SID		      "157:358"
 	      Ports		      [1, 1, 0, 0, 0, 0, 0, 1]
 	      Position		      [990, 222, 1060, 258]
 	      ZOrder		      36
@@ -1431,7 +2001,7 @@ Model {
 		Block {
 		  BlockType		  Inport
 		  Name			  "In1"
-		  SID			  "1:1852"
+		  SID			  "157:359"
 		  Position		  [75, 78, 105, 92]
 		  ZOrder		  -1
 		  IconDisplay		  "Port number"
@@ -1439,15 +2009,14 @@ Model {
 		Block {
 		  BlockType		  ActionPort
 		  Name			  "Action Port"
-		  SID			  "1:1853"
+		  SID			  "157:360"
 		  Position		  [170, 15, 229, 43]
 		  ZOrder		  -2
-		  ActionType		  "then"
 		}
 		Block {
 		  BlockType		  Outport
 		  Name			  "Out1"
-		  SID			  "1:1854"
+		  SID			  "157:361"
 		  Position		  [325, 78, 355, 92]
 		  ZOrder		  -3
 		  IconDisplay		  "Port number"
@@ -1463,7 +2032,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "If Action\nSubsystem1"
-	      SID		      "1:1855"
+	      SID		      "157:362"
 	      Ports		      [1, 1, 0, 0, 0, 0, 0, 1]
 	      Position		      [990, 322, 1060, 358]
 	      ZOrder		      37
@@ -1493,7 +2062,7 @@ Model {
 		Block {
 		  BlockType		  Inport
 		  Name			  "In1"
-		  SID			  "1:1856"
+		  SID			  "157:363"
 		  Position		  [75, 78, 105, 92]
 		  ZOrder		  -1
 		  IconDisplay		  "Port number"
@@ -1501,15 +2070,14 @@ Model {
 		Block {
 		  BlockType		  ActionPort
 		  Name			  "Action Port"
-		  SID			  "1:1857"
+		  SID			  "157:364"
 		  Position		  [170, 15, 229, 43]
 		  ZOrder		  -2
-		  ActionType		  "elseif"
 		}
 		Block {
 		  BlockType		  Outport
 		  Name			  "Out1"
-		  SID			  "1:1858"
+		  SID			  "157:365"
 		  Position		  [325, 78, 355, 92]
 		  ZOrder		  -3
 		  IconDisplay		  "Port number"
@@ -1525,7 +2093,7 @@ Model {
 	    Block {
 	      BlockType		      SubSystem
 	      Name		      "If Action\nSubsystem2"
-	      SID		      "1:1859"
+	      SID		      "157:366"
 	      Ports		      [1, 1, 0, 0, 0, 0, 0, 1]
 	      Position		      [990, 437, 1060, 473]
 	      ZOrder		      38
@@ -1555,7 +2123,7 @@ Model {
 		Block {
 		  BlockType		  Inport
 		  Name			  "In1"
-		  SID			  "1:1860"
+		  SID			  "157:367"
 		  Position		  [75, 78, 105, 92]
 		  ZOrder		  -1
 		  IconDisplay		  "Port number"
@@ -1563,15 +2131,14 @@ Model {
 		Block {
 		  BlockType		  ActionPort
 		  Name			  "Action Port"
-		  SID			  "1:1861"
+		  SID			  "157:368"
 		  Position		  [170, 15, 229, 43]
 		  ZOrder		  -2
-		  ActionType		  "else"
 		}
 		Block {
 		  BlockType		  Outport
 		  Name			  "Out1"
-		  SID			  "1:1862"
+		  SID			  "157:369"
 		  Position		  [325, 78, 355, 92]
 		  ZOrder		  -3
 		  IconDisplay		  "Port number"
@@ -1587,7 +2154,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "K0"
-	      SID		      "1:1863"
+	      SID		      "157:370"
 	      Position		      [390, 5, 420, 35]
 	      ZOrder		      14
 	      Value		      "k0"
@@ -1595,7 +2162,7 @@ Model {
 	    Block {
 	      BlockType		      Memory
 	      Name		      "Memory"
-	      SID		      "1:1864"
+	      SID		      "157:371"
 	      Position		      [520, 250, 550, 280]
 	      ZOrder		      12
 	      BlockMirror	      on
@@ -1610,7 +2177,7 @@ Model {
 	    Block {
 	      BlockType		      Merge
 	      Name		      "Merge"
-	      SID		      "1:1865"
+	      SID		      "157:372"
 	      Ports		      [3, 1]
 	      Position		      [1150, 320, 1190, 360]
 	      ZOrder		      42
@@ -1619,7 +2186,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "SAMPLING_PERIOD"
-	      SID		      "1:1866"
+	      SID		      "157:373"
 	      Position		      [190, 205, 220, 235]
 	      ZOrder		      17
 	      Value		      "SAMPLING_PERIOD"
@@ -1627,7 +2194,7 @@ Model {
 	    Block {
 	      BlockType		      Sum
 	      Name		      "Sum"
-	      SID		      "1:1867"
+	      SID		      "157:374"
 	      Ports		      [2, 1]
 	      Position		      [450, 210, 470, 230]
 	      ZOrder		      13
@@ -1641,7 +2208,7 @@ Model {
 	    Block {
 	      BlockType		      Sum
 	      Name		      "Sum1"
-	      SID		      "1:1868"
+	      SID		      "157:375"
 	      Ports		      [2, 1]
 	      Position		      [320, 145, 340, 165]
 	      ZOrder		      24
@@ -1655,7 +2222,7 @@ Model {
 	    Block {
 	      BlockType		      Sum
 	      Name		      "Sum2"
-	      SID		      "1:1869"
+	      SID		      "157:376"
 	      Ports		      [3, 1]
 	      Position		      [620, 195, 640, 215]
 	      ZOrder		      29
@@ -1669,7 +2236,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "WT_CALIBRATION"
-	      SID		      "1:1870"
+	      SID		      "157:377"
 	      Position		      [110, 80, 140, 110]
 	      ZOrder		      16
 	      Value		      "WT_CALIBRATION"
@@ -1677,7 +2244,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "k1"
-	      SID		      "1:1871"
+	      SID		      "157:378"
 	      Position		      [390, 120, 420, 150]
 	      ZOrder		      11
 	      Value		      "k1"
@@ -1685,7 +2252,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "k2"
-	      SID		      "1:1872"
+	      SID		      "157:379"
 	      Position		      [465, 360, 495, 390]
 	      ZOrder		      15
 	      Value		      "k2"
@@ -1693,7 +2260,7 @@ Model {
 	    Block {
 	      BlockType		      Constant
 	      Name		      "x_ref"
-	      SID		      "1:1873"
+	      SID		      "157:380"
 	      Position		      [255, 165, 285, 195]
 	      ZOrder		      18
 	      Value		      "x_ref"
@@ -1701,7 +2268,7 @@ Model {
 	    Block {
 	      BlockType		      Outport
 	      Name		      "uValue"
-	      SID		      "1:1874"
+	      SID		      "157:381"
 	      Position		      [1225, 333, 1255, 347]
 	      ZOrder		      45
 	      IconDisplay	      "Port number"
@@ -1956,10 +2523,10 @@ Model {
 	Block {
 	  BlockType		  Reference
 	  Name			  "uint16 to uint8 (Byets) Convertor"
-	  SID			  "1:1829"
+	  SID			  "157:382"
 	  Ports			  [1, 2]
-	  Position		  [140, 427, 285, 478]
-	  ZOrder		  119
+	  Position		  [235, 297, 380, 348]
+	  ZOrder		  135
 	  LibraryVersion	  "1.47"
 	  SourceBlock		  "GisooLib/uint16 to uint8 (Byets) Convertor"
 	  SourceType		  "SubSystem"
@@ -1967,31 +2534,10 @@ Model {
 	Block {
 	  BlockType		  Outport
 	  Name			  "DAC0"
-	  SID			  "1:1811"
-	  Position		  [780, 228, 810, 242]
-	  ZOrder		  -7
+	  SID			  "157:383"
+	  Position		  [875, 98, 905, 112]
+	  ZOrder		  127
 	  IconDisplay		  "Port number"
-	}
-	Line {
-	  SrcBlock		  "Actuator"
-	  SrcPort		  1
-	  Points		  [25, 0]
-	  DstBlock		  "DAC0"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "ADC0"
-	  SrcPort		  1
-	  Points		  [10, 0]
-	  DstBlock		  "Sensor"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "ADC1"
-	  SrcPort		  1
-	  Points		  [10, 0]
-	  DstBlock		  "Sensor"
-	  DstPort		  2
 	}
 	Line {
 	  SrcBlock		  "SynchronizerLoop"
@@ -2005,6 +2551,25 @@ Model {
 	  SrcPort		  1
 	  DstBlock		  "SynchronizerLoop"
 	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Actuator"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 15]
+	  DstBlock		  "DAC0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ADC0"
+	  SrcPort		  1
+	  DstBlock		  "Sensor"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ADC1"
+	  SrcPort		  1
+	  DstBlock		  "Sensor"
+	  DstPort		  2
 	}
 	Line {
 	  SrcBlock		  "BaseStation"
@@ -2033,12 +2598,14 @@ Model {
 	Line {
 	  SrcBlock		  "Demux2"
 	  SrcPort		  1
+	  Points		  [20, 0; 0, -30]
 	  DstBlock		  "BytesTo uint16 Convrtor"
 	  DstPort		  1
 	}
 	Line {
 	  SrcBlock		  "Demux2"
 	  SrcPort		  2
+	  Points		  [20, 0; 0, -11; 10, 0]
 	  DstBlock		  "BytesTo uint16 Convrtor"
 	  DstPort		  2
 	}
@@ -2063,7 +2630,7 @@ Model {
 	Line {
 	  SrcBlock		  "Data Type Conversion"
 	  SrcPort		  1
-	  Points		  [17, 0; 0, 430]
+	  Points		  [60, 0; 0, 390; -301, 0; 0, 40]
 	  DstBlock		  "WaterTankController"
 	  DstPort		  2
 	}
@@ -2083,52 +2650,23 @@ Model {
 	Line {
 	  SrcBlock		  "Demux2"
 	  SrcPort		  4
+	  Points		  [20, 0; 0, 5]
 	  DstBlock		  "BytesTo uint16 Convrtor1"
 	  DstPort		  2
 	}
 	Line {
 	  SrcBlock		  "Data Type Conversion1"
 	  SrcPort		  1
-	  Points		  [31, 0; 0, 440]
+	  Points		  [31, 0; 0, 277; -306, 0; 0, 193]
 	  DstBlock		  "WaterTankController"
 	  DstPort		  1
 	}
 	Annotation {
-	  SID			  "1:1819"
-	  Position		  [1139, 129]
-	  ZOrder		  -1
-	}
-	Annotation {
-	  SID			  "1:1822"
-	  Position		  [1049, 44]
+	  SID			  "157:295"
+	  Position		  [974, 34]
 	  ZOrder		  -1
 	}
       }
-    }
-    Block {
-      BlockType		      Demux
-      Name		      "Demux"
-      SID		      "6"
-      Ports		      [1, 2]
-      Position		      [385, 92, 390, 243]
-      ZOrder		      -4
-      ShowName		      off
-      Outputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      DiscreteStateSpace
-      Name		      "Discrete State-Space\n(Plant)"
-      SID		      "2"
-      Position		      [515, 351, 625, 389]
-      ZOrder		      -8
-      BlockMirror	      on
-      A			      "Ad"
-      B			      "Bd"
-      C			      "Cd"
-      D			      "Dd"
-      X0		      "x0"
-      SampleTime	      "-1"
     }
     Block {
       BlockType		      Constant
@@ -2141,12 +2679,12 @@ Model {
     Line {
       SrcBlock		      "Discrete State-Space\n(Plant)"
       SrcPort		      1
-      Points		      [-228, 0; 0, -200]
+      Points		      [-281, 0; 0, -200]
       DstBlock		      "Calibration-ADC"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "Cooja Platform"
+      SrcBlock		      "GISOO-Simulation Environment"
       SrcPort		      1
       DstBlock		      "Calibration-DAC"
       DstPort		      1
@@ -2167,15 +2705,15 @@ Model {
     Line {
       SrcBlock		      "Demux"
       SrcPort		      1
-      Points		      [37, 0; 0, -35]
-      DstBlock		      "Cooja Platform"
+      Points		      [70, 0]
+      DstBlock		      "GISOO-Simulation Environment"
       DstPort		      1
     }
     Line {
       SrcBlock		      "Demux"
       SrcPort		      2
-      Points		      [26, 0; 0, 40]
-      DstBlock		      "Cooja Platform"
+      Points		      [70, 0]
+      DstBlock		      "GISOO-Simulation Environment"
       DstPort		      2
     }
   }
@@ -2189,7 +2727,7 @@ Model {
 Stateflow {
   machine {
     id			    1
-    name		    "WaterTankModel_ExternalController"
+    name		    "WaterTankModel_cleande3"
     created		    "06-Nov-2013 15:20:33"
     isLibrary		    0
     firstTarget		    2

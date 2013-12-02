@@ -216,22 +216,23 @@ task void radioSendTask() {
 
 After preparing our TinyOS codes we have to create all the motes in Cooja. It has bees shown in the following picture. In this scenario mote-ids has been defined in the "app_parameters.h": 
 {{{
-        COORDINATOR_ADDRESS	=	4,
-	SENSOR_ADDRESS 		=	2,
-	ACTUATOR_ADDRESS 	= 	5,
-	RELAYNODE_ADDRESS 	= 	3,
+        SENSOR_ADDRESS          =       1,
+        RELAYNODE_ADDRESS       =       2,
+        COORDINATOR_ADDRESS     =       3,
+        ACTUATOR_ADDRESS        =       4     
 }}}
 
-So we have to create the motes with the mentioned id but instead of Coordinator (Controller) we have to create our base-station. After creating, for those motes which needs to be connected to the plant or PC(for controlling purposes) we have to activate the "GISOO-Simulink plugin". In this scenario sensor needs to sense the water level from the plant, actuator should be able to send the actuation value to the plant, and also base station should be able to transfer the serial data to the controller model in the PC and receive the results back from that model. As it has shown the "GISOO-Simulink plugin" has been activated for these motes. 
+So we have to create the motes with the mentioned id but instead of Coordinator (Controller) we have to create our base-station. After creating, for those motes which needs to be connected to the plant or PC(for controlling purposes) we have to activate the "GISOO-Simulink plugin". In this scenario sensor needs to sense the water level from the plant, actuator should be able to send the actuation value to the plant, and also base-Station should be able to transfer the serial data to the controller model in the PC and receive the results back from that model. As it has shown the "GISOO-Simulink plugin" has been activated for these motes. 
 
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SerialCommunication.png >
 <p>
 
-The important point about this scenario is the serial communication which will be performed by using the Base-Station. GISOO support two type of serial communication in its scenarios. 
+The important point about this scenario is the serial communication which will be performed by using the Base-Station. As it has been mentioned, GISOO supports two type of serial communication in its scenarios. 
+
   # Mote in Cooja send data via serial to the Simulink without expecting to receive data from Serial. (In these types of scenarios The "GISOO-Simulink plugin" will automatically forward the motes serial data to it mirror motes in Simulink)
-  # Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the check-box in the "GISOO-Simulink plugin" and also mentioning the specific amount of in the provided testBox.) As you can see in the above picture the check-box of the plug-in for the base-station has been ticked and it expect to receive the reply 1 millisecond (default value) after the serial data has been send via the serial to Simulink.
+  # Mote In Cooja send data via serial to the Simulink and it expect to receive a reply serial data from Simulink after a specific amount of time. (In these types of scenarios you have to specify the necessity of receiving the serial reply by selecting the check-box in the "GISOO-Simulink plugin" and also mentioning the specific amount of in the provided text-box.) As you can see in the above picture the check-box of the plug-in for the base-station has been ticked and it expect to receive the reply 1 millisecond (default value) after the serial data has been send via the serial to Simulink.
 
 Like all other scenarios in GISOO the other side of simulation should be designed in Simulink. In the Simulink part, the location of plant and the "GISOO-Simulation Environment" are exactly the same as the simple scenario without serial communication, which has been shown in the following picture.
 
@@ -240,16 +241,16 @@ Like all other scenarios in GISOO the other side of simulation should be designe
 
 <p>
 
-The main difference between this scenario and the simple scenario without serial communication is inside the "GISOO-Simulation Environment". As it has shown in the following picture in this scenario we have to add another mote as baseStasion to the Simulation Environment which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the baseStation in order to forward the value to the actuator.
+The main difference between this scenario and the simple scenario without serial communication is inside the "GISOO-Simulation Environment". As it has shown in the following picture, in this scenario we have to add another mote as base-Station to the Simulation Environment which receives the serial data from its mirror mote in Cooja and forward the data to controller model which will calculate the actuation value according to its input and finally it will send the calculated to the base-Station in order to forward the value to the actuator.
 
-Since in GISOO the serial data should have the fix 16 bytes data structure, the output serial data should be divided to it 16 bytes and then acording to your defined data types you can recreate your data from the serial message. Since in this scenario we send two values as a water levels that each of them has two bytes (the message structure of sensor has been explained previously in this page)
+Since in GISOO the serial data should have the fix 16 bytes data structure, the output serial data should be divided to it 16 bytes and then according to your defined data types, you can recreate your data from the serial message. In this scenario we send two values as a water levels that each of them has two bytes (the message structure of sensor has been explained previously in this page)
 
 {{{
 nx_uint16_t tankLevel[8]; // tankLevel[0] for the tank-1 and  tankLevel[1] for tank-2 
 }}}
 So after receiving the serial data we have to recreate two water tank values and for this aim we can use the provided blocks in GISOO Simulink Library to generate different data types from bytes.
 
-After generating the water level values we have to use these values as the input of the controller model which has been shown as a block in this model. Finally the results of the model should be sent back to the and we have to convert this value to its corresponding bytes.
+After generating the water level values, we have to use these values as the input of the controller model which has been shown as a block in this model. Finally the results of the model should be sent back via serial communication and we have to convert this value to its corresponding bytes.
 
 The Following picture shows the structure of the "GISOO-Simulation Environment" for this scenario. The important point that should never be mistaken is the location of the controller model. This model should always be located inside the "GISOO-Simulation Environment". The outside of the "GISOO-Simulation Environment" is our <b>physical environment or Plant</b> and the controller model is not part of the plant!   
 <p align="center">   

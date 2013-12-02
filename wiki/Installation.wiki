@@ -159,7 +159,7 @@ to the following part (It has already added in the following lines:
 [http://www.mathworks.se/products/simulink/ Simulink] is the most widely used tool for simulation and
 model-based control design by Mathworks. Simulink is part of MATLAB and you will have to have a valid MATLAB license to be able to use it.
 
-Note that to be able to run GISOO, you *must* have Simulink installed on your machine with the *[http://www.mathworks.se/products/xpctarget/ xPC Target] toolbox*.
+Note that to be able to run GISOO, you *must* have Simulink installed on your machine.
 
 == Adding GISOO Simulink Library to Simulink ==
 

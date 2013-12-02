@@ -167,7 +167,7 @@ For each node, according to its action you should add the required ADC or DAC co
 
 In the final step, we need to add a physical model of our plant which can be modeled in a Discrete State-Space block outside the GSE. We now have different number of input and output from our GSE block, which has been created by the ADC-connector or DAC-connector components from the previous step. 
 
-Now in this step the outputs from the GSE should be used as the input for our plant model and the output of the plant model should be used as the input for the COOJA platform. The following picture shows a simple environment and the interaction between the GSE and the plant model.
+Now in this step the outputs from the GSE should be used as the input for our plant model and the output of the plant model should be used as the input for the "GISOO-Simulation Environment". The following picture shows a simple environment and the interaction between the GSE and the plant model.
 
 <p align="center">  
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/AddingPlant.png" >

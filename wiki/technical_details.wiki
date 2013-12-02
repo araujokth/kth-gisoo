@@ -1,8 +1,8 @@
 <wiki:toc />
 ----
 = General View=
-<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and one in Simulink which are synchronous together with the possibility of data communication. 
-In fact all the wireless system (which also can contain the controller) will be simulated in the Cooja and the plant will be simulated in Simulink, and whenever simulated system in Cooja needs to measure some variables in plant or actuate some actuators there, the sensor or actuator mote in Cooja will send the request for sensor value or send the actuation data to their mirror sensor or actuator in the Simulink model which are in contact with the plant model and can receive the requested sensor data or apply the actuation value. The following picture show the genera view of the the GISOO which can show the mirror motes in Cooja and Simulink and the location of the motes in the relation with the plant. (The following picture show the situation that the controller located in one of the motes, but it is also possible to locate the controller in a PC)
+<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and another one in Simulink which are synchronous together with the possibility of data communication. 
+In fact all the wireless system (which also can contain the controller) will be simulated in the Cooja and the plant will be simulated in Simulink, and whenever simulated system in Cooja needs to measure some variables in plant or actuate some actuators there, the sensor or actuator mote in Cooja will send the request for sensor value or send the actuation data to their mirror sensor or actuator in the Simulink model which are in contact with the plant model and can receive the requested sensor data or apply the actuation value. The following picture show the genera view of the the GISOO which can show the mirror motes in Cooja and Simulink and the location of the motes in the relation with the plant. (The following picture shows the situation that the controller located in one of the motes, but it is also possible to locate the controller in a PC)
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/DesignedModel.png"  height="682px" width="637px">
@@ -17,7 +17,7 @@ In the first step to prepare the simulation in GISOO we need to add all the wire
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Cooja_Mote_PortNumber.png"  >
 <p>
 
-On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 55555. This means that all the data which should be received by Simulink or even specific part of Simulink model should be sent to this port.
+On the other side Simulink model has different situation and all the Model will receive data from one predefined UDP port which by default is port number 55555. This means that all the data which should be received by Simulink or even a specific part of Simulink model, should be sent to this port.
 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/SimulinkReceivePortnumber.png" height="682px" width="737px" >
@@ -28,7 +28,7 @@ On the other side Simulink model has different situation and all the Model will 
 In GISOO, Cooja is responsible for controlling the simulation procedure. It means that Cooja will start simulating the wireless system until the moment that one of the motes in Cooja needs to send or receives some data to/from plant model. This can happen in four situations:
 
   * A sensor mote needs to sense some sensor data.
-  * An actuator mote needs to apply some actuation values on the plant
+  * An actuator mote needs to apply some actuation values on the plant.
   * A mote needs to send some serial data.
   * A mote needs to receive some serial data.
 
@@ -39,9 +39,9 @@ In any of these situations a mote in Cooja will send a message to the Simulink m
   * Actuation value (uValue)
   * Serial data
 
-<b>Simulation time:</b> In the message structure the first four bytes considered for carrying the Simulation time (in millisecond). In fact Cooja will run until the moment that a mote needs an especial communication with Simulink, then it will generate a message and add the time of simulation in Cooja to the beginning of the message. On the other side, Simulink will pause the simulation until it receive a message from Cooja. Then in the first step it will extract the Cooja time from the beginning the the message and will run the Simulink simulation to reach that specific moment. This procedure will be explained more in the synchronization explanation in this page.
+<b>Simulation time (4 bytes):</b> In the message structure the first four bytes considered for carrying the Simulation time (in millisecond). In fact Cooja will run until the moment that a mote needs an especial communication with Simulink, then it will generate a message and add the time of simulation in Cooja to the beginning of the message. On the other side, Simulink will pause the simulation until it receive a message from Cooja. Then in the first step it will extract the Cooja time from the beginning the the message and will run the Simulink simulation to reach that specific moment. This procedure will be explained more in the synchronization explanation in this page.
 
-<b>Mote-Pin-ID:</b> When ever a message generated by a mote in Cooja, Simulink as a receiver should be aware that this message came from which mote and should affect which part of that mote. For instance when a mote with id=4 needs to read data from its ADC1, in the message which will be send to Simulink both of the "mote-id" and "ADC1 (which we called it pin number)" should be clear. For this aim we generate a number by name of mote-pin-id which has been created by this method:
+<b>Mote-Pin-ID (4 bytes):</b> Whenever a message generated by a mote in Cooja, Simulink as a receiver should be aware that this message came from which mote and should affect which part (pin) of that mote. For instance when a mote with id=4 needs to read data from its ADC1, in the message which will be send to Simulink both of the "mote-id" and "ADC1 (which we called it pin number)" should be clear. For this aim we generate a number by name of mote-pin-id which has been created by this method:
 
 mote-pin-id = Mote-id*100 + pin number
 
@@ -52,9 +52,9 @@ and considered pin-ids are:
   * Serial data to be sent to Simulink = 18
   * Serial data to be received from Simulink = 19
 
-<b>Actuation value (uValue):</b> Although some the messages will be used to apply an actuation value to the plant because of need of fix message format in GISOO, these four bytes will be inside of all the messages by they will receive value and also their value will be used only when a mote in Cooja wants to apply an actuation value to the plant.
+<b>Actuation value (uValue - 4 bytes):</b> Although only some of the messages are used to apply an actuation value to the plant, because of needs of fix message format in GISOO, these four bytes will be inside of all the messages, but these bytes will receive value and also their value will be used only whenever a mote in Cooja wants to apply an actuation value to the plant.
 
-<b>Serial data:</b> for the same reason as it mention for actuation value, all the message will carry 16 bytes of serial message but they will only used when some serial data is needed to be transmitted from Cooja to Simulink or in vice versa.
+<b>Serial data(16 bytes):</b> for the same reason as it mentioned for actuation value, all the messages will carry 16 bytes of serial message, but they will only be used whenever some serial data is needed to be transmitted from Cooja to Simulink or in vice versa.
 
 The following picture shows a schema of the designed message structure for GISOO.
 

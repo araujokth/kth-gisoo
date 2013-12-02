@@ -160,9 +160,9 @@ In the section "[https://code.google.com/p/kth-gisoo/wiki/How_to_use_it ,How to 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/serialcommunication/SimpleScenarioMix.png >
 <p>
 
-In order to simulate the scenario with the controller in PC first we should create all of our motes  in Cooja. so four motes should be created: one Sensor, one relay, one Base-Station and, one actuator. You can download the TinyOS code for the motes from TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_controller_in_pc here]. These codes are exactly the same code as those we had for our simple scenario with the new message structure for the sensor and actuator and also instead of a code for controller we have a modified code for base-station which send the radio messages to the actuator instead of broadcast which will be explained in the following.  
+In order to simulate the scenario with the controller in PC first we should create all of our motes  in Cooja. so four motes should be created: one Sensor, one relay, one Base-Station and, one actuator. You can download the TinyOS code for the motes and Simulink Model from: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_controller_in_pc here]. These codes are exactly the same code as those we had for our simple scenario with the new message structure for the sensor and actuator and also instead of a code for controller we have a modified code for base-station which send the radio messages to the actuator instead of broadcast which will be explained in the following.  
 
-As we had explained in "[https://code.google.com/p/kth-gisoo/wiki/Samples#Message_structure_for_the_serial_communication_in_GISOO  Message structure for the serial communication in GISOO]" the message structure for sending via serial port should have 16 bytes. For this reason we changed the data struct of the message from sensor to the controller (relay will just forward the message without any modification) to make in a 16 bytes structure. In the define code for this scenario in the "app_parameters.h" the sensor data contains 16 bytes as it has shown in the following:
+As we had explained in "[https://code.google.com/p/kth-gisoo/wiki/Samples#Message_structure_for_the_serial_communication_in_GISOO  Message structure for the serial communication in GISOO]" the message structure for sending via serial port should have 16 bytes. For this reason we changed the data struct of the message from sensor to the controller (relay will just forward the message without any modification) to make in a 16 bytes structure. In the defined code for this scenario in the "app_parameters.h" the sensor data contains 16 bytes as it has shown in the following:
 
 {{{
 // Type of message send by the sensor node to the relay node
@@ -180,7 +180,7 @@ typedef nx_struct EncMsg2SensorsAct {
 }EncMsg2SensorsAct;
 }}}
 
-The other point that has been mentioned about the codes in this scenario was the modified base-station. Since we would like to forward all the actuation values from PC to the actuator (not the other motes) we modified the send function of the basestaion so that it just forward the radio messages to the actuator (mote with id:5 in this scenario). As it has been shown in the following code, the "addr" value has been changed to a fix id of actuator mote (5).  
+The other point that has been mentioned about the codes in this scenario was the modified base-station. Since we would like to forward all the actuation values from PC to the actuator (not the other motes) we modified the send function of the base-Station so that it just forward the radio messages to the actuator (mote with id:4 in this scenario). As it has been shown in the following code, the "addr" value has been changed to a fix id of actuator mote (4).  
 {{{
 task void radioSendTask() {
     uint8_t len;

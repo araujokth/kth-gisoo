@@ -121,7 +121,7 @@ Inside the "GISOO_Simulation_Environment" has been shown in the following pictur
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/CoojaConnector.png"  >
 <p>
 
-The next picture shows the entire of the "GISOO-Simulink plugin". As it has been marked in the picture This block will receive messages from Cooja and extract the Simulation-Time, mote-pin-id, uValue and, Serial data and also compare the Simulation time in Simulink with the Simulation time in Cooja and if Simulink is behind, it will continue the simulation to reach the proper time. The three blocks in the top right side of the picture shows the maximum number of the iteration that the while loop will do. This number will config the maximum time that Simulink can wait to receive a message from Cooja and if Simulink do not receive any message in this duration will consider it as a result of problem in communication with Cooja and to avoid the infinitive simulation loop, the stop block will stop the Simulink Simulation which will show a message on the screen. (If in the scenario you need bigger time intervals to receive messages from Cooja, you can increase the default value of this block, which is 3000 in the following figure.) 
+The next picture shows the entire of the "GISOO-Simulink plugin". As it has been marked in the picture This block will receive messages from Cooja and extract the Simulation-Time, mote-pin-id, uValue and, Serial data and also compare the Simulation time in Simulink with the Simulation time in Cooja and if Simulink is behind, it will continue the simulation to reach the proper time. The three blocks in the top right side of the picture shows the maximum number of the iteration that the while loop will do. This number will config the maximum time that Simulink can wait to receive a message from Cooja and if Simulink does not receive any message in this duration will consider it as a result of a problem in communication with Cooja, and to avoid the infinitive simulation loop, the stop block will stop the Simulink Simulation which will show a message on the screen. (If in the scenario you need bigger time intervals to receive messages from Cooja, you can increase the default value of this block, which is 300000 in the following figure.) 
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Inside_GISOO_Simulation_Env.png"  >
 <p>
@@ -134,32 +134,32 @@ The Following picture shows the message created by Stop block when it could not 
 
  == Sky-Mote ==
 
-The SkyMote bloke has been designed to be able to mimic the actions of a real mote such as reading ADC writing on DAC, and sending and receiving the radio data in the Simulink.
-The following figure shows the structure of the SkyMote block. This block will receive four types of data from the GISOO-Simulink plugin block in the "GISOO-Simulation-Environment" which are:
+The SkyMote bloke has been designed to mimic the actions of a real mote such as reading ADC, writing on DAC, and sending and receiving the radio data in the Simulink.
+The following figure shows the structure of the SkyMote block. This block will receive four data from the "CoojaConnector" block in the "GISOO-Simulation-Environment" which are:
 
-  * Time-Is-Correct: is the value of the mote-pin-id which has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
+  * Time-Is-Correct: is a boolean value which shows that if the Simulink time is equal with the Cooja time which has been received from the message or not.
 
-  * Interface-Identifier: is a boolean value which shows that if the Simulink time is equal with the Cooja time that it has received from the message or not.
+  * Interface-Identifier: is the value of the mote-pin-id which has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
 
   * uValue: is the actuation value for DACs, it also has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]
 
   * Input Serial-Data: is the serial data that has been received from Cooja.
 
   
-Also the mote will receive the output serial data from the mote input.
+More over to above values, the SkyMote can receive the output serial data from the mote input.
 
 In the mote structure picture the first colorful column from left (light orange) are the constant blocks which represent the pin-id of the motes. The values of pin-ids has been explained in [https://code.google.com/p/kth-gisoo/wiki/technical_details#Data_Communication   Data Communication]. These values will be used to fined the received data belongs to which pin.
 
-The other three colorful columns are three filter which finally can make the correct action in the mote based on the received data.
+The other three colorful columns are three filters which finally can make the correct action in the mote based on the received data.
 
-The firs filter column from left which are shown in light green, will discover if the received pin-id id the same as the constant number that has been compared or not. For each received message in Simulink one and only one of these block will return true and the rest will be false. 
+The firs filter column from left which are shown in light green, will discover if the received pin-id is the same as the constant number that has been compared or not. For each received message in Simulink one and only one of these blocks will return true and the rest will be false. 
 
-In the second comparison, firs the value of mote-id will be extracted from mote-pin-id value and then this value will be compared with id of the mote in Simulink. If the result of this comparison was true it means that the received message belonged to this mote otherwise it belongs to some other mote. In the final step, we will "AND" (logical and)the boolean result of this comparison with the result of previous filter and this AND can be considered as the second layer of filtering which has been shown in the orange column.
+In the second comparison, first the value of mote-id will be extracted from mote-pin-id value and then this value will be compared with id of the mote in Simulink. If the result of this comparison was true it means that the received message belonged to this mote otherwise it belongs to some other motes. In the final step, we will "AND" (logical and)the boolean result of this comparison with the result of previous filter and this AND can be considered as the second layer of filtering which has been shown in the orange column.
 
-Finally the last filter will check if the time of simulation in Simulink is exactly the same as the time of the simulation in Cooja which we had received in the received message or not. This step will also be achieved by performing a logical AND between the results of the second filter and the received boolean value from GISOO-Simulink plugin(IsTimeCorrect) which create the third and last filter that has been shown in yellow in the picture. Only the data could pass all these layers of the filter it can activate the proper action block which will perform the ADC reading or applying the DAC value or receiving the serial data or sending the serial data.
+Finally the last filter will check if the time of simulation in Simulink is exactly the same as the time of the simulation in Cooja which we had received in the received message or not. This step will also be achieved by performing a logical AND between the results of the second filter and the received boolean value from GISOO-Simulink plugin(IsTimeCorrect) and creates the third and the last filter that has been shown in yellow in the picture. Only the data which could pass all these layers of the filters can activate the proper action block which will perform the ADC reading or applying the DAC value or receiving the serial data or sending the serial data.
 Since we always used the ADC0 and ADC1 we just use them and we terminate the rest of the ADCs in our block model. But they can be used in the case of need. (ADC5 should be active but not used because of some unstudied problem in Cooja.)
 <p align="center">   
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/implementation_details/Mote.png">
 <p>
 
-The only action which needs extra procedure is the sending out of the serial-data. Since when we want to send the data to the serial port of a mote we should create a complete serial message including its header payload (serial data) and footer, in this model also we have pass the serial data from a specific designed block to create a serial message.(The block has been shown in light blue in the previous figure) The structure of serial message can be found in [http://tinyos.cvs.sourceforge.net/viewvc/tinyos/tinyos-2.x/doc/html/tep113.html  TEP 113]. But it should be mentioned that the two bytes of CRC should be created over P to end of the payload. (Not over S until end of the payload  as it has mentioned at the end of the TEP-113)
+The only action which needs extra procedure is the sending out of the serial-data. Since when we want to send the data to the serial port of a mote, we should create a complete serial message including its header, payload (serial data) and footer, in this model also we have pass the serial data from a specific designed block to create a serial message.(The block has been shown in light blue in the previous figure) The structure of serial message can be found in [http://tinyos.cvs.sourceforge.net/viewvc/tinyos/tinyos-2.x/doc/html/tep113.html  TEP 113]. But it should be mentioned that the two bytes of CRC should be created over P to end of the payload. (Not over S until end of the payload  as it has mentioned at the end of the TEP-113)

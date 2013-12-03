@@ -1,6 +1,11 @@
   * [Description_of_GISOO Welcome! Introduction to GISOO]
+
   * [Installation Installing GISOO]
+
   * [How_to_use_it How to use GISOO]
+
   * [Samples Examples tutorial]
+
   * [technical_details Implementation details]
+
   * [FAQ_page Frequently Asked Questions]

@@ -255,4 +255,4 @@ Although you can save all data from Simulink or COOJA for further analyzes, you 
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/helloworld/ActuationVslues.png" >
 <p>
 
-You can download all of the required codes (node codes, plant script, and Simulink model) from [https://kth-gisoo.googlecode.com/svn/trunk/files/watertanks_simple/WaterTanksFiles.zip here]. Then you just need to create the COOJA simulation and run the simulation!
+You can download all of the required codes (node codes, plant script, and Simulink model) from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fwater_tanks_simple_scenario here]. Then you just need to create the COOJA simulation and run the simulation!

@@ -95,7 +95,7 @@ After these steps are performed, one can Verify the correct installation of COOJ
 
 </wiki:comment>
 
-== Adding the GISOO COOJA plug-in ==
+== Adding the GISOO plugin in Cooja ==
 
 After verifying the COOJA installation, you are now ready to add GISOO to COOJA. First, you have to add the "GISOO-Simulink plug-in" which can be downloaded from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fgisoo_installation_files%2FGISOO_Simulink_Plugin here] to the Cooja. For this aim you have to do three steps:
   # After Downloading the plug-in folder you have to place it on the following path:

@@ -98,13 +98,11 @@ After these steps are performed, one can Verify the correct installation of COOJ
 == Adding the GISOO plugin in Cooja ==
 
 After verifying the COOJA installation, you are now ready to add GISOO plugin to COOJA. First, you have to add the "GISOO-Simulink plug-in" which can be downloaded from [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fgisoo_installation_files%2FGISOO_Simulink_Plugin here] to the Cooja. For this aim you have to do three steps:
-  
 # After Downloading the "GISOO-Simulink plug-in" folder, you have to place it on the following path:
 
 {{{
 YOUR_CONTIKI_FOLDER/tools/cooja/apps
 }}}
-
   # In the second step you have to download our modified MSPSim.jar from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/mspsim.zip here] and after extracting the.zip file you should substitute the mspsim.jar with the which is exist in your contiki folder in this path:
 
 {{{

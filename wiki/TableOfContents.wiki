@@ -5,8 +5,8 @@
  
   * [How_to_use_it How to use GISOO]
 
-  * [Examples tutorial Samples]
+  * [Samples Examples tutorial]
 
-  * [Implementation details technical_details]
+  * [technical_details Implementation details]
 
   * [FAQ_page Frequently Asked Questions]

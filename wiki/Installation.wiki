@@ -65,7 +65,6 @@ export PATH=$PATH:/cygdrive/c/mspgcc/bin
 export PATH=$PATH:/cygdrive/c/mspgcc/msp430/bin
 }}}
 
-
 === Downloading the latest Contiki and run COOJA in Cygwin ===
 As the last step, the latest Contiki version has to be downloaded from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to desired folder, one is now able to run COOJA. This can be done by running Cygwin, and then navigate to 
 
@@ -77,6 +76,11 @@ and issuing the command
 ant run
 }}}
 
+NOTE: It can happen that you run the ant command, that the java folder is not correctly being set. If this happens to you, you can solve it by typing in Cygwin:
+
+{{{
+export JAVA_HOME="C:/Program Files/Java/jdk1.7.0_45"
+}}}
 
 == Testing your COOJA installation ==
 

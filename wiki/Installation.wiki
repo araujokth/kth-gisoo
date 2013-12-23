@@ -61,8 +61,8 @@ export PATH=$PATH:/bin
 In order to run COOJA, [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=MSPGCC_Wiki MSPGCC] (Tool chain for [http://en.wikipedia.org/wiki/TI_MSP430 MSP430]) is required. You can find the download link of MSPGCC for Windows [http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Install:windows here]. After extracting it, you need to add the "/bin" and "/msp430/bin" to the environmental variable in Cygwin by issuing these commands:
 
 {{{
-export PATH=$PATH: /cygdrive/c/mspgcc/bin
-export PATH=$PATH: /cygdrive/c/mspgcc/msp430/bin
+export PATH=$PATH:/cygdrive/c/mspgcc/bin
+export PATH=$PATH:/cygdrive/c/mspgcc/msp430/bin
 }}}
 
 

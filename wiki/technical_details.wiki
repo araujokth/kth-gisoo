@@ -1,7 +1,7 @@
 <wiki:toc />
 ----
 = General View=
-<b>GISOO</b> stand for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and another one in Simulink which are synchronous together with the possibility of data communication. 
+<b>GISOO</b> stands for <b>G</b>raphical <b>I</b>ntegration of <b>S</b>imulink snd C<b>OO</b>ja and as the name represent each simulation in GISOO should be consist of the combination of two simulations, one in Cooja and another one in Simulink which are synchronous together with the possibility of data communication. 
 In fact all the wireless system (which also can contain the controller) will be simulated in the Cooja and the plant will be simulated in Simulink, and whenever simulated system in Cooja needs to measure some variables in plant or actuate some actuators there, the sensor or actuator mote in Cooja will send the request for sensor value or send the actuation data to their mirror sensor or actuator in the Simulink model which are in contact with the plant model and can receive the requested sensor data or apply the actuation value. The following picture show the genera view of the the GISOO which can show the mirror motes in Cooja and Simulink and the location of the motes in the relation with the plant. (The following picture shows the situation that the controller located in one of the motes, but it is also possible to locate the controller in a PC)
 
 <p align="center">   

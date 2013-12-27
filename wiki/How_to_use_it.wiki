@@ -156,7 +156,7 @@ After adding all the virtual nodes to this environment, it is necessary to set t
 For each node, according to its action you should add the required ADC or DAC connector component. For instance if you have added a mote to operate as a sensor which should measure data on the ADC0 pin (input to the node), then you have to connect the ADC-Connector component to ADC0 input of that mote, or if you want to receive some actuation data on the DAC0 (output of the node), you need to add the DAC connector component on the DAC0 output of your mote. These components and their location is shown in the following picture.
 
 <p align="center">  
-<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.jpg" >
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.png" >
 <p>
 
 == Adding Serial Communication connectors ==

@@ -159,9 +159,7 @@ For each node, according to its action you should add the required ADC or DAC co
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/how_to_use_GISOO/Simulink/ADC-DAC-Connectors.png" >
 <p>
 
-== Adding Serial Communication connectors ==
 
-*TODO*
 
 == Adding the plant/physical system model  ==
 

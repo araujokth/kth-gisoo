@@ -21,7 +21,7 @@ In this section you can find all the information on how to use GISOO and a simpl
 
 First, you should compile the code which you want to upload to your wireless nodes. You can either use TinyOS code or Contiki code for your applications. However, we remind you that at the moment all our examples are based on TinyOS.
 
-In TinyOS you compile your application in a wireless node by executing for eaxmple: "make telosb" for a telosb/tmote sky/cm5000 device. When you do such operation, a "build" folder is automatically created in the application folder, which contains some files including the "main.exe". This file will be used in COOJA as the mote application. You can check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands. 
+In TinyOS you compile your application in a wireless node by executing for eaxmple: "make telosb" for a telosb/tmote sky/cm5000 device. When you do such operation, a "build" folder is automatically created in the application folder, which contains some files including the "main.exe". This file will be used in COOJA as the mote application. You can find a TinyOS installation manual [https://kth-wsn.googlecode.com/files/GettingStartedWithTinyOS.pdf‎  here] and also check [http://tinyos.stanford.edu/tinyos-wiki/index.php/TinyOS_Tutorials TinyOS tutorials] For more detail about its commands. 
 
 Note that you can load several distinct wireless nodes with different applications in the same COOJA simulation.
 

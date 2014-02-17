@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.29"
+    ComputedModelVersion    "1.30"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -56,8 +56,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1570.0, 686.0]
-	ZoomFactor		[1.0]
-	Offset			[26.46250593662262, 7.0]
+	ZoomFactor		[0.4]
+	Offset			[-1151.0374940633774, -518.49999999999989]
       }
     }
   }
@@ -67,9 +67,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "behdad"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Feb 17 16:39:01 2014"
-  RTWModifiedTimeStamp	  314555931
-  ModelVersionFormat	  "1.%<AutoIncrement:29>"
+  LastModifiedDate	  "Mon Feb 17 17:16:13 2014"
+  RTWModifiedTimeStamp	  314558170
+  ModelVersionFormat	  "1.%<AutoIncrement:30>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -996,17 +996,9 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "40"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "636"
-    Block {
-      BlockType		      Constant
-      Name		      "1000"
-      SID		      "114"
-      Position		      [150, 925, 180, 955]
-      ZOrder		      85
-      Value		      "1000"
-    }
     Block {
       BlockType		      Scope
       Name		      "Actuation Value"
@@ -1115,7 +1107,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"34"
 	Block {
 	  BlockType		  Inport
 	  Name			  "ADC Connector"
@@ -11306,14 +11298,6 @@ Model {
 	  ZOrder		  -1
 	}
       }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "WT_CALIBRATION"
-      SID		      "145"
-      Position		      [70, 745, 100, 775]
-      ZOrder		      78
-      Value		      "WT_CALIBRATION"
     }
     Block {
       BlockType		      Scope

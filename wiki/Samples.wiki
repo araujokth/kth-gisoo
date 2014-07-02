@@ -124,6 +124,8 @@ This Value will act similar as the port number for the serial message and specif
 <p>
 
 
+==== How to add serial communication in your TinyOS code ====
+This section is not completely related to GISOO and how it works, but it is a complimentary part to give some hints to those who want to add the serial communication in part of their own TinyOS code.
 
 == Advanced Examples ==
 Most of the real scenarios are not only a simple sensor or actuator but they are a mixture of those. For this reason their simulation environment consist of ADC reading and DAC writing and even maybe serial communication together and in this part some of these mixed scenarios will be explained.

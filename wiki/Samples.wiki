@@ -127,6 +127,14 @@ This Value will act similar as the port number for the serial message and specif
 ==== How to add serial communication in your TinyOS code ====
 This section is not completely related to GISOO and how it works, but it is a complimentary part to give some hints to those who want to add the serial communication in part of their own TinyOS code.
 
+For adding serial communication to your code you need to pass the following steps:
+  * Creating a header file including your message structure and defining the "Active message id"
+  * Introduce the required component in your configuration file.
+  * Add the required interfaces in the module file.
+  * Add the sending code in your desired place in your code.
+  * Add the receive code in your desired place in your code. 
+
+
 == Advanced Examples ==
 Most of the real scenarios are not only a simple sensor or actuator but they are a mixture of those. For this reason their simulation environment consist of ADC reading and DAC writing and even maybe serial communication together and in this part some of these mixed scenarios will be explained.
 

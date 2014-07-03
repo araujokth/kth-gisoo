@@ -244,8 +244,7 @@ And these event should also be added to the application to make it complete:
 
 event void Control.startDone(error_t err) {
     if (err == SUCCESS) {
-      //call MilliTimer.startPeriodic(1000);
-call Timer0.startPeriodic( 250 );
+      call Timer0.startPeriodic( 250 );
     }
   }
   event void Control.stopDone(error_t err) {}

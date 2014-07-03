@@ -156,6 +156,23 @@ enum {
 #endif
 }}}
 
+
+You need to copy the shown code in a file named "TestSerial.h" which is located in the application folder.
+ 
+In the second step we need to add necessary components in the configuration file. these component has been shown in the following part:
+
+{{{
+
+// added part for serial communication:
+ components SerialActiveMessageC as AM;
+  BlinkC.Control -> AM;
+  //BlinkC.Receive -> AM.Receive[AM_TEST_SERIAL_MSG];
+  BlinkC.AMSend -> AM.AMSend[AM_TEST_SERIAL_MSG];
+  BlinkC.Packet -> AM;
+
+}}}
+
+
 == Advanced Examples ==
 Most of the real scenarios are not only a simple sensor or actuator but they are a mixture of those. For this reason their simulation environment consist of ADC reading and DAC writing and even maybe serial communication together and in this part some of these mixed scenarios will be explained.
 

@@ -197,7 +197,62 @@ bool locked = FALSE;
 
 }}}
 
+you should also start control component in the boot section
 
+{{{
+
+ call Control.start();//added by behdad 3
+
+}}}
+
+
+
+Finally you should add the following part in the place that you want to send the serial data
+
+{{{
+
+ if (locked) {
+      return;
+    }
+    else {
+      test_serial_msg_t* rcm = (test_serial_msg_t*)call Packet.getPayload(&packet, sizeof(test_serial_msg_t));
+      if (rcm == NULL) {return;}
+      if (call Packet.maxPayloadLength() < sizeof(test_serial_msg_t)) {
+	return;
+      }
+
+      rcm->counter = counter;
+      if (call AMSend.send(AM_BROADCAST_ADDR, &packet, sizeof(test_serial_msg_t)) == SUCCESS) {
+	locked = TRUE;
+      }
+    }
+
+ counter++;
+
+}}}
+
+
+And these event should also be added to the application to make it complete:
+
+{{{
+
+ event void AMSend.sendDone(message_t* bufPtr, error_t error) {
+    if (&packet == bufPtr) {
+      locked = FALSE;
+    }
+  }
+
+
+
+event void Control.startDone(error_t err) {
+    if (err == SUCCESS) {
+      //call MilliTimer.startPeriodic(1000);
+call Timer0.startPeriodic( 250 );
+    }
+  }
+  event void Control.stopDone(error_t err) {}
+
+}}}
 
 
 

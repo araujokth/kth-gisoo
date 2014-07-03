@@ -173,6 +173,35 @@ In the second step we need to add necessary components in the configuration file
 }}}
 
 
+Now you should wire some new components in your application the following part shows this wiring section:
+
+{{{
+
+//added by behdad 2:
+  uses interface Packet;
+  //uses interface Receive;
+  uses interface AMSend;
+  uses interface SplitControl as Control;
+
+}}}
+
+
+You should also declare these variable at the beginning of the implementation part:
+{{{
+
+// added by behdad 4
+uint16_t counter = 0;
+ message_t packet;
+bool locked = FALSE;
+//////// end of 4
+
+}}}
+
+
+
+
+
+
 == Advanced Examples ==
 Most of the real scenarios are not only a simple sensor or actuator but they are a mixture of those. For this reason their simulation environment consist of ADC reading and DAC writing and even maybe serial communication together and in this part some of these mixed scenarios will be explained.
 

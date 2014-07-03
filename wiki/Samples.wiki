@@ -126,17 +126,15 @@ This Value will act similar as the port number for the serial message and specif
 
 
 ==== How to add serial communication in your TinyOS code ====
-This section is not completely related to GISOO and how it works, but it is a complimentary part to give some hints to those who want to add the serial communication in part of their own TinyOS code.
+This section is not completely related to hte GISOO and how it works, but it explains how to add the serial communication in part of your own TinyOS code.
 
-For adding serial communication to your code you need to pass the following steps:
+For adding serial communication to your code, you need to pass the following steps:
   * Creating a header file including your message structure and defining the "Active message id"
   * Introduce the required components in your configuration file.
   * Add the required interfaces in the module file.
-  * Add the sending code in your desired place in your code.
-  * Add the receive code in your desired place in your code. 
+  * Modify the desired place of your code to send serial data.
 
-These steps has been explained in following.
-In order to create serial communication in your application in the first step you should create your message structure. In this section we selected the Blink application which is one of the basic examples in TinyOS and you can find it at "tinyos-2.x/apps" or download it from [http://www.tinyos.net/tinyos-1.x/apps/Blink/ here]. In this section we want to modify the application so that make it very similar to the testSerial application and send a counter value to the serial port whenever it toggle its first led. We use the same message structure as it has been used in testSerialApplication which has been shown in the previous section but again you can see it in the following picture (You should consider that the message structure should have 16 bytes even you want to communicate less amount of data):
+To add serial communication to your application in the first step you should create your message structure. In this section we selected the Blink application which is one of the basic examples in TinyOS and you can find it at "tinyos-2.x/apps" or download it from [http://www.tinyos.net/tinyos-1.x/apps/Blink/ here]. In this section we want to modify the application so that make it very similar to the testSerial application and send a counter value to the serial port whenever its first led toggled. We use the same message structure as it has been used in testSerialApplication which has been shown in the previous section, but again you can see it in the following picture (You should consider that the message structure should have 16 bytes even you want to communicate less amount of data):
 
 {{{
 
@@ -144,8 +142,8 @@ In order to create serial communication in your application in the first step yo
 #define TEST_SERIAL_H
 
 typedef nx_struct test_serial_msg {
-nx_uint16_t counter; // this is the place for our actual counter value 
-nx_uint16_t counter2[7]; // this has been added to convert the message structure to 16 bytes
+nx_uint16_t counter; // This is the place for our actual counter value 
+nx_uint16_t counter2[7]; // This has been added to convert the message structure to 16 bytes
 
 } test_serial_msg_t;
 
@@ -163,8 +161,8 @@ In the second step we need to add necessary components in the configuration file
 
 {{{
 
-// added part for serial communication:
- components SerialActiveMessageC as AM;
+// Added parts for serial communication:
+  components SerialActiveMessageC as AM;
   BlinkC.Control -> AM;
   BlinkC.AMSend -> AM.AMSend[AM_TEST_SERIAL_MSG];
   BlinkC.Packet -> AM;
@@ -172,7 +170,7 @@ In the second step we need to add necessary components in the configuration file
 }}}
 
 
-Now you should wire some new components in your application the following part shows this wiring section:
+Now you should wire some new components in your application. The following part shows this wiring section:
 
 {{{
 
@@ -195,7 +193,7 @@ You should also declare these variable at the beginning of the implementation pa
 
 }}}
 
-you should also start control component in the boot section
+you should also start control component in the boot section:
 
 {{{
 

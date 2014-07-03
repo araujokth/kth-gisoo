@@ -252,7 +252,7 @@ event void Control.startDone(error_t err) {
 }}}
 
 
-
+You can find the complete modified application with explanation comments [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fserial_communication%2FAddingSerialCommToBlink%253Fstate%253Dclosed here]
 
 == Advanced Examples ==
 Most of the real scenarios are not only a simple sensor or actuator but they are a mixture of those. For this reason their simulation environment consist of ADC reading and DAC writing and even maybe serial communication together and in this part some of these mixed scenarios will be explained.

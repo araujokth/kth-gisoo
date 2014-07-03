@@ -48,6 +48,7 @@ More over to the ADC and DAC, GISOO also support the serial Communication betwee
   # Mote In Cooja send data via serial to the Simulink and it expects to receive a reply serial data from Simulink after a specific amount of time.
 
 The next two examples explain each of these methods in details.
+
 ==== One Way Serial Communication ====
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fserial_communication here]  
 
@@ -129,10 +130,14 @@ This section is not completely related to GISOO and how it works, but it is a co
 
 For adding serial communication to your code you need to pass the following steps:
   * Creating a header file including your message structure and defining the "Active message id"
-  * Introduce the required component in your configuration file.
+  * Introduce the required components in your configuration file.
   * Add the required interfaces in the module file.
   * Add the sending code in your desired place in your code.
   * Add the receive code in your desired place in your code. 
+
+These steps has been explained in following.
+for
+
 
 
 == Advanced Examples ==

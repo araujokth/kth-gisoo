@@ -69,4 +69,8 @@ It is better to to delete this file (you can do it by the "rm" command)and then 
 
 == In Simulink I always receive unsigned values but I need to use signed values (signed int32) what I should do for that? == 
 The only change that you have made inside the " Bytes to uint32 Convertor" to convert the result from uint32 to int32 (this change is not required when you are using the (u)int16.
-For this change you should just go inside the " Bytes to uint32 Convertor" block and in the property window of "Sum of Elements" change the "accumulator data type" to the int8.(the change.jpg can be helpful)
+For this change you should just go inside the " Bytes to uint32 Convertor" block and in the property window of "Sum of Elements" change the "accumulator data type" to the int8.
+
+<p align="center">  
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/FAQ/SignedInt32.jpg" >
+<p>

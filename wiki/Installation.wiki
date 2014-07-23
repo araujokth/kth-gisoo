@@ -107,7 +107,7 @@ After verifying the COOJA installation, you are now ready to add GISOO plugin to
 {{{
 YOUR_CONTIKI_FOLDER/tools/cooja/apps
 }}}
-  * In the second step you have to download our modified MSPSim.jar from [https://kth-gisoo.googlecode.com/svn/trunk/files/gisoo/mspsim.zip here] and after extracting the.zip file you should substitute the mspsim.jar with the which is exist in your contiki folder in this path:
+  * In the second step you have to download our modified MSPSim.jar from [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/gisoo_installation_files/mspsim.zip here] and after extracting the.zip file you should substitute the mspsim.jar with the which is exist in your contiki folder in this path:
 
 {{{
 YOUR_CONTIKI_FOLDER/tools/mspsim

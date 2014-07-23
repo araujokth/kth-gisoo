@@ -65,7 +65,7 @@ export PATH=$PATH:/cygdrive/c/mspgcc/bin
 export PATH=$PATH:/cygdrive/c/mspgcc/msp430/bin
 }}}
 
-=== Downloading the latest Contiki and run COOJA in Cygwin ===
+=== Downloading Contiki 2.6 and running COOJA in Cygwin ===
 As the last step, please download *Contiki 2.6* from [http://sourceforge.net/projects/contiki/files/Contiki/ here]. After extracting the downloaded file to desired folder, one is now able to run COOJA. This can be done by running Cygwin, and then navigate to 
 
 {{{

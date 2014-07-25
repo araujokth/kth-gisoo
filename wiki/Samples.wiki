@@ -30,6 +30,7 @@ The following picture shows inside of the "GISOO-Simulation Environment" in the 
 <p>
 
 ==== ADC data transmission in GISOO - Using Contiki ===
+In order to provide an example for the ADC communication in Contiki we used the example which were available in <a href="http://stackoverflow.com/questions/21047965/how-to-read-temperature-humidity-and-light-measures-with-contiki-os">this page</a>.
 === DAC data transmission in GISOO ==
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fdac_data_transmission here] 
 

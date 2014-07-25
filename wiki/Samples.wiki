@@ -43,8 +43,8 @@ Since this code tries to read ADC data from ADC4 instead of ADC0 or ADC1 which h
 <img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADC4.png">
 <p>
 
-
-????????????????
+For using the Contiki code in COOJA, you have to brows and insert the C code and compile it in Cooja or you can use the provided "Onlinelight.sky" which is the result of compilation.
+the final simulation scenario should be like this: 
   
 === DAC data transmission in GISOO ==
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fdac_data_transmission here] 

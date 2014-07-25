@@ -40,7 +40,7 @@ Since this code tries to read ADC data from ADC4 instead of ADC0 or ADC1 which h
 
 
 <p align="center">  
-<img src="https://code.google.com/p/kth-gisoo/source/browse/trunk/images/samples/adcreader/ADC4.png">
+<img src="https://kth-gisoo.googlecode.com/svn/trunk/images/samples/adcreader/ADC4.png">
 <p>
 
 

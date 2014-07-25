@@ -113,7 +113,7 @@ YOUR_CONTIKI_FOLDER/tools/cooja/apps
 YOUR_CONTIKI_FOLDER/tools/mspsim
 }}}
 
-(This mspsim.jar has been modidied to support the DAC communication, and has been tested with Contiki2.6).
+(This mspsim.jar has been modified to support the DAC communication, and has been tested with Contiki 2.6).
   * In the third step you have to modify the build file in the Cooja folder and add
 
 {{{
@@ -140,7 +140,7 @@ And also add this line:
 <ant antfile="build.xml" dir="apps/GISOO_Simulink_Plugin" target="clean" inheritAll="false"/>  
 }}}
 
-to the following part (It has already added in the following lines:
+to the following part (it has already been added in the following lines):
 
 {{{
 <target name="clean" depends="init">

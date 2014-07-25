@@ -31,6 +31,7 @@ The following picture shows inside of the "GISOO-Simulation Environment" in the 
 
 ==== ADC data transmission in GISOO - Using Contiki ===
 In order to provide an example for the ADC communication in Contiki we used the example which were available in <a href="http://stackoverflow.com/questions/21047965/how-to-read-temperature-humidity-and-light-measures-with-contiki-os">this page</a>.
+Since this code tries to read ADC data from ADC4 instead of ADC0 or ADC1 which has been used in the other examples, we modified the mote block in Simulink library to activate ADC4 as well. You can see the mote block modification in the following picture.??????????
 === DAC data transmission in GISOO ==
 TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fdac_data_transmission here] 
 

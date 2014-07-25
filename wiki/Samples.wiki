@@ -30,9 +30,7 @@ The following picture shows inside of the "GISOO-Simulation Environment" in the 
 <p>
 
 ==== ADC data transmission in GISOO - Using Contiki ===
-Contiki codes and Simulink Model can be reached:
-
-[https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fadc_data_transmission_contiki%253Fstate%253Dclosed  here]
+Contiki codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fadc_data_transmission_contiki%253Fstate%253Dclosed  here]
 
 
 

@@ -8,7 +8,7 @@ In all the examples we are using the TinyOS to provide the mote programs, but in
 === ADC data transmission in GISOO ==
 In order to show the ADC data communication in GISOO we create a scenario that mote application in Cooja will sense and ADC value which has been generated in Simulink.
 ==== ADC data transmission in GISOO - Using TinyOS ===
-TinyOS codes and Simulink Model can be reaced: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fadc_data_transmission here] 
+TinyOS codes and Simulink Model can be reached: [https://code.google.com/p/kth-gisoo/source/browse/#svn%2Ftrunk%2Ffiles%2Fexamples%2Fadc_data_transmission here] 
 
 This example, explains the ADC communication procedure in GISOO. For this example you can download provided TinyOS code which should be used to create the Cooja simulation. Also the designed Simulink model for this scenario is available for download. In the first step you have to compile the TinyOS code by the following command:(To use this command  the TinyOS should be installed in advanced.) 
 {{{
@@ -30,6 +30,7 @@ The following picture shows inside of the "GISOO-Simulation Environment" in the 
 <p>
 
 ==== ADC data transmission in GISOO - Using Contiki ===
+Contiki codes and Simulink Model can be reached: here
 In order to provide an example for the ADC communication in Contiki we used the example which were available in <a href="http://stackoverflow.com/questions/21047965/how-to-read-temperature-humidity-and-light-measures-with-contiki-os">this page</a>.
 Since this code tries to read ADC data from ADC4 instead of ADC0 or ADC1 which has been used in the other examples, we modified the mote block in Simulink library to activate ADC4 as well. You can see the mote block modification in the following picture.??????????
 === DAC data transmission in GISOO ==

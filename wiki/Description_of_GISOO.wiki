@@ -6,7 +6,7 @@ GISOO is a virtual testbed for simulation of wireless cyber-physical systems tha
 
 In the content list on the navigation column on the left you can find the installation guide and how to use GISOO. Examples are provided, which can help you start developing your own applications. 
 
-GISOO's examples are currently developed for telosb, tmote sky or CM5000 nodes, which all have an [http://www.ti.com/lsds/ti/microcontroller/16-bit_msp430/overview.page?DCMP=MCU_other&HQS=msp430 MSP430 uC] and a [http://www.ti.com/product/cc2420 CC2420 radio]. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: [http://www.tinyos.net/ TinyOS] and [http://www.contiki-os.org/start.html Contiki OS].
+GISOO's examples are currently developed for TinyOS and telosb, tmote sky or CM5000 nodes, which all have an [http://www.ti.com/lsds/ti/microcontroller/16-bit_msp430/overview.page?DCMP=MCU_other&HQS=msp430 MSP430 uC] and a [http://www.ti.com/product/cc2420 CC2420 radio]. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: [http://www.tinyos.net/ TinyOS] and [http://www.contiki-os.org/start.html Contiki OS]. However, we are still working on developing our examples to Contiki OS.
 
 == Help and suggestions? ==
 

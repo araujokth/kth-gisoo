@@ -49,7 +49,7 @@ Since Cooja creates motes in order (It means that the generated mote-id will onl
 (Mote-ids in Cooja will be shown as a number on the mote circle.)
 
 == How to use the printf command in Cooja and GISOO? ==
-In Cooja there is a "Mote Output" plug-in (which will be appear by default when you run the Cooja). This plug-in will show all the printed data with the printf command. The only point which should be considered is that you use the "SerialPrintfC" component  instead of "PrintfC" in your TinyOS code, otherwise you will receive several unwanted character in your printed message. If you want to use printf in GISOO you should not use it in the motes that the GISOO plug-in has been activated for them because the plug-in can not differ the printf messages with the serial data which can cause error or conflict. 
+In Cooja there is a "Mote Output" plug-in (which will be appear by default when you run the Cooja). This plug-in will show all the printed data with the printf command. The only point which should be considered is that you use the "SerialPrintfC" component  instead of "PrintfC" in your TinyOS code, otherwise you will receive several unwanted character in your printed message. If you want to use printf in GISOO you should not use it in the motes that the GISOO plug-in has been activated for them because the plug-in can not differ the printf messages with the serial data which can cause error or conflict (But still you can use "SerialPrintfC" in the motes even the GISOO plug-in has been activated). 
 
 == Can we record the times and values of reading ADCs and writing DAC in GISOO? ==
 Yes. "GISOO-Simulink plugin" in Cooja by default contains a folder by name of "logs" which contains two text files: "ADCTime.txt" and "DACTime" and will record:

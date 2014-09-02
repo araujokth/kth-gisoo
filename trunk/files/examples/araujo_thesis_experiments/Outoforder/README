@@ -1,0 +1,5 @@
+The folders blip and rpl must be placed inside "tinyos-2.x/tos/lib/net/" so that the attack is implemented
+
+The malicious node is node number 8
+
+Data is sent from sensor node 1 to controller node 10

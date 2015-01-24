@@ -113,7 +113,7 @@ YOUR_CONTIKI_FOLDER/tools/cooja/apps
 YOUR_CONTIKI_FOLDER/tools/mspsim
 }}}
 
-(This mspsim.jar has been modified to support the DAC communication, also some modificatoin in the cc2420 driver has been done to support 15.4 protocol but if you are not using this protocol you can download this [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/gisoo_installation_files/mspsim.jar mspsim.jar] only modified to support the DAC but with original cc2420 driver and has been tested with Contiki 2.6).
+(This mspsim.jar has been modified to support the DAC communication, also some modificatoin in the cc2420 driver has been done to support 15.4 protocol but if you are not using this protocol you can download this [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/gisoo_installation_files/mspsim.jar mspsim.jar] which has only modified to support the DAC but with original cc2420 driver and has been tested with Contiki 2.6).
   * In the third step you have to modify the build file in the Cooja folder and add
 
 {{{

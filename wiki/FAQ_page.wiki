@@ -25,11 +25,6 @@ Want to install GISOO? Follow the installation instructions on the "Installing G
 This could be because there are some incomplete, incorrect or missing drivers in MSPsim. Please let us know if this happens to you so we can be aware of it. Debugging MSPsim is pretty straightforward if you know a bit of Java and know how to use printfs. 
 
 You have to download our modified MSPsim to your machine from [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/gisoo_installation_files/mspsim-withDAC.zip here] which has been modified to support DAC communication and tested with Contiki2.6)
-{{{
-cd ~
-cd local/src
-git clone https://github.com/mspsim/mspsim
-}}}
 
 Then, you can go and modify the drivers you need to modify. For example, the CC2420 driver is located in the folder "se/sics/mspsim/chip"
 
@@ -40,6 +35,14 @@ ant jar
 this command will compile the new code and create a mspsim.jar file.
 Copy the .jar file and place it in the following folder "YOUR_CONTIKI_FOLDER/tools/mspsim". Then just run COOJA again to test your new driver!
 You can fined our mspsim with the new cc2420 driver in [https://code.google.com/p/kth-gisoo/source/browse/trunk/files/gisoo_installation_files/mspsim-ModifiedCC2420.zip here] this new driver can support 15.4 radio protocol as well.
+
+If you are interested to see the original code for mspsim you can find it by following this commands but you should consider that the original mspsim is not proper to be used in GISOO since it doesn't support the DAC communication.
+
+{{{
+cd ~
+cd local/src
+git clone https://github.com/mspsim/mspsim
+}}}
 
 == What if there is a driver in MSPsim that is incomplete, incorrect or missing?==
 

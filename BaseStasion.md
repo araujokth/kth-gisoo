@@ -1,0 +1,4 @@
+# Base-Station #
+
+Base-Station is a nesC application for TinyOS motes. This application will forward all the received data from serial port to the radio(broadcast)and  vice versa.
+This application is available in the TinyOS folder under this path: "/tinyos-2.x/apps/BaseStation" or you can download it from [, here](http://www.tinyos.net/tinyos-2.x/apps/BaseStation/). Also you can find some explanation in [, this section](http://tinyos.stanford.edu/tinyos-wiki/index.php/Mote-PC_serial_communication_and_SerialForwarder_(TOS_2.1.1_and_later)#BaseStation_and_net.tinyos.tools.Listen) of TinyOS tutorial.

@@ -24,11 +24,11 @@ We presented GISOO at IEEE IECON 2013 on a special session on Industrial Wireles
 
 ### Development team
 
-José Araújo - PhD student - araujo@kth.se - currently Researcher at Ericsson Research, Stockholm
+[José Araújo](www.josearaujo.org) - PhD student - araujo@kth.se - currently Researcher at Ericsson Research, Stockholm
 
 Behdad Aminian - Research engineer - behdad@kth.se - currently at Ericsson, Stockholm
 
-Alessandro Luppi - PhD student at TU Graz
+[Alessandro Luppi](https://github.com/AlexLup) - PhD student at TU Graz
 
 ### Supervisors
 

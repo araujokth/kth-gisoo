@@ -6,8 +6,9 @@ We developed GISOO, a virtual testbed for simulation of wireless cyber-physical 
 
 ### What can I find here?
 
-In this google-code project you can find GISOO's code, examples and all related documentation. We will be adding many example codes so that you can develop your own wireless CPS experiments!
-GISOO's examples are currently developed for TinyOS and telosb, tmote sky or CM5000 nodes, which all have an MSP430 uC and a CC2420 radio. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: TinyOS and Contiki OS. However, we are still working on developing our examples to Contiki OS.
+Here you can find GISOO's code, examples and all related documentation. 
+
+GISOO's examples are currently developed for TinyOS and telosb, tmote sky or CM5000 nodes, which all have an MSP430 uC and a CC2420 radio. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: TinyOS and Contiki OS. 
 
 ### Help and suggestions?
 
@@ -16,18 +17,23 @@ The code is currently under no maintanence from the development team. However, y
 ### GISOO Publication
 
 If you write a paper and want to make a reference to GISOO, you can cite the following publication:
+
 B. Aminian, J. Araujo, M. Johansson and K. H. Johansson, "GISOO: A virtual testbed for wireless cyber-physical systems", IECON 2013 - 39th Annual Conference of the IEEE, pp. 5588-5593, November 2013.
-We presented GISOO at IEEE IECON 2013 on a special session on Industrial Wireless Communication and its Applications, organized by M. Gidlund and J. Åkerberg . The paper is available here!
+
+We presented GISOO at IEEE IECON 2013 on a special session on Industrial Wireless Communication and its Applications, organized by M. Gidlund and J. Åkerberg . The paper is available [here](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6700049)!
 
 ### Development team
 
 José Araújo - PhD student - araujo@kth.se - currently Researcher at Ericsson Research, Stockholm
+
 Behdad Aminian - Research engineer - behdad@kth.se - currently at Ericsson, Stockholm
+
 Alessandro Luppi - PhD student at TU Graz
 
 ### Supervisors
 
 Mikael Johansson - Professor - mikaelj@kth.se
+
 Karl Henrik Johansson - Professor - kallej@kth.se
 
 Department of Automatic Control - KTH The Royal Institute of Technology, Stockholm, Sweden

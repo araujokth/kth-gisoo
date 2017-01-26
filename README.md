@@ -1,6 +1,7 @@
 ### What is GISOO?
 
 The increasing demand for wireless cyber-physical systems (CPS) requires correct design, implementation and validation of computation, communication and control methods. Traditional simulation tools, which focus on either computation, communication or control, are insufficient when the three aspects interact. Efforts to extend the traditional tools to cover multiple domains, e.g., from simulating only control aspects to simulating both control and communication, often rely on simplistic models of a small subset of possible communication solutions.
+
 We developed GISOO, a virtual testbed for simulation of wireless cyber-physical systems that integrates two state-of-the art simulators, Simulink and COOJA. GISOO enables users to evaluate actual embedded code for the wireless nodes in realistic cyber-physical experiments, observing the effects of both the control and communication components. In this way, a wide range of communication solutions can be evaluated without developing abstract models of their control-relevant aspects, and changes made to the networking code in simulations is guaranteed to be translated into production code without errors.
 
 ### What can I find here?

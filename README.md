@@ -10,6 +10,10 @@ Here you can find GISOO's code, examples and all related documentation.
 
 GISOO's examples are currently developed for TinyOS and telosb, tmote sky or CM5000 nodes, which all have an MSP430 uC and a CC2420 radio. However, through COOJA, GISOO can support many other platforms. GISOO also supports the most popular wireless sensor networks operating systems: TinyOS and Contiki OS. 
 
+### How to get started?
+
+Check out the [wiki page](https://github.com/araujokth/kth-gisoo/wiki) for instructions on how to install and use GISOO
+
 ### Help and suggestions?
 
 The code is currently under no maintanence from the development team. However, you are very welcome to contribute to this project. If you want to be added as a collaborator please contact José Araújo at jose.araujo@ericsson.com

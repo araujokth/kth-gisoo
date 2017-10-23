@@ -32,7 +32,7 @@ We presented GISOO at IEEE IECON 2013 on a special session on Industrial Wireles
 
 [José Araújo](www.josearaujo.org) - PhD student - araujo@kth.se - currently at Ericsson Research, Stockholm
 
-Behdad Aminian - Research engineer - behdad@kth.se - currently at Ericsson, Stockholm
+Behdad Aminian - Research engineer - currently at Ericsson, Stockholm
 
 [Alessandro Luppi](https://github.com/AlexLup) - PhD student at TU Graz
 
